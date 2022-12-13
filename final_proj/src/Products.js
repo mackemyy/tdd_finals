@@ -6,17 +6,26 @@ import './Products.css';
 const Products = () => {
     return (
         <>
-        <div>       
-            <div className="parallax">
+        <div className="parallax">
             <div className="prod_title" data-testid="prod_title"> Our Products </div>
             <div className="prod_subtitle" data-testid="prod_subtitle">We have a wide range of breads, from the most basic all-time favorite Italian Breads, to other flavored and speciality breads. Scroll down to see our menu.</div>
-            </div>
+        </div>
+            
+        {/* <div>     
+            <div className="prod_title" data-testid="prod_title"> Our Products </div>
+            <div className="prod_subtitle" data-testid="prod_subtitle">We have a wide range of breads, from the most basic all-time favorite Italian Breads, to other flavored and speciality breads. Scroll down to see our menu.</div>
+
+        <div id="menu">Menu</div>
             <div className="content">
-                <div className="products">
-                    <div id="menu" data-testid="menu">Menu</div>
+                <div id="cards">
+                    <div id="products"></div>
+                    <div id="name">
+                        <p id="product-name">Baked Croissant Bread</p>
+                        <p id="price">75.00 PHP</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </div> */}
         </>
     )
 };

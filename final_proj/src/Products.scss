@@ -14,18 +14,15 @@ body, html {
     margin: 0;
 }
 
-// .parallax {
-//     background-image: url(../src/assets/bg.png);
-//     height: 100%; 
-//     background-attachment: fixed;
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-// }
+.parallax {
+    background-image: url("../src/assets/bg.png");
+    height: 100%; 
+    // background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-// .parallax {
-//     background-color: green;
-// }
 
 /* width */
 ::-webkit-scrollbar {
@@ -51,6 +48,8 @@ body, html {
 .content {
     color: $dirty-white;
     height: 1080px;
+    left: 118px;
+    top: 1112px;
 }
 
 .prod_title {
@@ -84,7 +83,7 @@ body, html {
 
 #menu {
     font-family: $main-font;
-    color: $black;
+    color: $white;
     position: absolute;
     left: 118px;
     top: 1112px;
@@ -93,5 +92,46 @@ body, html {
     font-size: 50px;
     line-height: 75px;
 }
+
+#cards {
+    width: 350px;
+    height: 400px;
+    background-color: #f5f2f2;
+    margin-top: 200px;
+    background-position: center;
+    background-image: url("../src/assets/products/croissant.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 300px;
+    background-repeat: no-repeat; 
+    border-radius: 15px;
+    position: relative;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  
+}
+
+  #name {
+
+    font-family: $main-font;
+    width: 350px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    font-size: 20px;
+    border-radius: 15px;
+    padding-bottom: 30px;
+    color: black;
+  }
+  
+
+  #price {
+    padding-bottom: 15px;
+  }
+
+
+  #product-name{
+    padding-bottom: 0%;
+  }
 
 
