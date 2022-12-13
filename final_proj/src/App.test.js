@@ -1,36 +1,36 @@
 import { render, screen, cleanup } from "@testing-library/react";
-import Home from './Home';
+import App from './App';
 
 afterEach(cleanup);
 
 describe("Check Home screen", ()=>{
 	it("check if there is a button for discover products",()=>{
-    render(<Home />); 
+    render(<App />); 
 		const btn_discover = screen.getByTestId("discover-btn");
 	  expect(btn_discover).toBeInTheDocument();
 	});
 
     it("check if there is a button for homepage navigate",()=>{
-    render(<Home />); 
-		const btn_home = screen.getByTestId("home-btn");
+    render(<App />); 
+		const btn_home = screen.getByTestId("home-nav");
 	  expect(btn_home).toBeInTheDocument();
 	});
 
-    it("check if there is a button for about page navigate",()=>{
-    render(<Home />); 
-		const btn_about = screen.getByTestId("about-btn");
+    it("check if there is a button for cart",()=>{
+    render(<App />); 
+		const btn_about = screen.getByTestId("cart-nav");
 	  expect(btn_about).toBeInTheDocument();
 	});
 
     it("check if there is a button for products page navigate",()=>{
-    render(<Home />);
-		const btn_products = screen.getByTestId("products-btn");
+    render(<App />);
+		const btn_products = screen.getByTestId("products-nav");
 	  expect(btn_products).toBeInTheDocument();
 	});
 
     it("check if there is a button for login page navigate",()=>{
-    render(<Home />);
-		const btn_login = screen.getByTestId("login-btn");
+    render(<App />);
+		const btn_login = screen.getByTestId("login-nav");
 	  expect(btn_login).toBeInTheDocument();
 	});
 })
