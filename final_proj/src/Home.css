@@ -10,47 +10,11 @@ body {
   margin: 20px;
 }
 
-.topnav {
-  overflow: hidden;
-  font-family: "Poppins";
-  font-weight: 500;
-  letter-spacing: 2px;
-  float: left;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding-right: 20px;
-}
-.topnav a {
-  float: right;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 12px 20px;
-  text-decoration: none;
-  font-size: 17px;
-  border-radius: 5px;
-  margin-left: 10px;
-  margin-top: 10px;
-}
-.topnav a:hover {
-  background-color: #F68A1E;
-  color: white;
-  border-radius: 10px;
-}
-.topnav a.active {
-  background-color: #F68A1E;
-  color: white;
-}
-.topnav a.active:hover {
-  background-color: white;
-  color: #F68A1E;
-}
-
 #loginbtn {
   margin-right: 50px;
 }
 
-.title {
+.home_title {
   font-family: "Port Lligat Slab";
   color: white;
   position: absolute;
@@ -63,7 +27,7 @@ body {
   line-height: 136px;
 }
 
-.subtitle {
+.home_subtitle {
   font-family: "Poppins";
   text-align: left;
   font-style: normal;

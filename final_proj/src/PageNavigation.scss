@@ -1,0 +1,45 @@
+$main-font: 'Poppins';
+$orange: #F68A1E;
+$white: white;
+$border-rad5: 5px;
+$border-rad10: 10px;
+
+.topnav {
+    font-family: $main-font;
+    font-weight: 500;
+    letter-spacing: 2px;
+    top: 30px;
+    right: 30px;
+    float: left;
+    position: fixed;
+    width: 100%;
+    padding-right: 20px;
+
+    & a {
+        float: right;
+        color: $grey;
+        text-align: center;
+        padding: 12px 30px;
+        text-decoration: none;
+        font-size: 17px;
+        border-radius: $border-rad5;
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+
+    & a:hover {
+        background-color: $orange;
+        color: $white;
+        border-radius: $border-rad10;
+    }
+
+    & a.active {
+        background-color: $orange;
+        color: $white;
+    }
+
+    & a.active:hover {
+        background-color: $white;
+        color: $orange;
+    }
+}

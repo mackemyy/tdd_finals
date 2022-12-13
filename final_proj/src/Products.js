@@ -8,8 +8,8 @@ const Products = () => {
         <>
         <div>       
             <div className="parallax">
-            <div className="title" data-testid="title"> Our Products </div>
-            <div className="subtitle" data-testid="subtitle">We have a wide range of breads, from the most basic all-time favorite Italian Breads, to other flavored and speciality breads. Scroll down to see our menu.</div>
+            <div className="prod_title" data-testid="prod_title"> Our Products </div>
+            <div className="prod_subtitle" data-testid="prod_subtitle">We have a wide range of breads, from the most basic all-time favorite Italian Breads, to other flavored and speciality breads. Scroll down to see our menu.</div>
             </div>
             <div className="content">
                 <div className="products">

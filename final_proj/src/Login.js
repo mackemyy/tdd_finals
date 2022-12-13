@@ -7,8 +7,8 @@ const Login = () => {
         <div>
               <div class="loginForm">
                 <div class="header">
-                    <div class="title">Welcome back!</div>
-                    <div class="subtitle">Login to your account.</div>
+                    <div class="login_title">Welcome back!</div>
+                    <div class="login_subtitle">Login to your account.</div>
                 </div>
                 <div class="input_fields">
                     <form action="">

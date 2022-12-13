@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import './Products.css';
+import './PageNavigation.css';
 
 export const PageNavigation = () => {
     return (

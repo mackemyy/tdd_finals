@@ -14,15 +14,18 @@ body, html {
     margin: 0;
 }
 
-.parallax {
-    background-image: url(../src/assets/bg.png);
-    height: 100%; 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+// .parallax {
+//     background-image: url(../src/assets/bg.png);
+//     height: 100%; 
+//     background-attachment: fixed;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+// }
 
+// .parallax {
+//     background-color: green;
+// }
 
 /* width */
 ::-webkit-scrollbar {
@@ -50,47 +53,7 @@ body, html {
     height: 1080px;
 }
 
-.topnav {
-    font-family: $main-font;
-    font-weight: 500;
-    letter-spacing: 2px;
-    top: 30px;
-    right: 30px;
-    float: left;
-    position: fixed;
-    width: 100%;
-    padding-right: 20px;
-
-    & a {
-        float: right;
-        color: $grey;
-        text-align: center;
-        padding: 12px 30px;
-        text-decoration: none;
-        font-size: 17px;
-        border-radius: $border-rad5;
-        margin-left: 10px;
-        margin-right: 20px;
-    }
-
-    & a:hover {
-        background-color: $orange;
-        color: $white;
-        border-radius: $border-rad10;
-    }
-
-    & a.active {
-        background-color: $orange;
-        color: $white;
-    }
-
-    & a.active:hover {
-        background-color: $white;
-        color: $orange;
-    }
-}
-
-.title {
+.prod_title {
     position: absolute;
     width: 655px;
     height: 136px;
@@ -104,8 +67,7 @@ body, html {
     color: $white;
     text-shadow: 0px 4px 50px $black;
 }
-
-.subtitle {
+.prod_subtitle {
     position: absolute;
     width: 826px;
     height: 136px;
