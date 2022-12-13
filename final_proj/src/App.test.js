@@ -1,35 +1,35 @@
 import { render, screen, cleanup } from "@testing-library/react";
-import App from './App';
+import Home from './Home';
 
 afterEach(cleanup);
 
 describe("Check Home screen", ()=>{
 	it("check if there is a button for discover products",()=>{
-    render(<App />); 
+    render(<Home />); 
 		const btn_discover = screen.getByTestId("discover-btn");
 	  expect(btn_discover).toBeInTheDocument();
 	});
 
     it("check if there is a button for homepage navigate",()=>{
-    render(<App />); 
+    render(<Home />); 
 		const btn_home = screen.getByTestId("home-btn");
 	  expect(btn_home).toBeInTheDocument();
 	});
 
     it("check if there is a button for about page navigate",()=>{
-    render(<App />); 
+    render(<Home />); 
 		const btn_about = screen.getByTestId("about-btn");
 	  expect(btn_about).toBeInTheDocument();
 	});
 
     it("check if there is a button for products page navigate",()=>{
-    render(<App />);
+    render(<Home />);
 		const btn_products = screen.getByTestId("products-btn");
 	  expect(btn_products).toBeInTheDocument();
 	});
 
     it("check if there is a button for login page navigate",()=>{
-    render(<App />);
+    render(<Home />);
 		const btn_login = screen.getByTestId("login-btn");
 	  expect(btn_login).toBeInTheDocument();
 	});
@@ -38,7 +38,7 @@ describe("Check Home screen", ()=>{
 // ////////////////TEST FOR LOGIN SCREEN
 // describe("Check Login screen", ()=>{
 // 	it("check if there is an email input",()=>{
-//     render(<App/>);
+//     render(<Home/>);
 // 		const input = screen.getByTestId("email-input");
 // 		expect(input).toBeInTheDocument();
 
@@ -46,7 +46,7 @@ describe("Check Home screen", ()=>{
 // 	});
 
 //     it("check if there is a password input",()=>{
-//     render(<App/>);
+//     render(<Home/>);
 // 		const input = screen.getByTestId("password-input");
 // 		expect(input).toBeInTheDocument();
 
@@ -54,7 +54,7 @@ describe("Check Home screen", ()=>{
 // 	});
 
 //     it("check if there is a button for logging in",()=>{
-//     render(<App/>);
+//     render(<Home/>);
 // 		const btn_login = screen.getByTestId("login-input-btn");
 // 	  expect(btn_login).toBeInTheDocument();
 // 	});
@@ -70,10 +70,10 @@ describe("Check Home screen", ()=>{
 // describe('MyButton', () => {
 //   it('calls the onClick function when clicked', () => {
 //     const onClick = jest.fn();
-//     const wrapper = shallow(<MyButton onClick={onClick} />);
+//     const wrHomeer = shallow(<MyButton onClick={onClick} />);
 
 //     // Simulate a click on the button
-//     wrapper.find('button').simulate('click');
+//     wrHomeer.find('button').simulate('click');
 
 //     // Assert that the onClick function was called
 //     expect(onClick).toHaveBeenCalled();

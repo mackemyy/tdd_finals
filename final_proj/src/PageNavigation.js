@@ -8,6 +8,9 @@ export const PageNavigation = () => {
                 <Link to='/login'>
                     LOGIN
                 </Link>
+                <Link to='/cart'>
+                    CART
+                </Link>
                 <Link to='/products'>
                     PRODUCTS
                 </Link>

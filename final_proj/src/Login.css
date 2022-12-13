@@ -66,8 +66,7 @@ input:focus {
 
 label {
   color: black;
-  font-size: 20px;
-  text-align: right;
+  text-align: start;
 }
 
 #email {
