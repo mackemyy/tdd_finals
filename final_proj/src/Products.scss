@@ -1,0 +1,135 @@
+$main-font: 'Poppins';
+$second-font: 'Port Lligat Slab';
+$orange: #F68A1E;
+$white: white;
+$dirty-white: #f2f2f2;
+$grey: #D9D9D9;
+$black: black;
+$border-rad5: 5px;
+$border-rad10: 10px;
+
+body, html {
+    height: 100%;
+    display: block;
+    margin: 0;
+}
+
+.parallax {
+    background-image: url(../src/assets/bg.png);
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $grey; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+.content {
+    color: $dirty-white;
+    height: 1080px;
+}
+
+.topnav {
+    font-family: $main-font;
+    font-weight: 500;
+    letter-spacing: 2px;
+    top: 30px;
+    right: 30px;
+    float: left;
+    position: fixed;
+    width: 100%;
+    padding-right: 20px;
+
+    & a {
+        float: right;
+        color: $grey;
+        text-align: center;
+        padding: 12px 30px;
+        text-decoration: none;
+        font-size: 17px;
+        border-radius: $border-rad5;
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+
+    & a:hover {
+        background-color: $orange;
+        color: $white;
+        border-radius: $border-rad10;
+    }
+
+    & a.active {
+        background-color: $orange;
+        color: $white;
+    }
+
+    & a.active:hover {
+        background-color: $white;
+        color: $orange;
+    }
+}
+
+.title {
+    position: absolute;
+    width: 655px;
+    height: 136px;
+    left: 633px;
+    top: 300px;
+    font-family: $second-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 126.727px;
+    line-height: 136px;
+    color: $white;
+    text-shadow: 0px 4px 50px $black;
+}
+
+.subtitle {
+    position: absolute;
+    width: 826px;
+    height: 136px;
+    left: 548px;
+    top: 500px;
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 45px;
+    text-align: center;
+    color: $white;
+}
+
+#menu {
+    font-family: $main-font;
+    color: $black;
+    position: absolute;
+    left: 118px;
+    top: 1112px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 75px;
+}
+
+
