@@ -1,0 +1,157 @@
+body {
+  font-family: "Poppins";
+  background-image: url("../src/assets/login-bg.png");
+  position: absolute;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.topnav {
+  overflow: hidden;
+  font-family: "Poppins";
+  font-weight: 500;
+  letter-spacing: 2px;
+  float: left;
+  position: fixed;
+  width: 100%;
+  padding-right: 20px;
+  top: 0;
+}
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.topnav a:hover {
+  background-color: #F68A1E;
+  color: white;
+  border-radius: 10px;
+}
+.topnav a.active {
+  background-color: #F68A1E;
+  color: white;
+}
+.topnav a.active:hover {
+  background-color: white;
+  color: #F68A1E;
+}
+
+#loginbtn {
+  margin-right: 50px;
+}
+
+.loginForm {
+  position: absolute;
+  width: 700px;
+  height: 600px;
+  left: 134px;
+  top: 140px;
+  background-color: white;
+  border-radius: 35px;
+  box-shadow: 0 0 10px black;
+}
+
+.header {
+  position: absolute;
+  top: 60px;
+  font-family: "Poppins";
+}
+
+.title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 45px;
+  padding-left: 95px;
+  left: 80px;
+  line-height: 82px;
+  color: #F68A1E;
+}
+
+.subtitle {
+  top: 20px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 38px;
+  color: black;
+}
+
+.input_fields {
+  position: absolute;
+  left: 100px;
+  top: 230px;
+  width: 80%;
+  height: 30px;
+}
+
+input:focus {
+  outline: none !important;
+  border-color: black;
+  box-shadow: 0 0 10px black;
+}
+
+label {
+  color: black;
+  font-size: 20px;
+  text-align: right;
+}
+
+#email {
+  width: 85%;
+  height: 45px;
+  border-radius: 5px;
+  border-color: #D9D9D9;
+  border: 0;
+  background-color: #D9D9D9;
+}
+
+#password {
+  width: 85%;
+  height: 45px;
+  border-radius: 5px;
+  border-color: #D9D9D9;
+  border: 0;
+  background-color: #D9D9D9;
+}
+
+.fa-eye {
+  position: absolute;
+  top: 136px;
+  right: 18%;
+  cursor: pointer;
+  color: black;
+}
+
+.loginBtn {
+  position: absolute;
+  width: 345px;
+  height: 70px;
+  left: 170px;
+  top: 460px;
+  background: #F68A1E;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 52px;
+  letter-spacing: 0.055em;
+  cursor: pointer;
+}
+.loginBtn:hover {
+  background-color: white;
+  border: 2px solid;
+  color: #F68A1E;
+}/*# sourceMappingURL=Login.css.map */
