@@ -1,0 +1,129 @@
+$main-font: 'Poppins';
+$second-font: 'Port Lligat Slab';
+$orange: #F68A1E;
+$white: white;
+$dirty-white: #f2f2f2;
+$grey: #D9D9D9;
+$text-color: black;
+$border-rad5: 5px;
+$border-rad10: 10px;
+
+body {
+    background-image: url("../src/assets/login-bg.png");
+    font-family: $main-font;
+    position: absolute;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    margin: 20px;
+}
+
+
+.topnav {
+    overflow: hidden;
+    font-family: $main-font;
+    font-weight: 500;
+    letter-spacing: 2px;
+    float: left;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-right: 20px;
+
+    & a {
+        float: right;
+        color: $dirty-white;
+        text-align: center;
+        padding: 12px 20px;
+        text-decoration: none;
+        font-size: 17px;
+        border-radius: $border-rad5;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    & a:hover {
+        background-color: $orange;
+        color: $white;
+        border-radius: $border-rad10;
+    }
+
+    & a.active {
+        background-color: $orange;
+        color: $white;
+    }
+
+    & a.active:hover {
+        background-color: $white;
+        color: $orange;
+    }
+}
+
+#loginbtn {
+    margin-right: 50px;
+}
+
+.title {
+    font-family: $second-font;
+    color: $white;
+    position: absolute;
+    width: 773px;
+    height: 136px;
+    left: 100px;
+    top: 210px;
+    font-weight: 400;
+    font-size: 126.727px;
+    line-height: 136px;
+}
+
+.subtitle {
+    font-family: $main-font;
+    text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 40px;
+    position: absolute;
+    width: 800px;
+    height: 225px;
+    left: 100px;
+    top: 340px;
+    color: $white;
+}
+
+.discoverBtn {
+    background-color: transparent;
+    border-color: $orange;
+    border-radius: $border-rad10;
+    border-width: 3px;
+    color: $white;
+    position: absolute;
+    width: 300px;
+    height: 80px;
+    left: 100px;
+    top: 600px;
+    font-family: $main-font;
+    font-size: 20px;
+    letter-spacing: 2px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $white;
+        border-color: none;
+        color: $orange;
+        font-weight: 500;
+    }
+}
+
+
+
+
+
+
+    
+
+    
+
+
