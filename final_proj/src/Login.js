@@ -5,12 +5,6 @@ const Login = () => {
     return (
         <>
         <div>
-            <div class="topnav">
-                <a href="#login" class="active" id="loginbtn">LOGIN</a>
-                <a href="#products">PRODUCTS</a>
-                <a href="#about">ABOUT</a>
-                <a href="#home">HOME</a>
-            </div>
               <div class="loginForm">
                 <div class="header">
                     <div class="title">Welcome back!</div>
