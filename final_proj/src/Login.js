@@ -4,7 +4,7 @@ import './Login.css';
 const Login = () => {
     return (
         <>
-        <div>
+        <div className="login-page">
               <div className="loginForm">
                 <div className="header">
                     <div className="login_title">Welcome back!</div>

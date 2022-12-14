@@ -8,17 +8,6 @@ $text-color: black;
 $border-rad5: 5px;
 $border-rad10: 10px;
 
-body {
-    background-image: url("../src/assets/login-bg.png");
-    font-family: $main-font;
-    position: absolute;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-    margin: 20px;
-}
 
 #loginbtn {
     margin-right: 50px;
