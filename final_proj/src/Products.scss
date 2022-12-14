@@ -1,137 +1,218 @@
 $main-font: 'Poppins';
 $second-font: 'Port Lligat Slab';
-$orange: #F68A1E;
-$white: white;
-$dirty-white: #f2f2f2;
-$grey: #D9D9D9;
-$black: black;
-$border-rad5: 5px;
-$border-rad10: 10px;
 
-body, html {
-    height: 100%;
-    display: block;
-    margin: 0;
+
+
+#header {
+  background: url('../src/assets/login-bg.png');
+  width: auto;
+  height: 20rem;
+ 
+  margin: 0 auto;
+  padding-top: 150px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-size:cover;
 }
 
-.parallax {
-    background-image: url("../src/assets/bg.png");
-    height: 100%; 
-    // background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+#header-title {
+  text-align: center; 
+  padding-top: 250px;
+  font-size: 150px;
 
-
-/* width */
-::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: $grey; 
-  }
+    margin: auto;
    
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888; 
-  }
+}
+
+#sub-info {
+ color: white;
+  width: 500px;
+  height: 50px;
+  font-family: 'Poppins';
+  font-size: 20px;
+  margin: auto;
+  text-align: center;
+}
+
+#title {
+  color: white;
+  margin-left: 150px;
+  margin-top: 100px;
+  font-size: 38px;
+  font-family: "Poppins";
   
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
-
-.content {
-    color: $dirty-white;
-    height: 1080px;
-    left: 118px;
-    top: 1112px;
 }
 
-.prod_title {
-    position: absolute;
-    width: 655px;
-    height: 136px;
-    left: 633px;
-    top: 300px;
-    font-family: $second-font;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 126.727px;
-    line-height: 136px;
-    color: $white;
-    text-shadow: 0px 4px 50px $black;
-}
-.prod_subtitle {
-    position: absolute;
-    width: 826px;
-    height: 136px;
-    left: 548px;
-    top: 500px;
-    font-family: $main-font;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 25px;
-    line-height: 45px;
-    text-align: center;
-    color: $white;
+#products {
+  width: 100%;
+  height: 500px;
+  display: float;
+  padding-left: 100px;
+  padding-top: 50px;
+  
 }
 
-#menu {
-    font-family: $main-font;
-    color: $white;
-    position: absolute;
-    left: 118px;
-    top: 1112px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 50px;
-    line-height: 75px;
-}
+#content {
+  font-family: "Port Lligat Slab";
+  // background-color: red;
+  width: 400px;
+  height: 80px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 70px;
+  color: white;
 
+ 
+  
+}
 #cards {
-    width: 350px;
-    height: 400px;
-    background-color: #f5f2f2;
-    margin-top: 200px;
-    background-position: center;
-    background-image: url("../src/assets/products/croissant.png");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 300px;
-    background-repeat: no-repeat; 
-    border-radius: 15px;
-    position: relative;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  padding-top: 50px;
+  width: 250px;
+  height: 220px;
+  background-color: #f0f0f0;
+ margin-top: 30px;
+ margin-left: 50px;
+ margin-bottom: 50px;
+  float: left;
+  border-radius: 15px;
+}
+
+#img-container {
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 220px;
+  height: 100px;
+  margin: 0 auto;
+  
   
 }
 
-  #name {
+#product-name {
+  width: 100%;
+  height: 50px;
+ 
+}
 
-    font-family: $main-font;
-    width: 350px;
-    height: 100px;
-    position: absolute;
-    bottom: 0;
-    font-size: 20px;
-    border-radius: 15px;
-    padding-bottom: 30px;
-    color: black;
-  }
+
+#product1{
   
+  background: url("../src/assets/products/BakedCroissantBread.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 220px;
+  height: 120px; 
+  margin: 0 auto;
+}
 
-  #price {
-    padding-bottom: 15px;
-  }
+#product2{
+  background: url("../src/assets/products/ChocolateLoaf.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 220px;
+  height: 120px;
+  margin: 0 auto;
+}
+#product3{
+  background: url("../src/assets/products/ClassicLoaf.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 220px;
+  height: 120px;
+  margin: 0 auto;
+}
+#product4{
+  background: url("../src/assets/products/PrawnBun.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 220px;
+  height: 120px;
+  margin: 0 auto;
+}
+#product5{
+  background: url("../src/assets/products/BriocheFlowerBread.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 220px;
+  height: 120px;
+  margin: 0 auto;
+}
+#product6{
+  background: url("../src/assets/products/PanePugliese.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 220px;
+  height: 120px;
+  margin: 0 auto;
+}
 
+#product7{
+  background: url("../src/assets/products/ClassicSlicedBread.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 220px;
+  height: 120px;
+  margin: 0 auto;
+}
 
-  #product-name{
-    padding-bottom: 0%;
-  }
+#product8{
+  background: url("../src/assets/products/PanePugliese.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 220px;
+  height: 120px;
+  margin: 0 auto;
+}
 
+#product9{
+  background: url("../src/assets/products/Pagnottadeldittaino.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 220px;
+  height: 120px;
+  margin: 0 auto;
+}
 
+#product6{
+  background: url("../src/assets/products/PanePugliese.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 220px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+#product6{
+  background: url("../src/assets/products/PanePugliese.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 220px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+#product6{
+  background: url("../src/assets/products/PanePugliese.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 220px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+#prod-info {
+  font-family: "Poppins";
+  font-weight: 500;
+  text-align: center;
+  
+  margin-bottom: 0px;
+}
+
+#price {
+  font-family: "Poppins";
+  text-align: center;
+ 
+  margin-top: 0px;
+}
