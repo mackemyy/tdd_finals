@@ -13,9 +13,9 @@ const Login = () => {
                 <div className="input_fields">
                     <form action="">
                         <label for="email" data-testid="email">Email:</label> 
-                        <input type="text" id="email" name="email" data-testid="email"/>
+                        <input type="text" id="email" name="email" data-testid="email-input"/>
                         <label for="password" data-testid="password">Password:</label>
-                        <input type="password" id="password" name="password" data-testid="password"/>
+                        <input type="password" id="password" name="password" data-testid="password-input"/>
                         <i className="far fa-eye" id="togglePassword"></i>
                     </form>
                 </div>

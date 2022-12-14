@@ -15,7 +15,7 @@ export const PageNavigation = () => {
                 <NavLink to='/products' data-testid='products-nav'>
                     PRODUCTS
                 </NavLink>
-                <NavLink to='/product-detail' data-testid='products-nav'>
+                <NavLink to='/product-detail' data-testid='productsdetail-nav'>
                     DETAIL
                 </NavLink>
                 <NavLink to='/' data-testid='home-nav'>
