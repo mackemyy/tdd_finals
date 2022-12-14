@@ -32,4 +32,13 @@
 .topnav a.active:hover {
   background-color: white;
   color: #F68A1E;
+}
+
+#mycart-icon {
+  font-size: 20px;
+  cursor: none;
+}
+
+#mycart-count {
+  cursor: none;
 }/*# sourceMappingURL=PageNavigation.css.map */
