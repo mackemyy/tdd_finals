@@ -1,30 +1,45 @@
 import './App.css';
-import Home from './Home';
-import { Link, BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Products from "./Products";
-import Login from './Login';
-import { PageNavigation } from './PageNavigation';
-import ShopProvider from './context/shopProvider';
-import ProductDetail from './ProductDetail';
+import {BrowserRouter, Link, Route, Routes} from "react-router-dom"
+import Cart from"./components/Cart";
+import About from "./components/About";
+import Products from "./components/Products";
+import Login from "./components/Login";
+import { CartState } from './components/Context';
+import Home from './components/Home';
+
 
 function App() {
-  return (
-    <ShopProvider>
-    <div className="App">
-      <header className="App-header">
-      <Router>
-        <PageNavigation></PageNavigation>
-        <Routes>
-            <Route exact path='/' element={< Home />}></Route>
-            <Route exact path='/product-detail' element={< ProductDetail />}></Route>
-            <Route exact path='/products' element={< Products />}></Route>
-            <Route exact path='/login' element={< Login />}></Route>
-        </Routes>
-      </Router>
+const {cart}=CartState ();
 
-      </header>
+
+
+  return (
+<BrowserRouter>
+
+    <div className="App">
+
+
+  <header className="App-header">
+    <h1> bakery shop project</h1>
+      <Link to ="/"> Home </Link>
+      <Link to="/about"> about</Link>
+      <Link to="/products"> Products</Link>
+      <Link to="/cart"> Cart({cart.length})</Link>
+
+      <Link to="/login"> Login</Link>
+
+   
+      <Routes>
+    <Route path ="/" element={<Home/>}/>
+    <Route path ="/about" element={<About/>}/>
+    <Route path ="/products" element={<Products/>}/>
+    <Route path ="/cart" element={<Cart/>}/>
+    <Route path ="/login" element={<Login/>}/>
+   
+      </Routes>
+    </header>
     </div>
-    </ShopProvider>
+    </BrowserRouter>
   );
 }
 
