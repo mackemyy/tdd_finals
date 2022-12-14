@@ -2,7 +2,7 @@
   font-family: "Poppins";
   font-weight: 500;
   letter-spacing: 2px;
-  top: 30px;
+  top: 20px;
   right: 30px;
   float: left;
   position: fixed;
@@ -19,22 +19,18 @@
   padding: 12px 30px;
   text-decoration: none;
   font-size: 17px;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-left: 10px;
   margin-right: 20px;
 }
 .topnav a:hover {
-  background-color: #F68A1E;
-  color: white;
+  color: #F68A1E;
   border-radius: 10px;
 }
 .topnav a.active {
   background-color: #F68A1E;
   color: white;
-}
-.topnav a.active:hover {
-  background-color: white;
-  color: #F68A1E;
+  border-radius: 10px;
 }
 
 #mycart-icon {

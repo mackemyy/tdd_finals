@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import './PageNavigation.css';
 
 export const PageNavigation = () => {
@@ -8,19 +8,19 @@ export const PageNavigation = () => {
         <>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"></link>
             <div className="topnav">
-                <Link to='/login' data-testid='login-nav'>
+                <NavLink to='/login' data-testid='login-nav'>
                     LOGIN
-                </Link>
+                </NavLink>
                 <a href=" " id="mycart-count">0<i class="fa fa-shopping-cart" id="mycart-icon" data-testid="mycart-btn"></i></a>
-                <Link to='/products' data-testid='products-nav'>
+                <NavLink to='/products' data-testid='products-nav'>
                     PRODUCTS
-                </Link>
-                <Link to='/product-detail' data-testid='products-nav'>
+                </NavLink>
+                <NavLink to='/product-detail' data-testid='products-nav'>
                     DETAIL
-                </Link>
-                <Link to='/' data-testid='home-nav'>
+                </NavLink>
+                <NavLink to='/' data-testid='home-nav'>
                     HOME
-                </Link>
+                </NavLink>
             </div>
         </>
     )
