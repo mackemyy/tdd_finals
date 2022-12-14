@@ -35,7 +35,7 @@ code {
   background-repeat: no-repeat; 
 }
 
-.products-page {
+/* .products-page {
   background: url('../src/assets/bg.png');
   background-size: cover;
   width: 100%;
@@ -44,7 +44,7 @@ code {
   background-attachment: scroll;
   background-position: center;
   background-repeat: no-repeat; 
-}
+} */
 
 .product-detail-page {
   background-color: #f2f2f2;
