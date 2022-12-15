@@ -1,0 +1,327 @@
+.cart-header {
+  font-style: normal;
+  color: #F68A1E;
+  position: absolute;
+  width: 303px;
+  height: 51px;
+  left: 80px;
+  top: 80px;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 82px;
+}
+
+.contents {
+  background-color: white;
+  position: absolute;
+  width: 1714px;
+  height: 500px;
+  left: 80px;
+  top: 250px;
+}
+
+.titlebar {
+  position: absolute;
+  width: 1714px;
+  height: 40px;
+  left: 80px;
+  top: 200px;
+  padding-top: 10px;
+  background: #1C1A17;
+}
+.titlebar p {
+  display: inline;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 200px;
+  text-decoration: none;
+  font-size: 30px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.select {
+  position: absolute;
+  width: 200px;
+  height: 29px;
+  left: 20px;
+  top: 90px;
+}
+
+.select .container {
+  padding-left: 50px;
+}
+
+.cart-container {
+  position: relative;
+  text-align: center;
+  margin-bottom: 12px;
+  cursor: pointer;
+  left: 0px;
+  top: -75px;
+  font-size: 25px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.cart-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.cart-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.cart-container input:checked ~ .checkmark {
+  background-color: #F68A1E;
+}
+.cart-container input:checked ~ .checkmark::after {
+  display: block;
+}
+.cart-container .checkmark::after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-right: 20px;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 3px;
+}
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.cart-items {
+  position: absolute;
+  width: 612px;
+  height: 176px;
+  left: 25px;
+  top: 80px;
+  text-align: center;
+}
+
+.prod {
+  position: absolute;
+  width: 250px;
+  height: 150px;
+  background-color: lightgray;
+  left: 70px;
+  border-radius: 15px;
+}
+.prod img {
+  background-image: url("../src/assets/products/BakedCroissantBread.png");
+  text-indent: -9999px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 250px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+
+img {
+  display: block;
+}
+
+.prodinfo {
+  position: absolute;
+  width: 200px;
+  height: 150px;
+  top: 100px;
+  left: 300px;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  color: black;
+}
+.prodinfo .checkmark {
+  left: -305px;
+  top: 50px;
+}
+
+.qtybtn {
+  font-size: 25px;
+  text-align: center;
+}
+
+.addBtn {
+  box-sizing: border-box;
+  position: absolute;
+  width: 47px;
+  height: 45px;
+  left: 860px;
+  top: 50px;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 25px;
+}
+.addBtn:hover {
+  background-color: #F68A1E;
+  color: black;
+}
+
+.subtractBtn {
+  box-sizing: border-box;
+  position: absolute;
+  width: 47px;
+  height: 45px;
+  left: 770px;
+  top: 50px;
+  background: white;
+  border: 1px solid black;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 25px;
+}
+.subtractBtn:hover {
+  background-color: #F68A1E;
+  color: black;
+}
+
+.item-qty {
+  box-sizing: border-box;
+  position: absolute;
+  width: 47px;
+  height: 45px;
+  left: 815px;
+  top: 25px;
+  line-height: 42px;
+  background: white;
+  color: black;
+  border: 1px solid black;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.subtractBtn1 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 47px;
+  height: 45px;
+  left: 990px;
+  top: 230px;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 25px;
+}
+
+.item-qty1 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 47px;
+  height: 45px;
+  left: 1035px;
+  top: 205px;
+  line-height: 42px;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.price p {
+  position: absolute;
+  width: 167px;
+  height: 53px;
+  left: 585px;
+  top: 25px;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 52px;
+  color: #000000;
+}
+
+.total1 {
+  position: absolute;
+  width: 167px;
+  height: 53px;
+  left: 1220px;
+  top: 30px;
+  font-size: 25px;
+  line-height: 52px;
+  color: #000000;
+}
+
+.deleteBtn {
+  position: absolute;
+  width: 110px;
+  height: 45px;
+  left: 1500px;
+  top: 55px;
+  border-radius: 10px;
+  border-style: none;
+  background-color: white;
+  color: red;
+  font-size: 25px;
+}
+.deleteBtn:hover {
+  background-color: red;
+  color: white;
+}
+
+.checkoutBtn {
+  position: absolute;
+  width: 290px;
+  height: 60px;
+  left: 1350px;
+  top: 460px;
+  background-color: #F68A1E;
+  border-radius: 10px;
+  border-style: none;
+  font-size: 30px;
+  color: white;
+}
+.checkoutBtn:hover {
+  background-color: #1C1A17;
+  color: white;
+}
+
+.subtotal {
+  position: absolute;
+  width: 389px;
+  height: 60px;
+  left: 900px;
+  top: 460px;
+  font-size: 30px;
+  line-height: 8px;
+  letter-spacing: 0.055em;
+  color: #000000;
+  background: #F6F6F6;
+  border-radius: 10px;
+}
+
+.backBtn {
+  position: absolute;
+  width: 290px;
+  height: 60px;
+  left: 10px;
+  top: 460px;
+  font-size: 30px;
+  color: white;
+  background-color: #1C1A17;
+  border-radius: 10px;
+  border-style: none;
+}
+.backBtn:hover {
+  background-color: #F68A1E;
+  color: white;
+}/*# sourceMappingURL=Cart.css.map */

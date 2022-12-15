@@ -11,7 +11,14 @@ export const PageNavigation = () => {
                 <NavLink to='/login' data-testid='login-nav'>
                     LOGIN
                 </NavLink>
-                <a href=" " id="mycart-count">0<i class="fa fa-shopping-cart" id="mycart-icon" data-testid="mycart-btn"></i></a>
+                <NavLink to='/checkout' data-testid='checkout-nav'>
+                    CHECKOUT
+                </NavLink>
+                <NavLink to='/my-cart' id="mycart-count" data-testid='my-cart'>
+                    0
+                    <i class="fa fa-shopping-cart" id="mycart-icon" data-testid="mycart-btn"></i>
+                </NavLink>
+                {/* <a href=" " id="mycart-count">0<i class="fa fa-shopping-cart" id="mycart-icon" data-testid="mycart-btn"></i></a> */}
                 <NavLink to='/products' data-testid='products-nav'>
                     PRODUCTS
                 </NavLink>

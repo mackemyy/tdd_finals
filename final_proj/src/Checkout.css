@@ -1,0 +1,272 @@
+#profile-btn {
+  margin-right: 50px;
+  padding-bottom: 3px;
+}
+
+#mycart-btn.active {
+  color: orange;
+}
+
+.checkoutForm {
+  position: absolute;
+  width: 1350px;
+  height: 650px;
+  margin-left: 180px;
+  top: 100px;
+  background-color: white;
+  border-radius: 35px;
+  box-shadow: 0 0 10px black;
+  font-family: "Poppins";
+}
+
+.check-space {
+  margin-left: 65px;
+  margin-bottom: 20px;
+}
+
+.checkout-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 82px;
+  color: orange;
+  padding-left: 50px;
+  padding-top: 35px;
+}
+
+.column {
+  width: 45%;
+  padding-left: 55px;
+}
+
+#col1 {
+  float: left;
+}
+
+#col2 {
+  float: right;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.checkout-subtitle {
+  top: 20px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 38px;
+  color: orange;
+}
+
+.line {
+  height: 1px;
+  background: black;
+  width: 83%;
+  float: left;
+}
+
+#ship-details {
+  padding: 10px;
+  margin-top: 20px;
+  height: 90px;
+  width: 455px;
+  background-color: rgb(217, 217, 217);
+  border-radius: 10px;
+}
+
+.c-ship {
+  float: left;
+  font-weight: 555;
+  font-size: 120%;
+}
+
+#c1 {
+  padding-left: 8px;
+}
+
+#c2 {
+  padding-right: 10px;
+  float: right;
+}
+
+#editShip-btn {
+  color: black;
+  float: right;
+}
+
+.checkout-subtitle2 {
+  font-style: italic;
+  margin-bottom: 5px;
+  color: rgb(102, 102, 102);
+}
+
+.pay-info {
+  width: 420px;
+  height: 46px;
+  background: rgb(217, 217, 217);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#john {
+  font-size: 18px;
+  padding: 10px;
+}
+
+.mini-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#mcol1 {
+  float: left;
+}
+
+#mcol2 {
+  float: right;
+  margin-right: 188px;
+}
+
+#mcol3 {
+  float: right;
+}
+
+#expDate {
+  width: 180px;
+  height: 46px;
+}
+
+#john1 {
+  font-size: 18px;
+  padding: 10px;
+  font-style: italic;
+  color: rgb(102, 102, 102);
+}
+
+#editPay-btn {
+  color: black;
+  float: right;
+  position: absolute;
+  margin-left: 200px;
+  margin-top: 53px;
+}
+
+.cart-card {
+  width: 450px;
+  height: 80px;
+  background: rgb(217, 217, 217);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+#croissant {
+  background-image: url("../src/assets/products/BakedCroissantBread.png");
+  width: 80px;
+  height: 70px;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  background-color: white;
+  background-position: center;
+  background-size: contain;
+}
+
+#slicedbread {
+  background-image: url("../src/assets/products/ClassicSlicedBread.png");
+  width: 80px;
+  height: 70px;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  background-color: white;
+  background-position: center;
+  background-size: contain;
+}
+
+.cart-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#pic-col1 {
+  margin-top: 5px;
+  float: left;
+  width: 20%;
+}
+
+#pic-col2 {
+  font-weight: 600;
+  float: right;
+  width: 50%;
+  position: absolute;
+  margin-left: 95px;
+  margin-top: 5px;
+}
+
+#pic-details {
+  margin-right: 150px;
+}
+
+#pic-col3 {
+  position: absolute;
+  width: 30%;
+  margin-left: 320px;
+  margin-top: 28px;
+  font-style: italic;
+  color: rgb(102, 102, 102);
+}
+
+.pay-details {
+  width: 450px;
+  height: 100px;
+  background: rgb(217, 217, 217);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+#pay-col1 {
+  float: left;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+#pay-col2 {
+  float: right;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+#bold {
+  font-weight: 600;
+}
+
+.placeOrderBtn {
+  margin-right: 120px;
+  float: right;
+  width: 250px;
+  height: 60px;
+  left: 170px;
+  top: 460px;
+  background: orange;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 52px;
+  letter-spacing: 0.055em;
+  cursor: pointer;
+}
+.placeOrderBtn:hover {
+  background-color: white;
+  border: 2px solid;
+  color: orange;
+}/*# sourceMappingURL=Checkout.css.map */
