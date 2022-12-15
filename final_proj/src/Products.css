@@ -1,13 +1,29 @@
-#header {
-  background: url("../src/assets/login-bg.png");
-  width: auto;
-  height: 20rem;
-  margin: 0 auto;
-  padding-top: 150px;
-  position: relative;
-  background-position: center;
-  background-repeat: "no-repeat";
-  background-size: cover;
+body, html {
+  scroll-padding-top: 50px;
+}
+
+.prod-header {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  color: white;
+  left: 0%;
+  top: 40%;
+}
+
+#main-title {
+  font-family: "Port Lligat Slab";
+  font-size: 75px;
+}
+
+#sub-info {
+  font-family: "Poppins";
+  font-size: 20px;
+  width: 45%;
+  padding-left: 26%;
+  position: absolute;
+  margin: auto;
+  text-align: center;
 }
 
 #header-title {
@@ -17,30 +33,36 @@
   margin: auto;
 }
 
-#sub-info {
-  color: white;
-  width: 500px;
-  height: 50px;
-  font-family: "Poppins";
-  font-size: 20px;
-  margin: auto;
-  text-align: center;
+.parallax {
+  background-image: url("../src/assets/bg.png");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.menu-box {
+  background-color: white;
+  height: 1400px;
 }
 
 #title {
-  color: white;
+  color: rgba(0, 0, 0, 0.835);
   margin-left: 150px;
-  margin-top: 100px;
+  padding-top: 3%;
   font-size: 38px;
   font-family: "Poppins";
+  font-weight: 400;
 }
 
 #products {
-  width: 100%;
+  width: 1763.08px;
   height: 500px;
   display: float;
   padding-left: 100px;
-  padding-top: 50px;
+  padding-top: 30px;
+  justify-content: center;
 }
 
 #content {
@@ -55,14 +77,19 @@
 
 #cards {
   padding-top: 50px;
-  width: 250px;
-  height: 220px;
+  width: 310px;
+  height: 230px;
   background-color: #f0f0f0;
-  margin-top: 30px;
-  margin-left: 50px;
+  margin-top: 3%;
+  margin-left: 10%;
   margin-bottom: 50px;
   float: left;
   border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+#cards:hover {
+  transform: scale(1.2);
 }
 
 #img-container {
@@ -78,14 +105,15 @@
 #product-name {
   width: 100%;
   height: 50px;
+  color: rgba(0, 0, 0, 0.835);
 }
 
 #product1 {
   background: url("../src/assets/products/BakedCroissantBread.png");
   background-size: cover;
   background-repeat: "no-repeat";
-  width: 220px;
-  height: 120px;
+  width: 235px;
+  height: 125px;
   margin: 0 auto;
 }
 
@@ -93,8 +121,8 @@
   background: url("../src/assets/products/ChocolateLoaf.png");
   background-size: cover;
   background-repeat: "no-repeat";
-  width: 220px;
-  height: 120px;
+  width: 235px;
+  height: 125px;
   margin: 0 auto;
 }
 
@@ -102,8 +130,8 @@
   background: url("../src/assets/products/ClassicLoaf.png");
   background-size: cover;
   background-repeat: "no-repeat";
-  width: 220px;
-  height: 120px;
+  width: 235px;
+  height: 125px;
   margin: 0 auto;
 }
 
@@ -111,8 +139,8 @@
   background: url("../src/assets/products/PrawnBun.png");
   background-size: cover;
   background-repeat: "no-repeat";
-  width: 220px;
-  height: 120px;
+  width: 235px;
+  height: 125px;
   margin: 0 auto;
 }
 
@@ -120,8 +148,8 @@
   background: url("../src/assets/products/BriocheFlowerBread.png");
   background-size: cover;
   background-repeat: "no-repeat";
-  width: 220px;
-  height: 120px;
+  width: 235px;
+  height: 125px;
   margin: 0 auto;
 }
 
@@ -129,8 +157,8 @@
   background: url("../src/assets/products/PanePugliese.png");
   background-size: cover;
   background-repeat: "no-repeat";
-  width: 220px;
-  height: 120px;
+  width: 235px;
+  height: 125px;
   margin: 0 auto;
 }
 
@@ -138,8 +166,8 @@
   background: url("../src/assets/products/ClassicSlicedBread.png");
   background-size: cover;
   background-repeat: "no-repeat";
-  width: 220px;
-  height: 120px;
+  width: 235px;
+  height: 125px;
   margin: 0 auto;
 }
 
@@ -147,8 +175,8 @@
   background: url("../src/assets/products/PanePugliese.png");
   background-size: cover;
   background-repeat: "no-repeat";
-  width: 220px;
-  height: 120px;
+  width: 235px;
+  height: 125px;
   margin: 0 auto;
 }
 
@@ -156,8 +184,8 @@
   background: url("../src/assets/products/Pagnottadeldittaino.png");
   background-size: cover;
   background-repeat: "no-repeat";
-  width: 220px;
-  height: 120px;
+  width: 235px;
+  height: 125px;
   margin: 0 auto;
 }
 
@@ -165,8 +193,8 @@
   background: url("../src/assets/products/PanePugliese.png");
   background-size: cover;
   background-repeat: "no-repeat";
-  width: 220px;
-  height: 120px;
+  width: 235px;
+  height: 125px;
   margin: 0 auto;
 }
 
@@ -174,8 +202,8 @@
   background: url("../src/assets/products/PanePugliese.png");
   background-size: cover;
   background-repeat: "no-repeat";
-  width: 220px;
-  height: 120px;
+  width: 235px;
+  height: 125px;
   margin: 0 auto;
 }
 
@@ -183,8 +211,8 @@
   background: url("../src/assets/products/PanePugliese.png");
   background-size: cover;
   background-repeat: "no-repeat";
-  width: 220px;
-  height: 120px;
+  width: 235px;
+  height: 125px;
   margin: 0 auto;
 }
 
