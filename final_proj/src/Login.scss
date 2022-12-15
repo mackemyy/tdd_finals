@@ -24,34 +24,39 @@ $border-rad10: 10px;
 }
 
 .header {
+    display: block;
     position: absolute;
-    top: 60px;
+    margin-top: 9%;
     font-family: $main-font;
+    width: 100%;
 }
 
 .login_title {
+    position: absolute;
     font-style: normal;
-    font-weight: 600;
     font-size: 45px;
-    padding-left: 95px;
-    left: 80px;
-    line-height: 82px;
     color: $orange;
+    font-weight: 600;
+    padding-left: 10%;
+    line-height: 82px;
 }
 
 .login_subtitle {
-    top: 20px;
-    font-size: 20px;
+    position: absolute;
     font-style: normal;
-    font-weight: 400;
     line-height: 38px;
     color: $black;
+    font-size: 20px;
+    padding-left: 11%;
+    padding-top: 11%;
+    font-weight: 400;
+    
 }
 
 .input_fields {
     position: absolute;
-    left: 100px;
-    top: 230px;
+    left: 15%;
+    top: 36%;
     width: 80%;
     height: 30px;
 }
@@ -64,7 +69,7 @@ input:focus {
 
 label {
     color: $black;
-    // font-size: 18px;
+    font-family: $main-font;
     text-align: start;
 
 }
@@ -72,28 +77,30 @@ label {
 #email {
     width: 85%;
     height: 45px;
+    margin-bottom: 5%;
     border-radius: $border-rad5;
     border-color: $grey;
     border: 0;
+    
     background-color: $grey;
 }
 
 #password {
     width: 85%;
     height: 45px;
+    margin-bottom: 3%;
     border-radius: $border-rad5;
     border-color: $grey;
     border: 0;
     background-color: $grey;
 }
 
-.fa-eye {
-    position: absolute;
-    top: 136px;
-    right: 18%;
-    cursor: pointer;
-    color: $black;
-}
+// .fa-eye {
+//     position: absolute;
+//     right: 18%;
+//     cursor: pointer;
+//     color: $black;
+// }
 
 .loginBtn {
     position: absolute;
