@@ -6,6 +6,7 @@ import Login from './Login';
 import { PageNavigation } from './PageNavigation';
 import ShopProvider from './context/shopProvider';
 import ProductDetail from './ProductDetail';
+import Cart from './Cart';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route exact path='/product-detail' element={< ProductDetail />}></Route>
             <Route exact path='/products' element={< Products />}></Route>
             <Route exact path='/login' element={< Login />}></Route>
+            <Route exact path='/my-cart' element={< Cart />}></Route>
         </Routes>
       </Router>
 

@@ -39,6 +39,17 @@ html {
   background-repeat: no-repeat; 
 }
 
+.my-cart-page {
+  background-color: white;
+  background-size: cover;
+  width: 100%;
+  height: 100%; 
+  position: absolute;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;  
+}
+
 .products-page {
   background-size: cover;
   width: 100%;
