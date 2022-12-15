@@ -19,11 +19,19 @@ const ShopProvider = (props) => {
         })
     }
 
+    const deleteItem = (itemID) => {
+        dispatch({
+            type: 'deleteItem',
+            payload: itemID
+        })
+    }
+
     return(
         <>
             <ShopContext.Provider value={{
                 items: state.items,
                 addItem,
+                deleteItem,
             }}>{props.children}</ShopContext.Provider>
         </>
     )

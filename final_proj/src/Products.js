@@ -3,16 +3,21 @@ import ShopContext from "./context/shop_context";
 import './Products.css'
 
 const Products = () => {
-    const {addItem, items} = useContext(ShopContext);
+    const {addItem, deleteItem, items} = useContext(ShopContext);
 
     const onAddItem = () => {
         var newItem = {
             id: 1,
-            name: "croissant",
+            name: "ensaymada",
             price: 65,
         }
         addItem(newItem);
     }
+
+    const onDeleteItem = () => {
+        deleteItem(1);
+    }
+
     return (
         <>
         <div className="products-page">
@@ -26,14 +31,16 @@ const Products = () => {
         <div className="menu-box">
             <div id="title"><p>Menu</p></div>
             <div id="products">
-                <div id="cards" onClick={() => alert("Hello from here")}>
+                <div id="cards" onClick={onAddItem}>
                     <div class="img-container" id="product1"></div>
                     <div id="product-name">
                     <p id="prod-info">Baked Croissant Bread</p>
-                    <p></p>
+                    {items.map((item) => (
+                        <p>[{item.id}] : {item.name} - {item.price}</p>
+                    ))}
                     <p id="price">75.00 PHP</p></div>
                 </div>
-                <div id="cards">
+                <div id="cards" onClick={onDeleteItem}>
                     <div class="img-container" id="product2"></div>
                     <div id="product-name">
                     <p id="prod-info">Chocolate Loaf</p>
