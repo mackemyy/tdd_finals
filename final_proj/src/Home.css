@@ -1,0 +1,54 @@
+#loginbtn {
+  margin-right: 50px;
+}
+
+.home_title {
+  font-family: "Port Lligat Slab";
+  color: white;
+  position: absolute;
+  width: 773px;
+  height: 136px;
+  left: 100px;
+  top: 210px;
+  font-weight: 400;
+  font-size: 126.727px;
+  line-height: 136px;
+}
+
+.home_subtitle {
+  font-family: "Poppins";
+  text-align: left;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 40px;
+  position: absolute;
+  width: 800px;
+  height: 225px;
+  left: 100px;
+  top: 340px;
+  color: white;
+}
+
+.discoverBtn {
+  background-color: transparent;
+  border-color: #F68A1E;
+  border-radius: 10px;
+  border-width: 3px;
+  color: white;
+  position: absolute;
+  width: 300px;
+  height: 80px;
+  left: 100px;
+  top: 600px;
+  font-family: "Poppins";
+  font-size: 20px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.discoverBtn:hover {
+  background-color: white;
+  border-color: none;
+  color: #F68A1E;
+  font-weight: 500;
+}/*# sourceMappingURL=Home.css.map */

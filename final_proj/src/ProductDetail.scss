@@ -1,0 +1,186 @@
+$main-font: 'Poppins';
+$second-font: 'Port Lligat Slab';
+$orange: #F68A1E;
+$white: white;
+$dirty-white: #f2f2f2;
+$grey: #D9D9D9;
+$black: black;
+$border-rad5: 5px;
+$border-rad10: 10px;
+$custom-black: rgba(0, 0, 0, 0.649);
+$custom-blue: rgba(0, 0, 255, 0.708);
+$grey2: #666666;
+
+.topnav-bg {
+    width: 100%;
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.893);
+}
+
+.breadcrumbs {
+    float: left;
+    font-family: $main-font;
+    font-size: 20px;
+    margin-left: 80px;
+    margin-top: 30px;
+}
+
+.child {
+    display: inline-block;
+    padding: 20px;
+}
+
+#bc-menu {
+    text-decoration: none;
+    color: rgba(0, 0, 255, 0.708);
+}
+
+#bc-prod-details {
+    color: $custom-black
+}
+
+#arrow {
+    color: $black;
+}
+
+.prod-details {
+    display: block;
+}
+
+.img-placeholder {
+    float: left;
+    display: block;
+    clear: both;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+.container {
+    width: 700px;
+    height: 430px;  
+    border-radius: 25px;
+    background-color: $grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+        width: 600px;
+    }
+}
+
+.txt-placeholder {
+    float: right;
+    margin-left: 45%;
+    margin-top: 9.5%;
+    color: $black;
+    font-family: $main-font;
+    justify-content: left;
+    position: absolute;
+}
+
+.txt {
+    justify-content: left;
+    padding-bottom: 1%;
+}
+
+#pd-title {
+    font-size: 45px;
+}
+
+#pd-subtitle {
+    font-size: 25px;
+    color: $grey2;
+}
+
+#pd-price {
+    font-size: 40px;
+    color: $orange;
+}
+
+#pd-stocks {
+    font-size: 23px;
+    color: $grey2;
+    padding-top: 20px;
+}
+
+#qty-text {
+    font-size: 18px;
+}
+
+  .qty {
+    color: $black;
+    width: 25%;
+  }
+
+.wrapper{
+    height: 30px;
+    // min-width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $white;
+    border-radius: 5px;
+    border: 1px solid $black;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  }
+  .wrapper span{
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    cursor: pointer;
+    user-select: none;
+  }
+  .wrapper span.num{
+    font-size: 15px;
+    border-right: 2px solid rgba(0,0,0,0.2);
+    border-left: 2px solid rgba(0,0,0,0.2);
+    pointer-events: none;
+  }
+
+  .buttons {
+    display: flex;
+    float: right;
+    padding-top: 5%;
+    color: $white;
+    padding-right: 18%;
+
+  }
+
+  .btns {
+    width: 250px;
+    height: 55px;
+    text-align: center;
+    font-family: $main-font;
+    border-radius: $border-rad5;
+    font-size: 20px;
+    transition: transform .2s;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+  }
+
+  #backToMenu-btn {
+    background-color: $grey2;
+    color: $white;
+    position: absolute;
+    cursor: pointer;
+    font-family: 500px;
+    border: none;
+    
+  }
+
+  #addToCart-btn {
+    background-color: $orange;
+    color: $white;
+    position: absolute;
+    border: none;
+    border-radius: $border-rad5;
+    cursor: pointer;
+    margin-left: 55%;
+    float: right;
+  }
+
+
