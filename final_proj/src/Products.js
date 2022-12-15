@@ -3,15 +3,15 @@ import ShopContext from "./context/shop_context";
 import './Products.css'
 
 const Products = () => {
-    const {decStocks, prods} = useContext(ShopContext);
+    const {addItem, items} = useContext(ShopContext);
 
-    const onDecrement = () => {
-        decStocks(1);
-        console.log('tet');
-        const stock = prods.find(prods => {
-            return prods.id === 1;
-          });
-        console.log(stock);
+    const onAddItem = () => {
+        var newItem = {
+            id: 1,
+            name: "croissant",
+            price: 65,
+        }
+        addItem(newItem);
     }
     return (
         <>
@@ -26,10 +26,11 @@ const Products = () => {
         <div className="menu-box">
             <div id="title"><p>Menu</p></div>
             <div id="products">
-                <div id="cards">
+                <div id="cards" onClick={() => alert("Hello from here")}>
                     <div class="img-container" id="product1"></div>
                     <div id="product-name">
                     <p id="prod-info">Baked Croissant Bread</p>
+                    <p></p>
                     <p id="price">75.00 PHP</p></div>
                 </div>
                 <div id="cards">
