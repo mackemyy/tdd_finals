@@ -1,5 +1,6 @@
 import { render, screen, cleanup } from "@testing-library/react";
 import App from './App';
+import Login from './Login';
 
 afterEach(cleanup);
 
@@ -18,7 +19,7 @@ describe("Check Home screen", ()=>{
 
     it("check if there is a button for cart",()=>{
     render(<App />); 
-		const btn_about = screen.getByTestId("cart-nav");
+		const btn_about = screen.getByTestId("mycart-btn");
 	  expect(btn_about).toBeInTheDocument();
 	});
 
@@ -28,6 +29,12 @@ describe("Check Home screen", ()=>{
 	  expect(btn_products).toBeInTheDocument();
 	});
 
+	it("check if there is a button for products detail navigate",()=>{
+		render(<App />);
+			const btn_products = screen.getByTestId("productsdetail-nav");
+		  expect(btn_products).toBeInTheDocument();
+	});
+
     it("check if there is a button for login page navigate",()=>{
     render(<App />);
 		const btn_login = screen.getByTestId("login-nav");
@@ -35,30 +42,30 @@ describe("Check Home screen", ()=>{
 	});
 })
 
-// ////////////////TEST FOR LOGIN SCREEN
-// describe("Check Login screen", ()=>{
-// 	it("check if there is an email input",()=>{
-//     render(<Home/>);
-// 		const input = screen.getByTestId("email-input");
-// 		expect(input).toBeInTheDocument();
+////////////////TEST FOR LOGIN SCREEN
+describe("Check Login screen", ()=>{
+	it("check if there is an email input",()=>{
+    render(<Login />);
+		const input = screen.getByTestId("email-input");
+		expect(input).toBeInTheDocument();
 
-// 		expect(input).toHaveAttribute("type", "text");
-// 	});
+		expect(input).toHaveAttribute("type", "text");
+	});
 
-//     it("check if there is a password input",()=>{
-//     render(<Home/>);
-// 		const input = screen.getByTestId("password-input");
-// 		expect(input).toBeInTheDocument();
+    it("check if there is a password input",()=>{
+    render(<Login />);
+		const input = screen.getByTestId("password-input");
+		expect(input).toBeInTheDocument();
 
-// 		expect(input).toHaveAttribute("type", "password");
-// 	});
+		expect(input).toHaveAttribute("type", "password");
+	});
 
-//     it("check if there is a button for logging in",()=>{
-//     render(<Home/>);
-// 		const btn_login = screen.getByTestId("login-input-btn");
-// 	  expect(btn_login).toBeInTheDocument();
-// 	});
-// })
+    it("check if there is a button for logging in",()=>{
+    render(<Login />);
+		const btn_login = screen.getByTestId("login-btn");
+	  expect(btn_login).toBeInTheDocument();
+	});
+})
 
 
 ////////////////REACT TEST JEST FOR BUTTONS EXAMPLE 
