@@ -11,6 +11,9 @@ export const PageNavigation = () => {
                 <NavLink to='/login' data-testid='login-nav'>
                     LOGIN
                 </NavLink>
+                <NavLink to='/checkout' data-testid='checkout-nav'>
+                    CHECKOUT
+                </NavLink>
                 <NavLink to='/my-cart' id="mycart-count" data-testid='my-cart'>
                     0
                     <i class="fa fa-shopping-cart" id="mycart-icon" data-testid="mycart-btn"></i>
