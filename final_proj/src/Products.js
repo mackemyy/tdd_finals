@@ -3,27 +3,27 @@ import ShopContext from "./context/shop_context";
 import './Products.css'
 
 const Products = () => {
-    const {decStocks, prods} = useContext(ShopContext);
+    // const {decStocks, prods} = useContext(ShopContext);
 
-    const onDecrement = () => {
-        decStocks(1);
-        console.log('tet');
-        const stock = prods.find(prods => {
-            return prods.id === 1;
-          });
-        console.log(stock);
-    }
+    // const onDecrement = () => {
+    //     decStocks(1);
+    //     console.log('tet');
+    //     const stock = prods.find(prods => {
+    //         return prods.id === 1;
+    //       });
+    //     console.log(stock);
+    // }
     return (
         <>
-        <div className="products-page">
+        <div className="products-page" data-testid="products-page-test">
             {/* <link link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&family=Port+Lligat+Slab&display=swap" rel="stylesheet"></link> */}
-        <div className="prod-header">
+        <div className="prod-header" data-testid="prodheader-test">
             <div id="main-title">Our Products</div>
             <div id="sub-info">You Kneed This has been baking delicious and affordable breads for Filipinos for almost four decades. No merienda or almusal is complete without bread! <br/> Scroll down to see our Menu.</div>
         </div> 
 
-        <div className="parallax"></div>
-        <div className="menu-box">
+        <div className="parallax" data-testid="parallax-test"></div>
+        <div className="menu-box" data-testid="menu-box-test">
             <div id="title"><p>Menu</p></div>
             <div id="products">
                 <div id="cards">

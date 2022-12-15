@@ -1,6 +1,7 @@
 import { render, screen, cleanup } from "@testing-library/react";
 import App from './App';
 import Login from './Login';
+import Products from "./Products";
 
 afterEach(cleanup);
 
@@ -19,7 +20,7 @@ describe("Check Home screen", ()=>{
 
     it("check if there is a button for cart",()=>{
     render(<App />); 
-		const btn_about = screen.getByTestId("mycart-btn");
+		const btn_about = screen.getByTestId("my-cart");
 	  expect(btn_about).toBeInTheDocument();
 	});
 
@@ -27,12 +28,6 @@ describe("Check Home screen", ()=>{
     render(<App />);
 		const btn_products = screen.getByTestId("products-nav");
 	  expect(btn_products).toBeInTheDocument();
-	});
-
-	it("check if there is a button for products detail navigate",()=>{
-		render(<App />);
-			const btn_products = screen.getByTestId("productsdetail-nav");
-		  expect(btn_products).toBeInTheDocument();
 	});
 
     it("check if there is a button for login page navigate",()=>{
@@ -67,6 +62,32 @@ describe("Check Login screen", ()=>{
 	});
 })
 
+////////////////TEST FOR PRODUCTS PAGE
+describe("Check Products page screen", ()=>{
+	it("check if there is a products page",()=>{
+    render(<Products />);
+		const input = screen.getByTestId("products-page-test");
+		expect(input).toBeInTheDocument();
+	});
+
+    it("check if there is a header",()=>{
+    render(<Products />);
+		const input = screen.getByTestId("prodheader-test");
+		expect(input).toBeInTheDocument();
+	});
+
+    it("check if there is a parallax",()=>{
+    render(<Products />);
+		const input = screen.getByTestId("parallax-test");
+	  	expect(input).toBeInTheDocument();
+	});
+
+	it("check if there is a menu of products",()=>{
+		render(<Products />);
+			const input = screen.getByTestId("menu-box-test");
+			  expect(input).toBeInTheDocument();
+		});
+})
 
 ////////////////REACT TEST JEST FOR BUTTONS EXAMPLE 
 
