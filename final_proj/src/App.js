@@ -11,13 +11,13 @@ import Checkout from './Checkout';
 
 
 function App() {
-const {cart}=CartState ();
+// const {cart}=CartState ();
 
 
 
   return (
 <ShopProvider>
-<BrowserRouter>
+{/* <BrowserRouter> */}
 
     <div className="App">
       <header className="App-header">
@@ -34,7 +34,7 @@ const {cart}=CartState ();
       </Router>
     </header>
     </div>
-    </BrowserRouter>
+    {/* </BrowserRouter> */}
     </ShopProvider>
   );
 }
