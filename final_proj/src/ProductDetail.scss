@@ -51,8 +51,8 @@ $grey2: #666666;
     float: left;
     display: block;
     clear: both;
-    margin-left: 80px;
-    margin-top: 70px;
+    margin-left: 5%;
+    margin-top: 3%;
 }
 
 .container {
@@ -71,18 +71,17 @@ $grey2: #666666;
 
 .txt-placeholder {
     float: right;
-    margin-right: 330px;
-    margin-top: 70px;
+    margin-left: 45%;
+    margin-top: 9.5%;
     color: $black;
     font-family: $main-font;
     justify-content: left;
-    align-items: flex-start;
-    position: relative;
+    position: absolute;
 }
 
 .txt {
     justify-content: left;
-    padding: 0;
+    padding-bottom: 1%;
 }
 
 #pd-title {
@@ -100,17 +99,23 @@ $grey2: #666666;
 }
 
 #pd-stocks {
-    font-size: 25px;
+    font-size: 23px;
     color: $grey2;
+    padding-top: 20px;
 }
 
 #qty-text {
     font-size: 18px;
 }
 
+  .qty {
+    color: $black;
+    width: 25%;
+  }
+
 .wrapper{
     height: 30px;
-    min-width: 50px;
+    // min-width: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -134,14 +139,48 @@ $grey2: #666666;
     pointer-events: none;
   }
 
-// .float-container {
-//     border: 3px solid #fff;
-//     padding: 20px;
-// }
+  .buttons {
+    display: flex;
+    float: right;
+    padding-top: 5%;
+    color: $white;
+    padding-right: 18%;
 
-// .float-child {
-//     width: 50%;
-//     float: left;
-//     padding: 20px;
-//     border: 2px solid red;
-// }  
+  }
+
+  .btns {
+    width: 250px;
+    height: 55px;
+    text-align: center;
+    font-family: $main-font;
+    border-radius: $border-rad5;
+    font-size: 20px;
+    transition: transform .2s;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+  }
+
+  #backToMenu-btn {
+    background-color: $grey2;
+    color: $white;
+    position: absolute;
+    cursor: pointer;
+    font-family: 500px;
+    border: none;
+    
+  }
+
+  #addToCart-btn {
+    background-color: $orange;
+    color: $white;
+    position: absolute;
+    border: none;
+    border-radius: $border-rad5;
+    cursor: pointer;
+    margin-left: 55%;
+    float: right;
+  }
+
+

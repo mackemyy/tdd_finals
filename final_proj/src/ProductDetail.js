@@ -31,6 +31,10 @@ const ProductDetail = () => {
                             <span class="plus">+</span>
                         </div>
                     </div>
+                    <div className="buttons">
+                        <button id="backToMenu-btn" className="btns" data-testid="backToMenu-btn">Back To Menu</button>
+                        <button id="addToCart-btn" className="btns" data-testid="addToCart-btn">Add to Cart</button>
+                    </div>
                 </div>
                 {/* <div class="float-container">
                     <div class="float-child">

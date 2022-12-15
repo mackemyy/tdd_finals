@@ -38,8 +38,8 @@
   float: left;
   display: block;
   clear: both;
-  margin-left: 80px;
-  margin-top: 70px;
+  margin-left: 5%;
+  margin-top: 3%;
 }
 
 .container {
@@ -57,18 +57,17 @@
 
 .txt-placeholder {
   float: right;
-  margin-right: 330px;
-  margin-top: 70px;
+  margin-left: 45%;
+  margin-top: 9.5%;
   color: black;
   font-family: "Poppins";
   justify-content: left;
-  align-items: flex-start;
-  position: relative;
+  position: absolute;
 }
 
 .txt {
   justify-content: left;
-  padding: 0;
+  padding-bottom: 1%;
 }
 
 #pd-title {
@@ -86,17 +85,22 @@
 }
 
 #pd-stocks {
-  font-size: 25px;
+  font-size: 23px;
   color: #666666;
+  padding-top: 20px;
 }
 
 #qty-text {
   font-size: 18px;
 }
 
+.qty {
+  color: black;
+  width: 25%;
+}
+
 .wrapper {
   height: 30px;
-  min-width: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,4 +127,45 @@
   border-right: 2px solid rgba(0, 0, 0, 0.2);
   border-left: 2px solid rgba(0, 0, 0, 0.2);
   pointer-events: none;
+}
+
+.buttons {
+  display: flex;
+  float: right;
+  padding-top: 5%;
+  color: white;
+  padding-right: 18%;
+}
+
+.btns {
+  width: 250px;
+  height: 55px;
+  text-align: center;
+  font-family: "Poppins";
+  border-radius: 5px;
+  font-size: 20px;
+  transition: transform 0.2s;
+}
+.btns:hover {
+  transform: scale(1.2);
+}
+
+#backToMenu-btn {
+  background-color: #666666;
+  color: white;
+  position: absolute;
+  cursor: pointer;
+  font-family: 500px;
+  border: none;
+}
+
+#addToCart-btn {
+  background-color: #F68A1E;
+  color: white;
+  position: absolute;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 55%;
+  float: right;
 }/*# sourceMappingURL=ProductDetail.css.map */
