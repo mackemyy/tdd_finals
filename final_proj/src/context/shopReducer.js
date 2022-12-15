@@ -2,14 +2,10 @@
 const shopReducer = (state, action) => {
     const{type, payload} = action;
     switch(type) {
-        case 'decrementStocks':
+        case 'addItem':
             return {
                 ...state,
-                prods: state.prods.map(prod => 
-                    prod.id === payload 
-                    ? {...prod, stockAvail: prod.stockAvail=-1} 
-                    : prod
-                ),
+                items: [...state.items, payload]
             }
         default:
             return state;

@@ -1,29 +1,29 @@
 import React, { useReducer } from "react";
 import ShopContext from "./shop_context";
 import shopReducer from "./shopReducer";
-import allProducts from "../components/product";
+//import allProducts from "../components/product";
 
 
 
 const ShopProvider = (props) => {
     const initialState = {
-        prods: allProducts,
+        items: [],
     };
 
     const [state, dispatch] = useReducer(shopReducer, initialState);
 
-    const decStocks = (prodID) => {
+    const addItem = (item) => {
         dispatch({
-            type: 'decrementStocks',
-            payload: prodID
+            type: 'addItem',
+            payload: item
         })
     }
 
     return(
         <>
             <ShopContext.Provider value={{
-                prods: state.allProducts,
-                decStocks,
+                items: state.items,
+                addItem,
             }}>{props.children}</ShopContext.Provider>
         </>
     )
