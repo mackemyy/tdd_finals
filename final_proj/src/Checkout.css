@@ -9,7 +9,7 @@
 
 .checkoutForm {
   position: absolute;
-  width: 1350px;
+  width: 80%;
   height: 650px;
   margin-left: 180px;
   top: 100px;
@@ -25,13 +25,13 @@
 }
 
 .checkout-title {
-  font-style: normal;
+  font-style: "Poppins";
   font-weight: 600;
   font-size: 45px;
   line-height: 82px;
   color: orange;
   padding-left: 50px;
-  padding-top: 35px;
+  padding-top: 18px;
 }
 
 .column {
@@ -69,39 +69,47 @@
   float: left;
 }
 
-#ship-details {
-  padding: 10px;
-  margin-top: 20px;
-  height: 90px;
-  width: 455px;
-  background-color: rgb(217, 217, 217);
-  border-radius: 10px;
-}
-
 .c-ship {
   float: left;
-  font-weight: 555;
-  font-size: 120%;
 }
 
 #c1 {
-  padding-left: 8px;
+  width: 40%;
 }
 
 #c2 {
-  padding-right: 10px;
-  float: right;
+  width: 60%;
 }
 
-#editShip-btn {
-  color: black;
-  float: right;
+#contact-no {
+  font-size: 18px;
+  padding: 10px;
+  width: 80%;
+  height: 23px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border-color: #D9D9D9;
+  border: 0;
+  background-color: #D9D9D9;
 }
 
-.checkout-subtitle2 {
+#email-ship {
+  font-size: 18px;
+  padding: 10px;
+  width: 67%;
+  height: 23px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border-color: #D9D9D9;
+  border: 0;
+  background-color: #D9D9D9;
+}
+
+.subtitle2 {
   font-style: italic;
   margin-bottom: 5px;
   color: rgb(102, 102, 102);
+  margin-right: 100px;
 }
 
 .pay-info {
@@ -115,45 +123,30 @@
 #john {
   font-size: 18px;
   padding: 10px;
+  width: 55%;
+  height: 23px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border-color: #D9D9D9;
+  border: 0;
+  background-color: #D9D9D9;
 }
 
-.mini-row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-#mcol1 {
-  float: left;
-}
-
-#mcol2 {
-  float: right;
-  margin-right: 188px;
-}
-
-#mcol3 {
-  float: right;
+#ship-info {
+  font-size: 18px;
+  padding: 10px;
+  width: 80%;
+  height: 23px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border-color: #D9D9D9;
+  border: 0;
+  background-color: #D9D9D9;
 }
 
 #expDate {
   width: 180px;
   height: 46px;
-}
-
-#john1 {
-  font-size: 18px;
-  padding: 10px;
-  font-style: italic;
-  color: rgb(102, 102, 102);
-}
-
-#editPay-btn {
-  color: black;
-  float: right;
-  position: absolute;
-  margin-left: 200px;
-  margin-top: 53px;
 }
 
 .cart-card {

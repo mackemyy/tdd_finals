@@ -4,10 +4,11 @@ import './Checkout.css';
 const Checkout = () => {
     return(
         <>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Port+Lligat+Slab"></link>
             <div className="checkout-page">
                 <div className="checkoutForm">
                     <div className ="check-space">
-                        <div className="header">
+                        <div className="header-checkout">
                             <div className="checkout-title">Checkout</div>
                         </div>
 
@@ -15,7 +16,21 @@ const Checkout = () => {
                             <div className="column" id ="col1">
                                 <div className="checkout-subtitle">Shipping Address</div>
                                 <hr className = "line"/>
-                                <div id = "ship-details">
+                                <div className = "subtitle2">Name</div>
+                                    <input type = "text" id ="ship-info"></input>
+                                <div className = "subtitle2">Address</div>
+                                    <input type = "text" id ="ship-info"></input>
+                                <div className ="r-ship"> 
+                                    <div className ="c-ship" id = "c1">
+                                        <div className = "subtitle2">Contact No.</div>
+                                            <input type = "text" id ="contact-no"></input>
+                                    </div>
+                                    <div className ="c-ship" id = "c2">
+                                        <div className = "subtitle2">Email Address</div>
+                                            <input type = "text" id ="email-ship"></input>
+                                    </div>
+                                </div>
+                                {/* <div id = "ship-details">
                                 <div className ="r-ship"> 
                                     <div className ="c-ship" id = "c1">
                                         John M. Doe<br/>
@@ -29,16 +44,20 @@ const Checkout = () => {
                                             <i className="fa fa-pencil-square fa-lg" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
-                                </div>
+                                </div> */}
+                                <br/>
                                 <br/>
                                 <div className="checkout-subtitle">Payment Information</div>
                                 <hr className = "line"/><br/>
                                 <div className = "subtitle2">Name on Card</div>
-                                <div className = "pay-info" id = "name"><div id ="john">John M. Doe</div></div>
+                                <label htmlFor = "pay-info"  id = "name"> </label>
+                                    <input type = "text" id ="john"></input>
+                               
                                 <div className = "subtitle2">Card Information</div>
-                                <div className = "pay-info" id = "name"><div id ="john">1515 3456 7653 3453</div></div>
+                                <label className = "pay-info" id = "name"></label>
+                                    <input type ="text" id ="john"></input>
                                 <div className = "mini-row">
-                                    <div className ="mini-col" id = "mcol1">
+                                    {/* <div className ="mini-col" id = "mcol1">
                                         <div className = "subtitle2">Exp. Date</div>
                                         <div className = "pay-info" id = "expDate"><div id ="john1">MM/YY</div></div>
                                     </div>
@@ -47,11 +66,8 @@ const Checkout = () => {
                                         <div className = "pay-info" id = "expDate"><div id ="john1">XXX</div>
                                     
                                     </div>  
-                                    </div>
-                                    <div className ="mini-col" id ="mcol3">
-                                        <a href="#editShipAdd" id="editPay-btn">
-                                            <i className="fa fa-pencil-square fa-xl" aria-hidden="true"></i></a>
-                                    </div>
+                                    </div> */}
+                                    
                                     
                                 </div>
                             </div>
@@ -95,7 +111,7 @@ const Checkout = () => {
                                     </div>
                                     
                                 </div>
-                            
+                                <br/>
                                 <div className="subtitle2">Payment Details</div>
                                 <div className = "pay-details">
                                     <div className = "cart-row">
