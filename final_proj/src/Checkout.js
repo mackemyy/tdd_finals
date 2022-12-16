@@ -30,21 +30,6 @@ const Checkout = () => {
                                             <input type = "text" id ="email-ship"></input>
                                     </div>
                                 </div>
-                                {/* <div id = "ship-details">
-                                <div className ="r-ship"> 
-                                    <div className ="c-ship" id = "c1">
-                                        John M. Doe<br/>
-                                        Blk12, Lot 4, Midori Plains<br/>
-                                        Tungkop, Minglanilla
-                                    </div>
-                                    <div className ="c-ship" id="c2">
-                                        Cebu, Philippines<br/>
-                                        josh@mail.com<br/>
-                                        <a href="#editShipAdd" id="editShip-btn">
-                                            <i className="fa fa-pencil-square fa-lg" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                                </div> */}
                                 <br/>
                                 <br/>
                                 <div className="checkout-subtitle">Payment Information</div>
@@ -56,20 +41,6 @@ const Checkout = () => {
                                 <div className = "subtitle2">Card Information</div>
                                 <label className = "pay-info" id = "name"></label>
                                     <input type ="text" id ="john"></input>
-                                <div className = "mini-row">
-                                    {/* <div className ="mini-col" id = "mcol1">
-                                        <div className = "subtitle2">Exp. Date</div>
-                                        <div className = "pay-info" id = "expDate"><div id ="john1">MM/YY</div></div>
-                                    </div>
-                                    <div className ="mini-col" id ="mcol2">
-                                        <div className = "subtitle2" >CVC Code</div>
-                                        <div className = "pay-info" id = "expDate"><div id ="john1">XXX</div>
-                                    
-                                    </div>  
-                                    </div> */}
-                                    
-                                    
-                                </div>
                             </div>
                             <div className="column" id ="col2">
                                 <div>
