@@ -17,14 +17,12 @@ $border-rad10: 10px;
 }
 
 .cart-header {
-    font-style: normal;
     font-family: $main-font;
     color: $orange;
     position: absolute;
     width: 503px;
     height: 51px;
-    left: 90px;
-    top: 110px;
+    top: 120px;
     font-weight: 700;
     font-size: 70px;
     line-height: 82px;
@@ -49,9 +47,9 @@ $border-rad10: 10px;
     position: absolute;
     font-family: $main-font;
     width: 1714px;
-    height: 40px;
-    left: 100px;
+    height: 45px;
     top: 220px;
+    left: 100px;
     background: $blk-opac;
 
     & p {
@@ -202,6 +200,7 @@ img {
     border: 1px solid $black;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 25px;
+    font-family: $main-font;
     &:hover {
         background-color: $orange;
         color: $black;
@@ -219,6 +218,7 @@ img {
     border: 1px solid $black;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 25px;
+    font-family: $main-font;
     &:hover {
         background-color: $orange;
         color: $black;
@@ -232,6 +232,7 @@ img {
     height: 45px;
     left: 795px;
     top: 25px;
+    font-family: $main-font;
     line-height: 42px;
     background: $white;
     color: $black;
@@ -257,13 +258,14 @@ img {
     left: 1270px;
     top: 30px;
     font-size: 25px;
+    font-family: $main-font;
     line-height: 52px;
     color: $black;
 }
 
 .removeBtn {
     position: absolute;
-    width: 110px;
+    width: 115px;
     height: 45px;
     left: 1560px;
     top: 55px;
@@ -272,7 +274,7 @@ img {
     background-color: $white;
     color: red;
     font-size: 25px;
-
+    font-family: $main-font;
     &:hover {
         background-color: red;
         color: $white;
@@ -289,8 +291,8 @@ img {
     border-radius: $border-rad10;
     border-style: none;
     font-size: 30px;
+    font-family: $main-font;
     color:$white;
-
     &:hover {
         background-color: #1C1A17;
         color: $white;
@@ -304,6 +306,7 @@ img {
     left: 920px;
     top: 460px;
     font-size: 30px;
+    font-family: $main-font;
     line-height: 8px;
     letter-spacing: 0.055em;
     color: $black;
@@ -313,11 +316,13 @@ img {
 
 .backBtn {
     position: absolute;
+    font-family: $main-font;
     width: 290px;
     height: 60px;
     left: 20px;
     top: 460px;
     font-size: 30px;
+    font-family: $main-font;
     color: $white;
     background-color: #1C1A17;
     border-radius: $border-rad10;
