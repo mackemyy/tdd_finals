@@ -295,7 +295,7 @@
   padding: 14px 28px;
   border-radius: 10px;
   width: 40%;
-  height: 45%;
+  height: 42%;
 }
 
 .fa-times-circle {
@@ -304,6 +304,7 @@
   right: 10px;
   padding: 5px 7px;
   color: #f2f2f2;
+  cursor: pointer;
 }
 
 #h2 {
