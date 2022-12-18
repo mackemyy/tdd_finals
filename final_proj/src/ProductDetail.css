@@ -130,11 +130,12 @@
 }
 
 .buttons {
-  display: flex;
+  display: block;
   float: right;
-  padding-top: 5%;
+  padding-top: 1%;
   color: white;
   padding-right: 18%;
+  position: fixed;
 }
 
 .btns {
@@ -153,19 +154,20 @@
 #backToMenu-btn {
   background-color: #666666;
   color: white;
-  position: absolute;
+  position: fixed;
   cursor: pointer;
   font-family: 500px;
   border: none;
+  margin-left: 20%;
 }
 
 #addToCart-btn {
   background-color: #F68A1E;
   color: white;
-  position: absolute;
+  position: fixed;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-left: 55%;
+  margin-left: 35%;
   float: right;
 }/*# sourceMappingURL=ProductDetail.css.map */
