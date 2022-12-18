@@ -8,21 +8,30 @@ import allProducts from "../components/product";
 const ShopProvider = (props) => {
     const initialState = {
         items: allProducts,
+        cart: [],
+        checkout: [],
     };
 
     const [state, dispatch] = useReducer(shopReducer, initialState);
 
-    const addItem = (item) => {
+    const addToCart = (item) => {
         dispatch({
-            type: 'addItem',
+            type: 'addToCart',
             payload: item
         })
     }
 
-    const deleteItem = (itemID) => {
+    const deleteToCart = (itemID) => {
         dispatch({
-            type: 'deleteItem',
+            type: 'deleteToCart',
             payload: itemID
+        })
+    }
+
+    const decreaseStock = (itemID, amount) => {
+        dispatch({
+            type: 'decreaseStock',
+            payload: [itemID, amount]
         })
     }
 
@@ -30,8 +39,11 @@ const ShopProvider = (props) => {
         <>
             <ShopContext.Provider value={{
                 items: state.items,
-                addItem,
-                deleteItem,
+                cart: state.cart,
+                checkout: state.checkout,
+                addToCart,
+                deleteToCart,
+                decreaseStock,
             }}>{props.children}</ShopContext.Provider>
         </>
     )

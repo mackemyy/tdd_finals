@@ -4,22 +4,48 @@ import ShopContext from "./context/shop_context";
 import './ProductDetail.css';
 
 const ProductDetail = () => {
-    const {items} = useContext(ShopContext)
+    const {items, addToCart} = useContext(ShopContext)
     const location = useLocation()
-    // const [finalProd, setProd] = useState();
+    let [counter, setCounter] = useState(1)
     const {id} = location.state;
     console.log('YOU ARE IN PRODUCT DETAIL');
+
     
     const prod = items.find((item) => {
         return item.id === id;
       })
 
-    // useEffect(() => {
-    //     const prod = items.find((item) => {
-    //         return item.id === id;
-    //       })
-    //     setProd(prod);
-    //   },[items, id]);
+    const upLimit = parseInt(prod.stockAvail);
+    const lowLimit = parseInt(1, 10);
+
+    const onSubtractClick = () => {
+       if(counter > lowLimit){
+        setCounter(prevCounter => prevCounter - 1);
+       }
+       else{
+        setCounter(1)
+       }
+    }
+
+    const onAddClick = () => {
+        if(counter < upLimit){
+        setCounter(prevCounter => prevCounter + 1);
+        }
+    }
+
+    const onAddToCart = () => {
+        const newItem = {
+            id: prod.id,
+            name: prod.name,
+            price: prod.price,
+            amount: counter
+        }
+
+        alert("Successfully added to cart");
+        // decreaseStock(id, counter);
+        addToCart(newItem);
+    }
+
     return(
         <>
         <div className="product-detail-page">
@@ -43,16 +69,18 @@ const ProductDetail = () => {
                     <div className="qty">
                         <div id="qty-text" className="txt">Quantity</div>
                         <div class="wrapper">
-                            <span class="minus">-</span>
-                            <span class="num">1</span>
-                            <span class="plus">+</span>
+                            <span class="minus" onClick={onSubtractClick}>-</span>
+                            <span class="num">{counter}</span>
+                            <span class="plus" onClick={onAddClick}>+</span>
                         </div>
                     </div>
                     <div className="buttons">
                     <NavLink to='/products' data-testid='products-nav'>
                         <button id="backToMenu-btn" className="btns" data-testid="backToMenu-btn">Back To Menu</button>
                     </NavLink>
-                        <button id="addToCart-btn" className="btns" data-testid="addToCart-btn">Add to Cart</button>
+                    <NavLink to='/products' data-testid='products-nav'>
+                        <button id="addToCart-btn" className="btns" data-testid="addToCart-btn" onClick={onAddToCart}>Add to Cart</button>
+                    </NavLink>
                     </div>
                 </div>
                 {/* <div class="float-container">
