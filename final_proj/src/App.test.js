@@ -1,11 +1,11 @@
-import { render, screen, cleanup } from "@testing-library/react";
+import { render, screen, cleanup, fireEvent } from "@testing-library/react";
 import App from './App';
 import Login from './Login';
 import Products from "./Products";
 
 afterEach(cleanup);
 
-describe("Check Home screen", ()=>{
+describe("Check Main screen", ()=>{
 	it("check if there is a button for discover products",()=>{
     render(<App />); 
 		const btn_discover = screen.getByTestId("discover-btn");
@@ -34,6 +34,42 @@ describe("Check Home screen", ()=>{
     render(<App />);
 		const btn_login = screen.getByTestId("login-nav");
 	  expect(btn_login).toBeInTheDocument();
+	});
+
+	test('clicking home link navigates to home page', () => {
+		render(<App />);
+		fireEvent.click(screen.getByText('HOME'));
+		expect(window.location.pathname).toBe('/');
+	});
+
+	test('clicking detail link navigates to detail page', () => {
+		render(<App />);
+		fireEvent.click(screen.getByText('DETAIL'));
+		expect(window.location.pathname).toBe('/product-detail');
+	});
+
+	test('clicking products link navigates to products page', () => {
+		render(<App />);
+		fireEvent.click(screen.getByText('PRODUCTS'));
+		expect(window.location.pathname).toBe('/products');
+	});
+
+	test('clicking cart link navigates to cart page', () => {
+		render(<App />);
+		fireEvent.click(screen.getByText('0'));
+		expect(window.location.pathname).toBe('/my-cart');
+	});
+
+	test('clicking checkout link navigates to checkout page', () => {
+		render(<App />);
+		fireEvent.click(screen.getByText('CHECKOUT'));
+		expect(window.location.pathname).toBe('/checkout');
+	});
+
+	test('clicking login link navigates to login page', () => {
+		render(<App />);
+		fireEvent.click(screen.getByText('LOGIN'));
+		expect(window.location.pathname).toBe('/login');
 	});
 })
 
@@ -83,10 +119,10 @@ describe("Check Products page screen", ()=>{
 	});
 
 	it("check if there is a menu of products",()=>{
-		render(<Products />);
-			const input = screen.getByTestId("menu-box-test");
-			  expect(input).toBeInTheDocument();
-		});
+	render(<Products />);
+		const input = screen.getByTestId("menu-box-test");
+		expect(input).toBeInTheDocument();
+	});
 })
 
 ////////////////REACT TEST JEST FOR BUTTONS EXAMPLE 
