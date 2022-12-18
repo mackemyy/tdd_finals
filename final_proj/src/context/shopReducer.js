@@ -2,15 +2,25 @@
 const shopReducer = (state, action) => {
     const{type, payload} = action;
     switch(type) {
-        case 'addItem':
+        case 'addToCart':
             return {
                 ...state,
-                items: [...state.items, payload]
+                cart: [...state.cart, payload]
             };
-        case 'deleteItem':
+        case 'deleteToCart':
             return {
                 ...state,
-                items: state.items.filter((item) => item.id !== payload),
+                cart: state.cart.filter((item) => item.id !== payload),
+            };
+        case 'decreaseStock':
+            const {itemID, amount} = payload;
+            return {
+                ...state,
+                items: state.items.map((item) => 
+                item.id === itemID
+                ? {...item, stockAvail: item.stockAvail - amount} 
+                : item
+                ),
             };
         default:
             return state;

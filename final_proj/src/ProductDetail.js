@@ -4,7 +4,7 @@ import ShopContext from "./context/shop_context";
 import './ProductDetail.css';
 
 const ProductDetail = () => {
-    const {items} = useContext(ShopContext)
+    const {items, addToCart} = useContext(ShopContext)
     const location = useLocation()
     let [counter, setCounter] = useState(1)
     const {id} = location.state;
@@ -15,8 +15,11 @@ const ProductDetail = () => {
         return item.id === id;
       })
 
+    const upLimit = parseInt(prod.stockAvail);
+    const lowLimit = parseInt(1, 10);
+
     const onSubtractClick = () => {
-       if(counter > 1){
+       if(counter > lowLimit){
         setCounter(prevCounter => prevCounter - 1);
        }
        else{
@@ -25,9 +28,22 @@ const ProductDetail = () => {
     }
 
     const onAddClick = () => {
-        if(counter < prod.stockAvail){
+        if(counter < upLimit){
         setCounter(prevCounter => prevCounter + 1);
         }
+    }
+
+    const onAddToCart = () => {
+        const newItem = {
+            id: prod.id,
+            name: prod.name,
+            price: prod.price,
+            amount: counter
+        }
+
+        alert("Successfully added to cart");
+        // decreaseStock(id, counter);
+        addToCart(newItem);
     }
 
     return(
@@ -62,7 +78,9 @@ const ProductDetail = () => {
                     <NavLink to='/products' data-testid='products-nav'>
                         <button id="backToMenu-btn" className="btns" data-testid="backToMenu-btn">Back To Menu</button>
                     </NavLink>
-                        <button id="addToCart-btn" className="btns" data-testid="addToCart-btn">Add to Cart</button>
+                    <NavLink to='/products' data-testid='products-nav'>
+                        <button id="addToCart-btn" className="btns" data-testid="addToCart-btn" onClick={onAddToCart}>Add to Cart</button>
+                    </NavLink>
                     </div>
                 </div>
                 {/* <div class="float-container">
