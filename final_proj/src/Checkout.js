@@ -73,7 +73,7 @@ const Checkout = () => {
                                     </div>
                                     <div id = "pic-col3">
                                         <div id = "pic-details">
-                                            PHP 50.000&nbsp;&nbsp; X1
+                                            PHP 50.00&nbsp;&nbsp; X1
                                         </div>
                                     </div>
                                     </div>
@@ -89,7 +89,7 @@ const Checkout = () => {
                                     </div>
                                     <div id = "pic-col3">
                                         <div id = "pic-details">
-                                            PHP 45.000&nbsp;&nbsp; X2
+                                            PHP 45.00&nbsp;&nbsp; X2
                                         </div>
                                     </div> 
                                     </div>
@@ -105,7 +105,7 @@ const Checkout = () => {
                                     </div>
                                     <div id = "pic-col3">
                                         <div id = "pic-details">
-                                            PHP 45.000&nbsp;&nbsp; X2
+                                            PHP 45.00&nbsp;&nbsp; X2
                                         </div>
                                     </div> 
                                     </div>
