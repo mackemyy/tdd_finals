@@ -6,20 +6,30 @@ import './ProductDetail.css';
 const ProductDetail = () => {
     const {items} = useContext(ShopContext)
     const location = useLocation()
-    // const [finalProd, setProd] = useState();
+    let [counter, setCounter] = useState(1)
     const {id} = location.state;
     console.log('YOU ARE IN PRODUCT DETAIL');
+
     
     const prod = items.find((item) => {
         return item.id === id;
       })
 
-    // useEffect(() => {
-    //     const prod = items.find((item) => {
-    //         return item.id === id;
-    //       })
-    //     setProd(prod);
-    //   },[items, id]);
+    const onSubtractClick = () => {
+       if(counter > 1){
+        setCounter(prevCounter => prevCounter - 1);
+       }
+       else{
+        setCounter(1)
+       }
+    }
+
+    const onAddClick = () => {
+        if(counter < prod.stockAvail){
+        setCounter(prevCounter => prevCounter + 1);
+        }
+    }
+
     return(
         <>
         <div className="product-detail-page">
@@ -43,9 +53,9 @@ const ProductDetail = () => {
                     <div className="qty">
                         <div id="qty-text" className="txt">Quantity</div>
                         <div class="wrapper">
-                            <span class="minus">-</span>
-                            <span class="num">1</span>
-                            <span class="plus">+</span>
+                            <span class="minus" onClick={onSubtractClick}>-</span>
+                            <span class="num">{counter}</span>
+                            <span class="plus" onClick={onAddClick}>+</span>
                         </div>
                     </div>
                     <div className="buttons">
