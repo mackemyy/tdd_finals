@@ -22,12 +22,7 @@ const Products = () => {
             <div id="title"><p>Menu</p></div>
             <div id="products">
                 {items.map((item, index) => (
-                <NavLink to={{
-                    pathName: '/product-detail',
-                    state: {
-                        id: item.id
-                    },
-                }}>
+                <NavLink to='/product-detail'>
                     <div id="cards" key={index}>
                         <div class="img-container" id="product1"></div>
                         <div id="product-name">
