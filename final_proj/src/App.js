@@ -9,9 +9,16 @@ import ProductDetail from './ProductDetail';
 import Cart from './Cart';
 import Checkout from './Checkout';
 
+
 function App() {
+// const {cart}=CartState ();
+
+
+
   return (
-    <ShopProvider>
+<ShopProvider>
+{/* <BrowserRouter> */}
+
     <div className="App">
       <header className="App-header">
       <Router>
@@ -25,9 +32,9 @@ function App() {
             <Route exact path='/checkout' element={< Checkout />}></Route>
         </Routes>
       </Router>
-
-      </header>
+    </header>
     </div>
+    {/* </BrowserRouter> */}
     </ShopProvider>
   );
 }
