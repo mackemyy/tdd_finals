@@ -32,7 +32,7 @@ const ProductDetail = () => {
             <div className="prod-details">
                 <div className="img-placeholder">
                     <div className="container">
-                    <img src={require("./assets/products/BakedCroissantBread.png")} alt="Baked Croissant Bread"/>
+                    <img src={prod.image} alt="Product"/>
                     </div>
                 </div>
                 <div className="txt-placeholder">
