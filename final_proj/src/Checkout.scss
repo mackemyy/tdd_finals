@@ -4,6 +4,7 @@ $white: white;
 $dirty-white: #f2f2f2;
 $grey: #D9D9D9;
 $black: black;
+$dark-modal: #151413;
 $border-rad5: 5px;
 $border-rad10: 10px;
 
@@ -288,4 +289,64 @@ $border-rad10: 10px;
 		border: 2px solid ;
 		color: $orange ;
 	}
+}
+
+//modal
+
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49,49,49,0.8);
+}
+.modal-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: $dark-modal;
+    padding: 14px 28px;
+    border-radius: $border-rad10;
+	width: 40%;
+	height: 45%;
+}
+
+.fa-times-circle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+	color: $dirty-white;
+}
+
+#h2{
+	color: $dirty-white;
+	font-size: 35px;
+	padding-left: 36%;
+	font-family: $main-font;
+	font-weight: 600;
+	padding-top: 20px;;
+}
+
+#p{
+	color: $dirty-white;
+	font-family: $main-font;
+	padding-left: 18%;
+	font-size: 20px;
+
+}
+
+#check{
+	color: orange;
+	padding-left: 44%;
+	padding-top: 55px;
+	
 }
