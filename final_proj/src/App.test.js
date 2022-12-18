@@ -55,12 +55,6 @@ describe("Check Main screen", ()=>{
 		expect(window.location.pathname).toBe('/');
 	});
 
-	test('clicking detail link navigates to detail page', () => {
-		render(<App />);
-		fireEvent.click(screen.getByText('DETAIL'));
-		expect(window.location.pathname).toBe('/product-detail');
-	});
-
 	test('clicking products link navigates to products page', () => {
 		render(<App />);
 		fireEvent.click(screen.getByText('PRODUCTS'));
