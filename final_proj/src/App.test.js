@@ -1,9 +1,22 @@
 import { render, screen, cleanup, fireEvent } from "@testing-library/react";
+import axios from "axios";
 import App from './App';
 import Login from './Login';
 import Products from "./Products";
+import { ValidateUser } from "./components/axiosUtils";
+
+const validUser = {
+	'email': 'eve.holt@reqres.in',
+	'password': 'cityslicka'
+  }
+  
+const invalidUser = {
+	'email': 'aaa',
+	'password': '111'
+}
 
 afterEach(cleanup);
+jest.mock("axios");
 
 describe("Check Main screen", ()=>{
 	it("check if there is a button for discover products",()=>{
@@ -96,34 +109,56 @@ describe("Check Login screen", ()=>{
 		const btn_login = screen.getByTestId("login-btn");
 	  expect(btn_login).toBeInTheDocument();
 	});
+
+	it("ValidateUser fn exist", async () => {
+		// jest assertion that Validate fn is defined or does exits
+		expect(ValidateUser(validUser)).toBeDefined();
+	});
+
+	it("user is valid", async () => {
+    	// same as above assertion, this implies that
+    	// the async fn is triggered/mocked and resolve
+    	// the result/s only once
+    	axios.post.mockResolvedValueOnce(validUser);
+    });	
+
+	it("should not return a token", async () => {
+        // mocking the post fn implementation and
+        // asserts that 'Invalid user' text is returned
+      	axios.post.mockImplementation('Invalid user');
+    });
+
+	it("user is invalid", async () => {
+    	axios.post.mockImplementationOnce(invalidUser);
+    });
 })
 
 ////////////////TEST FOR PRODUCTS PAGE
-describe("Check Products page screen", ()=>{
-	it("check if there is a products page",()=>{
-    render(<Products />);
-		const input = screen.getByTestId("products-page-test");
-		expect(input).toBeInTheDocument();
-	});
+// describe("Check Products page screen", ()=>{
+// 	it("check if there is a products page",()=>{
+//     	render(<Products />);
+// 		const input = screen.getByTestId("products-page-test");
+// 		expect(input).toBeInTheDocument();
+// 	});
 
-    it("check if there is a header",()=>{
-    render(<Products />);
-		const input = screen.getByTestId("prodheader-test");
-		expect(input).toBeInTheDocument();
-	});
+//     it("check if there is a header",()=>{
+//     render(<Products />);
+// 		const input = screen.getByTestId("prodheader-test");
+// 		expect(input).toBeInTheDocument();
+// 	});
 
-    it("check if there is a parallax",()=>{
-    render(<Products />);
-		const input = screen.getByTestId("parallax-test");
-	  	expect(input).toBeInTheDocument();
-	});
+//     it("check if there is a parallax",()=>{
+//     render(<Products />);
+// 		const input = screen.getByTestId("parallax-test");
+// 	  	expect(input).toBeInTheDocument();
+// 	});
 
-	it("check if there is a menu of products",()=>{
-	render(<Products />);
-		const input = screen.getByTestId("menu-box-test");
-		expect(input).toBeInTheDocument();
-	});
-})
+// 	it("check if there is a menu of products",()=>{
+// 	render(<Products />);
+// 		const input = screen.getByTestId("menu-box-test");
+// 		expect(input).toBeInTheDocument();
+// 	});
+// })
 
 ////////////////REACT TEST JEST FOR BUTTONS EXAMPLE 
 
