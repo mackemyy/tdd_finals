@@ -75,8 +75,8 @@ const ProductDetail = () => {
                         </div>
                     </div>
                     <div className="buttons">
-                    <NavLink to='/products' data-testid='products-nav'>
-                        <button id="backToMenu-btn" className="btns" data-testid="backToMenu-btn">Back To Menu</button>
+                    <NavLink to='/login' data-testid='products-nav'>
+                        <button id="backToMenu-btn" className="btns" data-testid="backToMenu-btn">Proceed to Checkout</button>
                     </NavLink>
                     <NavLink to='/products' data-testid='products-nav'>
                         <button id="addToCart-btn" className="btns" data-testid="addToCart-btn" onClick={onAddToCart}>Add to Cart</button>
