@@ -1,13 +1,13 @@
 import React, { useReducer } from "react";
 import ShopContext from "./shop_context";
 import shopReducer from "./shopReducer";
-//import allProducts from "../components/product";
+import allProducts from "../components/product";
 
 
 
 const ShopProvider = (props) => {
     const initialState = {
-        items: [],
+        items: allProducts,
     };
 
     const [state, dispatch] = useReducer(shopReducer, initialState);

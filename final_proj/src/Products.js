@@ -1,22 +1,12 @@
 import { useContext, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import ShopContext from "./context/shop_context";
 import './Products.css'
 
 const Products = () => {
-    const {addItem, deleteItem, items} = useContext(ShopContext);
-
-    const onAddItem = () => {
-        var newItem = {
-            id: 1,
-            name: "ensaymada",
-            price: 65,
-        }
-        addItem(newItem);
-    }
-
-    const onDeleteItem = () => {
-        deleteItem(1);
-    }
+    const {items} = useContext(ShopContext);
+    const { pathName } = useLocation();
+    console.log(pathName);
 
     return (
         <>
@@ -31,16 +21,22 @@ const Products = () => {
         <div className="menu-box">
             <div id="title"><p>Menu</p></div>
             <div id="products">
-                <div id="cards" onClick={onAddItem}>
-                    <div class="img-container" id="product1"></div>
-                    <div id="product-name">
-                    <p id="prod-info">Baked Croissant Bread</p>
-                    {items.map((item) => (
-                        <p>[{item.id}] : {item.name} - {item.price}</p>
-                    ))}
-                    <p id="price">75.00 PHP</p></div>
-                </div>
-                <div id="cards" onClick={onDeleteItem}>
+                {items.map((item, index) => (
+                <NavLink to={{
+                    pathName: '/product-detail',
+                    state: {
+                        id: item.id
+                    },
+                }}>
+                    <div id="cards" key={index}>
+                        <div class="img-container" id="product1"></div>
+                        <div id="product-name">
+                        <p id="prod-info">{item.name}</p>
+                        <p id="price">{item.price}</p></div>
+                    </div>
+                </NavLink>
+                ))};
+                {/* <div id="cards" onClick={onDeleteItem}>
                     <div class="img-container" id="product2"></div>
                     <div id="product-name">
                     <p id="prod-info">Chocolate Loaf</p>
@@ -87,7 +83,7 @@ const Products = () => {
                     <div id="product-name">
                     <p id="prod-info">Civraxiu</p>
                     <p id="price">40.00 PHP</p></div>
-                </div>  
+                </div>   */}
             </div>
         </div>
         

@@ -83,10 +83,11 @@ body, html {
   margin-top: 3%;
   margin-left: 10%;
   margin-bottom: 50px;
-  float: left;
+  /* float: left; */
   border-radius: 15px;
   cursor: pointer;
   transition: transform 0.2s;
+  display: inline-block;
 }
 #cards:hover {
   transform: scale(1.2);

@@ -5,7 +5,7 @@
             name: "Baked Croissant Bread",
             price: "75.00 PHP",
             stockAvail: 35,
-            // imageUrl: image1,
+            // imageUrl: URL("../src/assets/products/BakedCroissantBread.png"),
         },
         {
             id: 2,
