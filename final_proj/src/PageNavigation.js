@@ -22,7 +22,7 @@ export const PageNavigation = () => {
                 <NavLink to='/products' data-testid='products-nav'>
                     PRODUCTS
                 </NavLink>
-                <NavLink to='/product-detail' data-testid='productsdetail-nav'>
+                <NavLink to='/product-detail' state={{id: 1}} data-testid='productsdetail-nav'>
                     DETAIL
                 </NavLink>
                 <NavLink to='/' data-testid='home-nav'>

@@ -1,8 +1,25 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import ShopContext from "./context/shop_context";
 import './ProductDetail.css';
 
 const ProductDetail = () => {
+    const {items} = useContext(ShopContext)
+    const location = useLocation()
+    // const [finalProd, setProd] = useState();
+    const {id} = location.state;
+    console.log('YOU ARE IN PRODUCT DETAIL');
+    
+    const prod = items.find((item) => {
+        return item.id === id;
+      })
+
+    // useEffect(() => {
+    //     const prod = items.find((item) => {
+    //         return item.id === id;
+    //       })
+    //     setProd(prod);
+    //   },[items, id]);
     return(
         <>
         <div className="product-detail-page">
@@ -19,10 +36,10 @@ const ProductDetail = () => {
                     </div>
                 </div>
                 <div className="txt-placeholder">
-                    <div id="pd-title" className="txt">Baked Criossant Bread</div>
+                    <div id="pd-title" className="txt">{prod.name}</div>
                     <div id="pd-subtitle" className="txt">Classic Favorites</div>
-                    <div id="pd-price" className="txt">75.00 PHP</div>
-                    <div id="pd-stocks" className="txt">5 STOCKS LEFT</div>
+                    <div id="pd-price" className="txt">{prod.price}</div>
+                    <div id="pd-stocks" className="txt">{prod.stockAvail} STOCKS LEFT</div>
                     <div className="qty">
                         <div id="qty-text" className="txt">Quantity</div>
                         <div class="wrapper">
@@ -32,7 +49,9 @@ const ProductDetail = () => {
                         </div>
                     </div>
                     <div className="buttons">
+                    <NavLink to='/products' data-testid='products-nav'>
                         <button id="backToMenu-btn" className="btns" data-testid="backToMenu-btn">Back To Menu</button>
+                    </NavLink>
                         <button id="addToCart-btn" className="btns" data-testid="addToCart-btn">Add to Cart</button>
                     </div>
                 </div>

@@ -4,9 +4,10 @@ import ShopContext from "./context/shop_context";
 import './Products.css'
 
 const Products = () => {
-    const {items} = useContext(ShopContext);
-    const { pathName } = useLocation();
-    console.log(pathName);
+    const {items} = useContext(ShopContext)
+    const { pathName } = useLocation()
+    console.log(pathName)
+    console.log('THIS IS A TEST LOG CONSOLE HAHA')
 
     return (
         <>
@@ -22,7 +23,7 @@ const Products = () => {
             <div id="title"><p>Menu</p></div>
             <div id="products">
                 {items.map((item, index) => (
-                <NavLink to='/product-detail'>
+                <NavLink to='/product-detail' state={{id: item.id}}>
                     <div id="cards" key={index}>
                         <div class="img-container" id="product1"></div>
                         <div id="product-name">
