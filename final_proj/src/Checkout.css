@@ -186,6 +186,13 @@
   clear: both;
 }
 
+#cart-row-space {
+  width: 85%;
+  height: 200px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
 #pic-col1 {
   margin-top: 5px;
   float: left;

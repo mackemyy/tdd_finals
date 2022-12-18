@@ -48,13 +48,15 @@ const Checkout = () => {
                                 <hr className = "line"/>
                                 <br/>
                                 <div className = "cart-row" >
+                                    <div id = "cart-row-space">
+
                                     <div className = "cart-card" >
                                         <div id = "pic-col1">
                                             <div id = "croissant"></div> 
                                         </div>
                                     <div id = "pic-col2">
                                         <div id = "pic-details">
-                                            Baked Croissant br/ead
+                                            Baked Croissant bread
                                         </div>
                                     </div>
                                     <div id = "pic-col3">
@@ -62,8 +64,8 @@ const Checkout = () => {
                                             PHP 50.000&nbsp;&nbsp; X1
                                         </div>
                                     </div>
-                                        
                                     </div>
+
                                     <div className = "cart-card" >
                                         <div id = "pic-col1">
                                             <div id = "slicedbread"></div> 
@@ -77,10 +79,26 @@ const Checkout = () => {
                                         <div id = "pic-details">
                                             PHP 45.000&nbsp;&nbsp; X2
                                         </div>
+                                    </div> 
                                     </div>
-                                        
+
+                                    <div className = "cart-card" >
+                                        <div id = "pic-col1">
+                                            <div id = "slicedbread"></div> 
+                                        </div>
+                                    <div id = "pic-col2">
+                                        <div id = "pic-details">
+                                            Fresh Sliced bread
+                                        </div>
                                     </div>
-                                    
+                                    <div id = "pic-col3">
+                                        <div id = "pic-details">
+                                            PHP 45.000&nbsp;&nbsp; X2
+                                        </div>
+                                    </div> 
+                                    </div>
+
+                                    </div>
                                 </div>
                                 <br/>
                                 <div className="subtitle2">Payment Details</div>
