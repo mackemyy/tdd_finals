@@ -38,7 +38,7 @@ const ShopProvider = (props) => {
     const decreaseStock = (itemID, amount) => {
         dispatch({
             type: 'decreaseStock',
-            payload: [itemID, amount]
+            payload: {itemID, amount}
         })
     }
 
