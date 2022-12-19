@@ -5,7 +5,6 @@ import Login from './Login';
 import Checkout from "./Checkout";
 
 import { ValidateUser } from "./components/axiosUtils";
-import { shallow } from 'enzyme';
 
 const validUser = {
 	'email': 'eve.holt@reqres.in',
