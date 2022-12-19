@@ -1,31 +1,15 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import ShopContext from "./context/shop_context";
 import './Cart.css';
 
 
 const Cart = () => {
-     // const location = useLocation()
-    // const {id} = location.state;
-    const {items} = useContext(ShopContext)
-    let [counter, setCounter] = useState(1);
 
+    const {cart, deleteToCart} = useContext(ShopContext)
 
-    const prod = items.find((item) => {
-        return item.id;
-      })
-
-    const upLimit = parseInt(prod.stockAvail);
-    const lowLimit = parseInt(1, 10);
-
-    const onSubtractClick = () => {
-        if(counter > lowLimit){
-        setCounter(prevCounter => prevCounter - 1);
-        }
-    }
-    const onAddClick = () => {
-        if(counter < upLimit){
-        setCounter(prevCounter => prevCounter + 1);
-        }
+    const onDeleteToCart = (prodID) => {
+        deleteToCart(prodID);
     }
 
     return (
@@ -55,29 +39,29 @@ const Cart = () => {
 
 
                 {/* start of cart card */}
-                <div id="cart-card-menu">
+                {cart.map((item, index) => (
+                <div id="cart-card-menu" key={index}>
 
                     <div id="col-1">
                             <div id="cart-check-box"> 
                                     <input  type="checkbox" data-testid="checkbox"/> 
                                     </div>
                                     <div id="cart-img"></div>
-                                    <div id="cart-details">Baked Croissant Bread</div>
+                                    <div id="cart-details">{item.name}</div>
                             </div>
-                    <div id="cart-additionals">PHP 55.00</div>
-                    <div id="cart-additionals">
-                                <button id="qty-btn">+</button>
-                                 <div id="qty-cnt">1</div>
-                                <button id="qty-btn">-</button>
+                    <div id="cart-additionals">{item.price}</div>
+                    <div id="cart-additionals">  
+                                 <div id="qty-cnt">{item.amount}</div>
                     </div>
-                    <div id="cart-additionals">PHP 55.00</div>
+                    <div id="cart-additionals">{item.subtotal}</div>
                     <div id="cart-additionals">
-                        <button id="removebtn">Remove</button>
+                        <button id="removebtn" onClick={onDeleteToCart.bind(this, item.id)}>Remove</button>
                     </div>
                     <div>
                     </div>
 
                     </div>
+                    ))};
             {/* end of cart card */}
 
 
@@ -87,9 +71,11 @@ const Cart = () => {
             
             <div id="footer">
                     <div id="col-1-btn">
+                    <NavLink to='/products' data-testid='products-nav'>
                         <button class="backBtn">Back To Menu</button>
+                    </NavLink>
                     </div>
-                    <div id="sub-total">Subtotal: PHP 120.00</div>
+                    <div id="sub-total">Subtotal: tobefixed</div>
                     <div id="col-2-btn">
                             <button class="checkoutBtn">Checkout</button>
                     </div>
