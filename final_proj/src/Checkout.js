@@ -131,7 +131,13 @@ const Checkout = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <button className="placeOrderBtn" onClick={toggleModal}>Place Order</button>
+                                <div id="btn-ctnr">
+                                     <button className="placeOrderBtn" onClick={toggleModal}>Place Order</button>
+                                </div>
+
+
+
+                               
                                 </div>
                                 </div>
                             </div>

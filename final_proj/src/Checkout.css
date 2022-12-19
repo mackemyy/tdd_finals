@@ -8,13 +8,14 @@
 }
 
 .checkoutForm {
-  padding-top: 30px;
+  padding-top: 15px;
   position: absolute;
   width: 80%;
-  height:800px;
+  height: 780px;
   margin-left: 180px;
   top: 100px;
   background-color: white;
+  
   border-radius: 35px;
   box-shadow: 0 0 10px black;
   font-family: "Poppins";
@@ -112,6 +113,7 @@
 
 .subtitle2 {
   font-style: italic;
+  margin-top: 10px;
   margin-bottom: 5px;
   color: rgb(102, 102, 102);
   margin-right: 100px;
@@ -236,12 +238,25 @@
 }
 
 .pay-details {
-  width: 450px;
+  
+  width: 470px;
   height: 100px;
   background: rgb(217, 217, 217);
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 10px 0px 0px 10px;
   padding: 5px;
+}
+
+
+#btn-ctnr {
+  margin-top: 10px;
+  width: 480px;
+  height: 50px;
+ 
+  border-radius: 10px;
+  text-align: end;
+ 
+ 
 }
 
 #pay-col1 {
@@ -261,12 +276,11 @@
 }
 
 .placeOrderBtn {
-  margin-right: 120px;
-  float: right;
+ 
+  
   width: 250px;
   height: 60px;
-  left: 170px;
-  top: 460px;
+ 
   background: orange;
   color: white;
   border: 0;
@@ -278,11 +292,13 @@
   line-height: 52px;
   letter-spacing: 0.055em;
   cursor: pointer;
+ 
 }
 .placeOrderBtn:hover {
   background-color: white;
   border: 2px solid;
   color: orange;
+  
 }
 
 .modal, .overlay {
