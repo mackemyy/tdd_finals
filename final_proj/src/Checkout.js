@@ -1,4 +1,4 @@
-import { useState } from "react";
+    import { useState } from "react";
 import './Checkout.css';
 
 const Checkout = () => {
@@ -44,6 +44,7 @@ const Checkout = () => {
                                 </div>
                                 <br/>
                                 <br/>
+                                
                                 <div className="checkout-subtitle">Payment Information</div>
                                 <hr className = "line"/><br/>
                                 <div className = "subtitle2">Name on Card</div>
@@ -62,53 +63,55 @@ const Checkout = () => {
                                 <div className = "cart-row" >
                                     <div id = "cart-row-space">
 
+
+
+                                {/* YOUR CART CARD */}
                                     <div className = "cart-card" >
-                                        <div id = "pic-col1">
-                                            <div id = "croissant"></div> 
+                                        <div>
+                                            <div id = "bread-picture"></div> 
                                         </div>
-                                    <div id = "pic-col2">
-                                        <div id = "pic-details">
-                                            Baked Croissant bread
-                                        </div>
-                                    </div>
-                                    <div id = "pic-col3">
-                                        <div id = "pic-details">
-                                            PHP 50.00&nbsp;&nbsp; X1
+                                    <div id="pic-details">
+                                        <div id="bread-name">Croissant MF</div>
+                                        <div id="bread-detail">QUASSANT imo mama</div>
+                                        <div id="price-quantity">
+                                            <div id="bread-price">PHP 50.00</div>
+                                            <div id="bread-quantity">x2</div>
                                         </div>
                                     </div>
                                     </div>
 
                                     <div className = "cart-card" >
-                                        <div id = "pic-col1">
-                                            <div id = "slicedbread"></div> 
+                                        <div>
+                                            <div id = "bread-picture"></div> 
                                         </div>
-                                    <div id = "pic-col2">
-                                        <div id = "pic-details">
-                                            Fresh Sliced bread
+                                    <div id="pic-details">
+                                        <div id="bread-name">Croissant MF</div>
+                                        <div id="bread-detail">QUASSANT imo mama</div>
+                                        <div id="price-quantity">
+                                            <div id="bread-price">PHP 50.00</div>
+                                            <div id="bread-quantity">x2</div>
                                         </div>
                                     </div>
-                                    <div id = "pic-col3">
-                                        <div id = "pic-details">
-                                            PHP 45.00&nbsp;&nbsp; X2
-                                        </div>
-                                    </div> 
                                     </div>
 
                                     <div className = "cart-card" >
-                                        <div id = "pic-col1">
-                                            <div id = "slicedbread"></div> 
+                                        <div>
+                                            <div id = "bread-picture"></div> 
                                         </div>
-                                    <div id = "pic-col2">
-                                        <div id = "pic-details">
-                                            Fresh Sliced bread
+                                    <div id="pic-details">
+                                        <div id="bread-name">Croissant MF</div>
+                                        <div id="bread-detail">QUASSANT imo mama</div>
+                                        <div id="price-quantity">
+                                            <div id="bread-price">PHP 50.00</div>
+                                            <div id="bread-quantity">x2</div>
                                         </div>
                                     </div>
-                                    <div id = "pic-col3">
-                                        <div id = "pic-details">
-                                            PHP 45.00&nbsp;&nbsp; X2
-                                        </div>
-                                    </div> 
                                     </div>
+                                {/* YOUR CART CARD ENDS HERE */}
+                                   
+
+                                  
+                                    
                                     </div>
                                 </div>
                                 <br/>
