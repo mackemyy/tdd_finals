@@ -1,8 +1,33 @@
+import { useContext, useState } from "react";
+import ShopContext from "./context/shop_context";
 import './Cart.css';
 
 
 const Cart = () => {
- 
+     // const location = useLocation()
+    // const {id} = location.state;
+    const {items} = useContext(ShopContext)
+    let [counter, setCounter] = useState(1);
+
+
+    const prod = items.find((item) => {
+        return item.id;
+      })
+
+    const upLimit = parseInt(prod.stockAvail);
+    const lowLimit = parseInt(1, 10);
+
+    const onSubtractClick = () => {
+        if(counter > lowLimit){
+        setCounter(prevCounter => prevCounter - 1);
+        }
+    }
+    const onAddClick = () => {
+        if(counter < upLimit){
+        setCounter(prevCounter => prevCounter + 1);
+        }
+    }
+
     return (
         <>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Port+Lligat+Slab"></link>
@@ -29,15 +54,15 @@ const Cart = () => {
                         </div> 
                         <div className="prodinfo">
                             <label className="cart-container">Baked Croissant Bread
-                            <input type="checkbox" data-testid="checkbox"/> 
+                            <input type="checkbox" data-testid="checkbox" /> 
                             <span class="checkmark"></span> 
                             <p className="price">75.00 PHP</p>
                             </label>
                         </div>
                     <div className="qtybtn">
-                        <button className="addBtn">+</button>
-                        <p className="item-qty">1</p>
-                        <button className="subtractBtn">-</button>
+                        <button className="addBtn" onClick={onAddClick}>+</button>
+                        <p className="item-qty">{counter}</p>
+                        <button className="subtractBtn" onClick={onSubtractClick}>-</button>
                         <p className="total1">PHP 75.00</p>
                         <button className="removeBtn">Remove</button>
                     </div>
