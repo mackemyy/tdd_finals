@@ -52,13 +52,10 @@ const Cart = () => {
                     <div>
                     </div>
 
-                   {/* end of cart card */}
+                    </div>
+            {/* end of cart card */}
 
 
-               
-                    
-                
-                </div>
 
               
             </div>
