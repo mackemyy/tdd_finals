@@ -5,6 +5,30 @@ import './ProductDetail.css';
 
 const ProductDetail = () => {
     const {items, addToCart, addToCheckout, decreaseStock} = useContext(ShopContext)
+    const [modalConfirm, setModalConfirm] = useState(false);
+
+    const toggleConfirmModal = () => {
+       
+        const newItem = {
+            id: prod.id,
+            name: prod.name,
+            price: prod.price,
+            amount: counter
+        }
+
+        addToCart(newItem);
+        setModalConfirm(!modalConfirm)
+        
+    }
+
+    if(modalConfirm) {
+        document.body.classList.add('active-modal')
+      } else {
+        document.body.classList.remove('active-modal')
+      }
+    
+
+    const {items, addToCart} = useContext(ShopContext)
     const location = useLocation()
     let [counter, setCounter] = useState(1)
     const {id} = location.state;
@@ -31,18 +55,22 @@ const ProductDetail = () => {
         if(counter < upLimit){
         setCounter(prevCounter => prevCounter + 1);
         }
+        
+       
     }
 
-    const onAddToCart = () => {
-        const newItem = {
-            id: prod.id,
-            name: prod.name,
-            price: prod.price,
-            amount: counter,
-        }
-        alert("Successfully added to cart");
-        addToCart(newItem);
-    }
+    // const onAddToCart = () => {
+        // const newItem = {
+            // id: prod.id,
+            // name: prod.name,
+            // price: prod.price,
+            // amount: counter
+        // }
+
+        // alert("Successfully added to cart");
+        // decreaseStock(id, counter);
+        // addToCart(newItem);
+    // }
 
     const onAddToCheckout = () => {
         const newCheckout = {
@@ -59,6 +87,7 @@ const ProductDetail = () => {
 
     return(
         <>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Port+Lligat+Slab"></link>
         <div className="product-detail-page">
             <div className="topnav-bg"></div>
             <div className="breadcrumbs">
@@ -89,13 +118,45 @@ const ProductDetail = () => {
                     <NavLink to='/checkout' data-testid='products-nav'>
                         <button id="buyItNow-btn" className="btns" data-testid="buyItNow-btn" onClick={onAddToCheckout}>Buy It Now</button>
                     </NavLink>
-                    <NavLink to='/products' data-testid='products-nav'>
-                        <button id="addToCart-btn" className="btns" data-testid="addToCart-btn" onClick={onAddToCart}>Add to Cart</button>
-                    </NavLink>
+                    
+                        <button id="addToCart-btn" className="btns" data-testid="addToCart-btn" onClick={toggleConfirmModal}>Add to Cart</button>
+                    
+  
                     </div>
                 </div>
             </div>
         </div>
+
+        {/* //MODAL  */}
+
+        {modalConfirm && (
+        <div className = "modalC">
+            <div className="overlayC"></div>
+                <div className="modal-contentC">
+                <i id = "check" class="fa fa-check-circle fa-5x" aria-hidden="true"></i>
+                <br/>
+                <div id="h2C">Added to cart!</div>
+                <br/>
+                
+                {/* <i class="fa fa-times-circle fa-2x" aria-hidden="true" onClick={toggleConfirmModal}></i> */}
+                <div className="row-pd">
+                    
+                <NavLink to='/products' data-testid='products-nav'>
+                    <div className = "column-pd" id="col-pd1">
+                    <button className="cntshop-btn" onClick= "">Continue Shopping</button>
+                    </div>
+                </NavLink>
+
+                <NavLink to='/my-cart' data-testid='products-nav'>
+                    <div className = "column-pd" id="col-pd2">
+                    <button className="cntshop-btn" onClick="">View My Cart</button>
+                    </div>
+                </NavLink>
+                </div>
+            </div>
+        </div>
+        )
+        }
 
         </>
     )
