@@ -21,6 +21,13 @@ const ShopProvider = (props) => {
         })
     }
 
+    const addToCheckout = (item) => {
+        dispatch({
+            type: 'addToCheckout',
+            payload: item
+        })
+    }
+
     const deleteToCart = (itemID) => {
         dispatch({
             type: 'deleteToCart',
@@ -42,6 +49,7 @@ const ShopProvider = (props) => {
                 cart: state.cart,
                 checkout: state.checkout,
                 addToCart,
+                addToCheckout,
                 deleteToCart,
                 decreaseStock,
             }}>{props.children}</ShopContext.Provider>

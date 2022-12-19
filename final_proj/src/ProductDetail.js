@@ -4,7 +4,7 @@ import ShopContext from "./context/shop_context";
 import './ProductDetail.css';
 
 const ProductDetail = () => {
-    const {items, addToCart} = useContext(ShopContext)
+    const {items, addToCart, addToCheckout} = useContext(ShopContext)
     const location = useLocation()
     let [counter, setCounter] = useState(1)
     const {id} = location.state;
@@ -38,12 +38,24 @@ const ProductDetail = () => {
             id: prod.id,
             name: prod.name,
             price: prod.price,
-            amount: counter
+            amount: counter,
         }
-
         alert("Successfully added to cart");
         // decreaseStock(id, counter);
         addToCart(newItem);
+    }
+
+    const onAddToCheckout = () => {
+        const newCheckout = {
+            id: prod.id,
+            name: prod.name,
+            price: prod.price,
+            amount: counter
+        }
+
+        alert("Successfully added to checkout");
+        // decreaseStock(id, counter);
+        addToCheckout(newCheckout);
     }
 
     return(
@@ -75,8 +87,8 @@ const ProductDetail = () => {
                         </div>
                     </div>
                     <div className="buttons">
-                    <NavLink to='/login' data-testid='products-nav'>
-                        <button id="backToMenu-btn" className="btns" data-testid="backToMenu-btn">Buy It Now</button>
+                    <NavLink to='/checkout' data-testid='products-nav'>
+                        <button id="backToMenu-btn" className="btns" data-testid="backToMenu-btn" onClick={onAddToCheckout}>Buy It Now</button>
                     </NavLink>
                     <NavLink to='/products' data-testid='products-nav'>
                         <button id="addToCart-btn" className="btns" data-testid="addToCart-btn" onClick={onAddToCart}>Add to Cart</button>
