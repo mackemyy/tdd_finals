@@ -13,7 +13,8 @@ const ProductDetail = () => {
             id: prod.id,
             name: prod.name,
             price: prod.price,
-            amount: counter
+            amount: counter,
+            subtotal: parseInt(prod.price) * counter,
         }
 
         addToCart(newItem);
