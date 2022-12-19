@@ -8,7 +8,7 @@ import ShopProvider from './context/shopProvider';
 import ProductDetail from './ProductDetail';
 import Cart from './Cart';
 import Checkout from './Checkout';
-
+import PrivateRoute from './components/PrivateRoute';
 
 function App() {
 // const {cart}=CartState ();
@@ -29,7 +29,9 @@ function App() {
             <Route exact path='/products' element={< Products />}></Route>
             <Route exact path='/login' element={< Login />}></Route>
             <Route exact path='/my-cart' element={< Cart />}></Route>
-            <Route exact path='/checkout' element={< Checkout />}></Route>
+            <Route path='/checkout' element={<PrivateRoute>
+                <Checkout />
+              </PrivateRoute>}></Route>
         </Routes>
       </Router>
     </header>
