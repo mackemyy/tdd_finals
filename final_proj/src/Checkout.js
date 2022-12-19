@@ -1,5 +1,6 @@
 import { useState } from "react";
 import './Checkout.css';
+import { NavLink} from "react-router-dom";
 
 const Checkout = () => {
     const [modalVisible, setModalVisible] = useState(false);
@@ -152,8 +153,9 @@ const Checkout = () => {
                 Your order has been placed. A confirmation<br/>
                 &nbsp;&nbsp;of your order has been sent to your email.
                 </div>
-
+                <NavLink to='/products' data-testid='products-nav'>
                 <i class="fa fa-times-circle fa-2x" aria-hidden="true" onClick={toggleModal}></i>
+                </NavLink>
             </div>
         </div>
         )
