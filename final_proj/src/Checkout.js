@@ -18,7 +18,7 @@ const Checkout = () => {
     return(
         <>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Port+Lligat+Slab"></link>
-            <div className="checkout-page">
+            <div className="checkout-page" data-testid='checkout-test'>
                 <div className="checkoutForm">
                     <div className ="check-space">
                         <div className="header-checkout">
@@ -132,7 +132,7 @@ const Checkout = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <button className="placeOrderBtn" onClick={toggleModal}>Place Order</button>
+                                <button className="placeOrderBtn" onClick={toggleModal} data-testid='placeorder-test'>Place Order</button>
                                 </div>
                                 </div>
                             </div>
