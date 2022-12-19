@@ -8,91 +8,72 @@ const Cart = () => {
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Port+Lligat+Slab"></link>
             <div className="my-cart-page">
                 <div className="topnav-bg"></div>
-                <div className="cart-header">
-                    <div className="title"><i class="fa fa-shopping-cart" id="mycart-icon" data-testid="mycart-btn"></i>My Cart</div>
+
+
+            <div id="cart-title">
+                <div id="logo"><i class="fa fa-shopping-cart" id="cart-icon" data-testid="mycart-btn"></i></div>
+                <div id="logo-title">My Cart</div>
+            </div>
+
+            <div id="cart-title-nav">
+                <div id="cart-title-item">Item</div>
+                <div id="cart-title-secondary">Price</div>
+                <div id="cart-title-secondary">Qty</div>
+                <div id="cart-title-secondary">Total</div>
+            </div>
+
+            <div id="cart-content">
+                <div id="all-select-box">
+                        <input type="checkbox" data-testid="checkbox"/> 
+                        <label>Select All</label>
                 </div>
-                <div className="titlebar">
-                    <p id="item">Item</p>
-                    <p id="qty">Qty.</p>
-                    <p id="total">Total</p>
-                </div>
-                <div className="contents">
-                    <div className="allCarts">
-                    <div className="select">
-                            <label className="cart-container">Select All
-                            <input type="checkbox" data-testid="checkbox"/> 
-                                <span class="checkmark"></span>  
-                            </label>
-                        </div>
-                        <div className="cart-items1">
-                            <div className="prod">
-                                <img id="prodimg" alt =""></img>
+
+
+                {/* start of cart card */}
+                <div id="cart-card-menu">
+
+                    <div id="col-1">
+                            <div id="cart-check-box"> 
+                                    <input  type="checkbox" data-testid="checkbox"/> 
+                                    </div>
+                                    <div id="cart-img"></div>
+                                    <div id="cart-details">Baked Croissant Bread</div>
                             </div>
-                            <div className="prodinfo">
-                                <label className="cart-container">Baked Croissant Bread
-                                <input type="checkbox" data-testid="checkbox"/> 
-                                <span class="checkmark"></span> 
-                                <p className="price">75.00 PHP</p>
-                                </label>
-                            </div>
-                            <div className="qtybtn">
-                                <button className="addBtn">+</button>
-                                <p className="item-qty">1</p>
-                                <button className="subtractBtn">-</button>
-                                <p className="total1">PHP 75.00</p>
-                                <button className="removeBtn">Remove</button>
-                            </div>
-                        </div>
-                        <div className="cart-items2">
-                            <div className="prod">
-                                <img id="prodimg" alt =""></img>
-                            </div>
-                            <div className="prodinfo">
-                                <label className="cart-container">Baked Croissant Bread
-                                <input type="checkbox" data-testid="checkbox"/> 
-                                <span class="checkmark"></span> 
-                                <p className="price">75.00 PHP</p>
-                                </label>
-                            </div>
-                            <div className="qtybtn">
-                                <button className="addBtn">+</button>
-                                <p className="item-qty">1</p>
-                                <button className="subtractBtn">-</button>
-                                <p className="total1">PHP 75.00</p>
-                                <button className="removeBtn">Remove</button>
-                            </div>
-                        </div>
-                        <div className="cart-items3">
-                            <div className="prod">
-                                <img id="prodimg" alt =""></img>
-                            </div>
-                            <div className="prodinfo">
-                                <label className="cart-container">Baked Croissant Bread
-                                <input type="checkbox" data-testid="checkbox"/> 
-                                <span class="checkmark"></span> 
-                                <p className="price">75.00 PHP</p>
-                                </label>
-                            </div>
-                            <div className="qtybtn">
-                                <button className="addBtn">+</button>
-                                <p className="item-qty">1</p>
-                                <button className="subtractBtn">-</button>
-                                <p className="total1">PHP 75.00</p>
-                                <button className="removeBtn">Remove</button>
-                            </div>
-                        </div>
+                    <div id="cart-additionals">PHP 55.00</div>
+                    <div id="cart-additionals">
+                                <button id="qty-btn">+</button>
+                                 <div id="qty-cnt">1</div>
+                                <button id="qty-btn">-</button>
                     </div>
+                    <div id="cart-additionals">PHP 55.00</div>
+                    <div id="cart-additionals">
+                        <button id="removebtn">Remove</button>
+                    </div>
+                    <div>
+                    </div>
+
+                   {/* end of cart card */}
+
+
+               
                     
+                
                 </div>
-                <div className="footer">
-                        <div className="subtotal">
-                            <p>Subtotal: PHP 201.00</p>
-                        </div>
-                        <div class="button"> 
-                            <button class="backBtn">Back to Menu</button>
-                            <button class="checkoutBtn">Checkout</button>
-                        </div>
-                </div>
+
+              
+            </div>
+            
+            <div id="footer">
+                    <div id="col-1-btn">
+                        <button class="backBtn">Back To Menu</button>
+                    </div>
+                    <div id="sub-total">Subtotal: PHP 120.00</div>
+                    <div id="col-2-btn">
+                            <button class="checkoutBtn">Back To Menu</button>
+                    </div>
+            </div>
+               
+               
             </div>
         </>
     )
