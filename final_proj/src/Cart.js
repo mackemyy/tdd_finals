@@ -17,7 +17,7 @@ const Cart = () => {
                 </div>
                 <div className="contents">
                     <div className="select">
-                        <label className="cart-container">Select All
+                        <label className="cart-container" id="selectAll">Select All
                         <input type="checkbox" data-testid="checkbox"/> 
                             <span class="checkmark"></span>  
                         </label>

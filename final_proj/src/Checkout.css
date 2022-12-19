@@ -180,7 +180,7 @@
   background-size: contain;
 }
 
-.cart-row:after {
+.payment-row:after {
   content: "";
   display: table;
   clear: both;
