@@ -3,9 +3,18 @@ const shopReducer = (state, action) => {
     const{type, payload} = action;
     switch(type) {
         case 'addToCart':
+            const prod = state.cart.find((item) => {
+                return item.id === payload.id;
+              })
             return {
                 ...state,
-                cart: [...state.cart, payload]
+                cart: prod === undefined 
+                ? [...state.cart, payload]
+                : state.cart.map((item) => 
+                item.id === payload.id
+                ? {...item, amount: item.amount + payload.amount, subtotal: parseInt(item.price) * (item.amount + payload.amount)} 
+                : item
+                ),
             };
         case 'addToCheckout':
             return {
