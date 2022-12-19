@@ -71,6 +71,12 @@ describe("Check Main screen", ()=>{
 	test('clicking checkout link navigates to checkout page', () => {
 		render(<App />);
 		fireEvent.click(screen.getByText('CHECKOUT'));
+		expect(window.location.pathname).toBe('/checkout');
+	});
+
+	test('clicking login link navigates to login page', () => {
+		render(<App />);
+		fireEvent.click(screen.getByText('LOGIN'));
 		expect(window.location.pathname).toBe('/login');
 	});
 })
