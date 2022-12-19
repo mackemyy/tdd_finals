@@ -27,8 +27,6 @@ const ProductDetail = () => {
         document.body.classList.remove('active-modal')
       }
     
-
-    const {items, addToCart} = useContext(ShopContext)
     const location = useLocation()
     let [counter, setCounter] = useState(1)
     const {id} = location.state;
