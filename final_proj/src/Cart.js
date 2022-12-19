@@ -1,7 +1,8 @@
-import { useState } from "react";
 import './Cart.css';
 
+
 const Cart = () => {
+ 
     return (
         <>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Port+Lligat+Slab"></link>
@@ -25,7 +26,7 @@ const Cart = () => {
                     <div className="cart-items">
                         <div className="prod">
                             <img id="prodimg" alt =""></img>
-                        </div>
+                        </div> 
                         <div className="prodinfo">
                             <label className="cart-container">Baked Croissant Bread
                             <input type="checkbox" data-testid="checkbox"/> 
@@ -40,6 +41,7 @@ const Cart = () => {
                         <p className="total1">PHP 75.00</p>
                         <button className="removeBtn">Remove</button>
                     </div>
+                    
                     <div className="subtotal">
                         <p>Subtotal: PHP 201.00</p>
                     </div>
