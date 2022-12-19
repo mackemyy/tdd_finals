@@ -1,10 +1,12 @@
-    import { useState } from "react";
+import { useState, useContext } from "react";
+import ShopContext from "./context/shop_context";
 import './Checkout.css';
 import { NavLink} from "react-router-dom";
 
 const Checkout = () => {
     const [modalVisible, setModalVisible] = useState(false);
-
+    const {checkout} = useContext(ShopContext)
+    let total = 0;
     const toggleModal = () => {
         setModalVisible(!modalVisible)
     }
@@ -14,7 +16,12 @@ const Checkout = () => {
       } else {
         document.body.classList.remove('active-modal')
       }
-    
+
+    checkout.map((item) => (
+        total = total + item.subtotal
+    ))
+
+    let fee = (Math.round((total * 0.20) * 100) / 100).toFixed(2)
     return(
         <>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Port+Lligat+Slab"></link>
@@ -67,47 +74,21 @@ const Checkout = () => {
 
 
                                 {/* YOUR CART CARD */}
-                                    <div className = "cart-card" >
+                                {checkout.map((item, index) => (
+                                    <div className = "cart-card" key={index}>
                                         <div>
                                             <div id = "bread-picture"></div> 
                                         </div>
                                     <div id="pic-details">
-                                        <div id="bread-name">Croissant MF</div>
-                                        <div id="bread-detail">QUASSANT imo mama</div>
+                                        <div id="bread-name">{item.name}</div>
+                                        <div id="bread-detail">{item.price}</div>
                                         <div id="price-quantity">
-                                            <div id="bread-price">PHP 50.00</div>
-                                            <div id="bread-quantity">x2</div>
+                                            <div id="bread-price">Subtotal: {(Math.round(item.subtotal * 100) / 100).toFixed(2)} PHP</div>
+                                            <div id="bread-quantity">Amount: {item.amount}</div>
                                         </div>
                                     </div>
                                     </div>
-
-                                    <div className = "cart-card" >
-                                        <div>
-                                            <div id = "bread-picture"></div> 
-                                        </div>
-                                    <div id="pic-details">
-                                        <div id="bread-name">Croissant MF</div>
-                                        <div id="bread-detail">QUASSANT imo mama</div>
-                                        <div id="price-quantity">
-                                            <div id="bread-price">PHP 50.00</div>
-                                            <div id="bread-quantity">x2</div>
-                                        </div>
-                                    </div>
-                                    </div>
-
-                                    <div className = "cart-card" >
-                                        <div>
-                                            <div id = "bread-picture"></div> 
-                                        </div>
-                                    <div id="pic-details">
-                                        <div id="bread-name">Croissant MF</div>
-                                        <div id="bread-detail">QUASSANT imo mama</div>
-                                        <div id="price-quantity">
-                                            <div id="bread-price">PHP 50.00</div>
-                                            <div id="bread-quantity">x2</div>
-                                        </div>
-                                    </div>
-                                    </div>
+                                    ))};
                                 {/* YOUR CART CARD ENDS HERE */}
                                    
 
@@ -126,9 +107,9 @@ const Checkout = () => {
                                             <div id = "bold">Total Payment</div>
                                         </div>
                                         <div id = "pay-col2">
-                                            PHP 140.00<br/>
-                                            PHP 50.00<br/>
-                                            <div id = "bold">PHP 190.00</div> 
+                                        {(Math.round(total * 100) / 100).toFixed(2)} PHP<br/>
+                                            {fee} PHP<br/>
+                                            <div id = "bold">{(Math.round((total + parseFloat(fee)) * 100) / 100).toFixed(2)} PHP</div> 
                                         </div>
                                     </div>
                                 </div>

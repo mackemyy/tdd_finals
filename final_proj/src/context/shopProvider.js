@@ -21,10 +21,10 @@ const ShopProvider = (props) => {
         })
     }
 
-    const addToCheckout = (item) => {
+    const addToCheckout = (items) => {
         dispatch({
             type: 'addToCheckout',
-            payload: item
+            payload: items
         })
     }
 

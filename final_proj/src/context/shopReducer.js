@@ -19,7 +19,8 @@ const shopReducer = (state, action) => {
         case 'addToCheckout':
             return {
                 ...state,
-                checkout: [...state.checkout, payload]
+                checkout: [...state.checkout, ...payload],
+                cart: [],
             };
         case 'deleteToCart':
             return {

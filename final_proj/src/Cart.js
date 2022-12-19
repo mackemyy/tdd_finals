@@ -6,10 +6,14 @@ import './Cart.css';
 
 const Cart = () => {
 
-    const {cart, deleteToCart} = useContext(ShopContext)
+    const {cart, deleteToCart, addToCheckout} = useContext(ShopContext)
 
     const onDeleteToCart = (prodID) => {
         deleteToCart(prodID);
+    }
+
+    const onCheckout = () => {
+        addToCheckout(cart);
     }
 
     return (
@@ -77,7 +81,9 @@ const Cart = () => {
                     </div>
                     <div id="sub-total">Subtotal: tobefixed</div>
                     <div id="col-2-btn">
-                            <button class="checkoutBtn">Checkout</button>
+                        <NavLink to='/checkout' data-testid='products-nav'>
+                            <button class="checkoutBtn" onClick={onCheckout}>Checkout</button>
+                        </NavLink>
                     </div>
             </div>
                
