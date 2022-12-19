@@ -95,11 +95,10 @@ body, html {
 #img-container {
   width: 100%;
   height: 180px;
-  background-size: cover;
-  background-repeat: "no-repeat";
+  background-size: contain;
   width: 220px;
   height: 100px;
-  margin: 0 auto;
+ 
 }
 
 #product-name {
@@ -109,11 +108,14 @@ body, html {
 }
 
 .product-img {
-  background-size: cover;
-  background-repeat: "no-repeat";
+  margin-left: 40px;
   width: 235px;
   height: 125px;
-  margin: 0 auto;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  
 }
 
 #prod-info {
@@ -127,4 +129,9 @@ body, html {
   font-family: "Poppins";
   text-align: center;
   margin-top: 0px;
-}/*# sourceMappingURL=Products.css.map */
+}
+
+
+
+
+/*# sourceMappingURL=Products.css.map */

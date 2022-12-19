@@ -125,7 +125,7 @@
   margin-bottom: 10px;
 }
 
-#john {
+#user-input {
   font-size: 18px;
   padding: 10px;
   width: 55%;
@@ -180,16 +180,7 @@
   margin: 10px 0px 0px 0px;
 }
 
-#slicedbread {
-  background-image: url("../src/assets/products/ClassicSlicedBread.png");
-  width: 80px;
-  height: 70px;
-  background-repeat: no-repeat;
-  border-radius: 5px;
-  background-color: white;
-  background-position: center;
-  background-size: contain;
-}
+
 
 .payment-row:after {
   content: "";
@@ -236,7 +227,7 @@
 }
 
 .pay-details {
-  width: 450px;
+  width: 480px;
   height: 100px;
   background: rgb(217, 217, 217);
   border-radius: 10px;
@@ -261,8 +252,8 @@
 }
 
 .placeOrderBtn {
-  margin-right: 120px;
-  float: right;
+  
+ 
   width: 250px;
   height: 60px;
   left: 170px;
@@ -369,5 +360,17 @@
   text-align: end;
   font-weight: 900;
   font-size: 20px;
+}
+
+
+#btn-ctnr {
+  margin-top: 10px;
+  width: 490px;
+  height: 50px;
+ 
+  border-radius: 10px;
+  text-align: end;
+ 
+ 
 }
 /*# sourceMappingURL=Checkout.css.map */
