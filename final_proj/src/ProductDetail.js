@@ -4,7 +4,7 @@ import ShopContext from "./context/shop_context";
 import './ProductDetail.css';
 
 const ProductDetail = () => {
-    const {items, addToCart, addToCheckout} = useContext(ShopContext)
+    const {items, addToCart, addToCheckout, decreaseStock} = useContext(ShopContext)
     const location = useLocation()
     let [counter, setCounter] = useState(1)
     const {id} = location.state;
@@ -41,7 +41,6 @@ const ProductDetail = () => {
             amount: counter,
         }
         alert("Successfully added to cart");
-        // decreaseStock(id, counter);
         addToCart(newItem);
     }
 
@@ -54,8 +53,8 @@ const ProductDetail = () => {
         }
 
         alert("Successfully added to checkout");
-        // decreaseStock(id, counter);
         addToCheckout(newCheckout);
+        decreaseStock(id, counter);
     }
 
     return(
