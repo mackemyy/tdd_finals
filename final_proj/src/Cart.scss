@@ -41,8 +41,12 @@ $border-rad10: 10px;
     position: absolute;
     width: 1714px;
     height: 500px;
-    left: 100px;
+    left: 54px;
     top: 270px;
+}
+
+p {
+    text-align: center;
 }
 
 .allCarts {
@@ -75,7 +79,7 @@ $border-rad10: 10px;
         text-align: center;
         padding: 230px;
         text-decoration: none;
-        font-size: 30px;
+        font-size: 25px;
         border-radius: $border-rad5;
         margin-left: 10px;
     }
@@ -345,17 +349,20 @@ img {
 
 .subtotal {
     position: absolute;
-    width: 389px;
+    width: 350px;
     height: 60px;
     left: 920px;
     top: 460px;
-    font-size: 30px;
+    font-size: 25px;
     font-family: $main-font;
     line-height: 8px;
     letter-spacing: 0.055em;
     color: $black;
     background: #f7f3f3;
     border-radius: $border-rad10;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
 }
 
 .backBtn {

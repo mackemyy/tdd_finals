@@ -14,7 +14,7 @@ const Cart = () => {
                 <div className="titlebar">
                     <p id="item">Item</p>
                     <p id="qty">Qty.</p>
-                    <p id="total">Total</p>
+                    <p id="total">Subtotal</p>
                 </div>
                 <div className="contents">
                     <div className="allCarts">
@@ -86,7 +86,7 @@ const Cart = () => {
                 </div>
                 <div className="footer">
                         <div className="subtotal">
-                            <p>Subtotal: PHP 201.00</p>
+                            <p>TOTAL: PHP 201.00</p>
                         </div>
                         <div class="button"> 
                             <button class="backBtn">Back to Menu</button>
