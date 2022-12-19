@@ -91,7 +91,7 @@ const Cart = () => {
                     </div>
                     <div id="sub-total">Subtotal: PHP 120.00</div>
                     <div id="col-2-btn">
-                            <button class="checkoutBtn">Back To Menu</button>
+                            <button class="checkoutBtn">Checkout</button>
                     </div>
             </div>
                
