@@ -5,6 +5,7 @@ $white: white;
 $dirty-white: #f2f2f2;
 $grey: #D9D9D9;
 $black: black;
+$dark-modal: #151413;
 $border-rad5: 5px;
 $border-rad10: 10px;
 $custom-black: rgba(0, 0, 0, 0.649);
@@ -140,11 +141,12 @@ $grey2: #666666;
   }
 
   .buttons {
-    display: flex;
+    display: block;
     float: right;
-    padding-top: 5%;
+    padding-top: 1%;
     color: $white;
     padding-right: 18%;
+    position: fixed;
 
   }
 
@@ -162,25 +164,130 @@ $grey2: #666666;
     }
   }
 
-  #backToMenu-btn {
+  #buyItNow-btn {
     background-color: $grey2;
     color: $white;
-    position: absolute;
+    position: fixed;
     cursor: pointer;
     font-family: 500px;
     border: none;
+    margin-left: 20%;
     
   }
 
   #addToCart-btn {
     background-color: $orange;
     color: $white;
-    position: absolute;
+    position: fixed;
     border: none;
     border-radius: $border-rad5;
     cursor: pointer;
-    margin-left: 55%;
+    margin-left: 35%;
     float: right;
   }
 
+//modal
+  .modalC, .overlayC {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+  }
+  
+  .overlayC {
+    background: rgba(49, 49, 49, 0.8);
+  }
+  
+  .modal-contentC {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: $dark-modal;
+    padding: 14px 28px;
+    border-radius: $border-rad10;
+    width: 40%;
+    height: 42%;
+  }
+  
+  .fa-times-circle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+    color: $dirty-white;
+    cursor: pointer;
+  }
+  
+  #h2C {
+    color: $dirty-white;
+    font-size: 35px;
+    padding-left: 32%;
+    font-family: $main-font;
+    font-weight: 600;
+    padding-top: 20px;
+  }
+  
+  
+  #check {
+    color: $orange;
+    padding-left: 44%;
+    padding-top: 55px;
+  }
 
+
+  .cntshop-btn{
+    margin-right: 120px ;
+	float: right ;
+	width: 250px ;
+	height: 60px ;
+	left: 170px ;
+	top: 460px ;
+	background: $orange;
+	color: $white ;
+	border: 0 ;
+	border-radius: 10px ;
+	font-family: $main-font ;
+	font-style: normal ;
+	font-weight: 600 ;
+	font-size: 20px ;
+	line-height: 52px ; 
+	letter-spacing: 0.055em ;
+	cursor: pointer ;
+	&:hover {
+		background-color: $white ;
+		border: 2px solid ;
+		color: $orange ;
+	}
+  }
+
+  .row-pd{
+    &:after {
+		content: "" ;
+		display: table ;
+		clear: both ;
+	}
+    position: absolute;
+  }
+
+  #col-pd1{
+    float: left;
+    padding-left: 300px;
+
+  }
+
+  #col-pd2{
+    float: right;
+    margin-left: 10px;
+    
+  
+  }
+
+  .column-pd{
+    width: 20% ;
+	padding-left: 100px ;
+  }

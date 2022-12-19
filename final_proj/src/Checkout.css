@@ -8,9 +8,10 @@
 }
 
 .checkoutForm {
+  padding-top: 30px;
   position: absolute;
   width: 80%;
-  height: 650px;
+  height:800px;
   margin-left: 180px;
   top: 100px;
   background-color: white;
@@ -54,6 +55,7 @@
 }
 
 .checkout-subtitle {
+  padding-top: 15px;
   top: 20px;
   font-size: 20px;
   font-style: normal;
@@ -63,8 +65,11 @@
 }
 
 .line {
+  
+  margin-top: 10px;
+  margin-bottom: 20px;
   height: 1px;
-  background: black;
+  background: rgb(138, 138, 138);
   width: 83%;
   float: left;
 }
@@ -150,23 +155,29 @@
 }
 
 .cart-card {
+  
   width: 450px;
-  height: 80px;
+  height: 110px;
   background: rgb(217, 217, 217);
+
   border-radius: 10px;
-  margin-bottom: 10px;
-  padding: 5px;
+  margin-bottom: 20px;
+  padding: 15px;
+  display: flex;
 }
 
-#croissant {
+#bread-picture{
   background-image: url("../src/assets/products/BakedCroissantBread.png");
   width: 80px;
-  height: 70px;
+  height: 90px;
   background-repeat: no-repeat;
   border-radius: 5px;
   background-color: white;
   background-position: center;
   background-size: contain;
+
+  padding: 10px 50px 0px 0px;
+  margin: 10px 0px 0px 0px;
 }
 
 #slicedbread {
@@ -180,10 +191,17 @@
   background-size: contain;
 }
 
-.cart-row:after {
+.payment-row:after {
   content: "";
   display: table;
   clear: both;
+}
+
+#cart-row-space {
+  width: 85%;
+  height: 200px;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 #pic-col1 {
@@ -202,7 +220,10 @@
 }
 
 #pic-details {
-  margin-right: 150px;
+  margin: 10px 10px 10px 10px;
+  width: 300px;
+  height: 100px;
+ 
 }
 
 #pic-col3 {
@@ -262,4 +283,91 @@
   background-color: white;
   border: 2px solid;
   color: orange;
-}/*# sourceMappingURL=Checkout.css.map */
+}
+
+.modal, .overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.overlay {
+  background: rgba(49, 49, 49, 0.8);
+}
+
+.modal-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: #151413;
+  padding: 14px 28px;
+  border-radius: 10px;
+  width: 40%;
+  height: 42%;
+}
+
+.fa-times-circle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 7px;
+  color: #f2f2f2;
+  cursor: pointer;
+}
+
+#h2 {
+  color: #f2f2f2;
+  font-size: 35px;
+  padding-left: 36%;
+  font-family: "Poppins";
+  font-weight: 600;
+  padding-top: 20px;
+}
+
+#p {
+  color: #f2f2f2;
+  font-family: "Poppins";
+  padding-left: 18%;
+  font-size: 20px;
+}
+
+#check {
+  color: orange;
+  padding-left: 44%;
+  padding-top: 55px;
+}
+
+#bread-name {
+  font-weight: bold;
+  font-size:20px;
+}
+
+#bread-detail{
+ 
+  font-size: 15px;
+}
+
+#price-quantity {
+ 
+  width: 300px;
+  height: 50px;
+}
+
+
+#bread-price {
+  text-align: end;
+  font-weight: 900;
+}
+
+#bread-quantity {
+  text-align: end;
+  font-weight: 900;
+  font-size: 20px;
+}
+/*# sourceMappingURL=Checkout.css.map */

@@ -95,6 +95,15 @@ label {
     background-color: $grey;
 }
 
+.result {
+    font-family: $main-font;
+    font-size: 15px;
+    color: red;
+   text-align: center;
+   font-weight: normal;
+   margin-top:58%;
+}
+
 // .fa-eye {
 //     position: absolute;
 //     right: 18%;

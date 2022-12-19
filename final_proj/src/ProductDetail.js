@@ -1,10 +1,91 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import ShopContext from "./context/shop_context";
 import './ProductDetail.css';
 
 const ProductDetail = () => {
+    const {items, addToCart, addToCheckout, decreaseStock} = useContext(ShopContext)
+    const [modalConfirm, setModalConfirm] = useState(false);
+
+    const toggleConfirmModal = () => {
+       
+        const newItem = {
+            id: prod.id,
+            name: prod.name,
+            price: prod.price,
+            amount: counter
+        }
+
+        addToCart(newItem);
+        setModalConfirm(!modalConfirm)
+        
+    }
+
+    if(modalConfirm) {
+        document.body.classList.add('active-modal')
+      } else {
+        document.body.classList.remove('active-modal')
+      }
+    
+    const location = useLocation()
+    let [counter, setCounter] = useState(1)
+    const {id} = location.state;
+    console.log('YOU ARE IN PRODUCT DETAIL');
+
+    
+    const prod = items.find((item) => {
+        return item.id === id;
+      })
+
+    const upLimit = parseInt(prod.stockAvail);
+    const lowLimit = parseInt(1, 10);
+
+    const onSubtractClick = () => {
+       if(counter > lowLimit){
+        setCounter(prevCounter => prevCounter - 1);
+       }
+       else{
+        setCounter(1)
+       }
+    }
+
+    const onAddClick = () => {
+        if(counter < upLimit){
+        setCounter(prevCounter => prevCounter + 1);
+        }
+        
+       
+    }
+
+    // const onAddToCart = () => {
+        // const newItem = {
+            // id: prod.id,
+            // name: prod.name,
+            // price: prod.price,
+            // amount: counter
+        // }
+
+        // alert("Successfully added to cart");
+        // decreaseStock(id, counter);
+        // addToCart(newItem);
+    // }
+
+    const onAddToCheckout = () => {
+        const newCheckout = {
+            id: prod.id,
+            name: prod.name,
+            price: prod.price,
+            amount: counter
+        }
+
+        alert("Successfully added to checkout");
+        addToCheckout(newCheckout);
+        decreaseStock(id, counter);
+    }
+
     return(
         <>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Port+Lligat+Slab"></link>
         <div className="product-detail-page">
             <div className="topnav-bg"></div>
             <div className="breadcrumbs">
@@ -15,38 +96,65 @@ const ProductDetail = () => {
             <div className="prod-details">
                 <div className="img-placeholder">
                     <div className="container">
-                    <img src={require("./assets/products/BakedCroissantBread.png")} alt="Baked Croissant Bread"/>
+                    <img src={prod.image} alt="Product"/>
                     </div>
                 </div>
                 <div className="txt-placeholder">
-                    <div id="pd-title" className="txt">Baked Criossant Bread</div>
+                    <div id="pd-title" className="txt">{prod.name}</div>
                     <div id="pd-subtitle" className="txt">Classic Favorites</div>
-                    <div id="pd-price" className="txt">75.00 PHP</div>
-                    <div id="pd-stocks" className="txt">5 STOCKS LEFT</div>
+                    <div id="pd-price" className="txt">{prod.price}</div>
+                    <div id="pd-stocks" className="txt">{prod.stockAvail} STOCKS LEFT</div>
                     <div className="qty">
                         <div id="qty-text" className="txt">Quantity</div>
                         <div class="wrapper">
-                            <span class="minus">-</span>
-                            <span class="num">1</span>
-                            <span class="plus">+</span>
+                            <span class="minus" onClick={onSubtractClick}>-</span>
+                            <span class="num">{counter}</span>
+                            <span class="plus" onClick={onAddClick}>+</span>
                         </div>
                     </div>
                     <div className="buttons">
-                        <button id="backToMenu-btn" className="btns" data-testid="backToMenu-btn">Back To Menu</button>
-                        <button id="addToCart-btn" className="btns" data-testid="addToCart-btn">Add to Cart</button>
+                    <NavLink to='/checkout' data-testid='products-nav'>
+                        <button id="buyItNow-btn" className="btns" data-testid="buyItNow-btn" onClick={onAddToCheckout}>Buy It Now</button>
+                    </NavLink>
+                    
+                        <button id="addToCart-btn" className="btns" data-testid="addToCart-btn" onClick={toggleConfirmModal}>Add to Cart</button>
+                    
+  
                     </div>
                 </div>
-                {/* <div class="float-container">
-                    <div class="float-child">
-                    <div class="green">Float Column 1</div>
-                    </div>
-
-                    <div class="float-child">
-                    <div class="blue">Float Column 2</div>
-                    </div>
-                </div> */}
             </div>
         </div>
+
+        {/* //MODAL  */}
+
+        {modalConfirm && (
+        <div className = "modalC">
+            <div className="overlayC"></div>
+                <div className="modal-contentC">
+                <i id = "check" class="fa fa-check-circle fa-5x" aria-hidden="true"></i>
+                <br/>
+                <div id="h2C">Added to cart!</div>
+                <br/>
+                
+                {/* <i class="fa fa-times-circle fa-2x" aria-hidden="true" onClick={toggleConfirmModal}></i> */}
+                <div className="row-pd">
+                    
+                <NavLink to='/products' data-testid='products-nav'>
+                    <div className = "column-pd" id="col-pd1">
+                    <button className="cntshop-btn" onClick= "">Continue Shopping</button>
+                    </div>
+                </NavLink>
+
+                <NavLink to='/my-cart' data-testid='products-nav'>
+                    <div className = "column-pd" id="col-pd2">
+                    <button className="cntshop-btn" onClick="">View My Cart</button>
+                    </div>
+                </NavLink>
+                </div>
+            </div>
+        </div>
+        )
+        }
 
         </>
     )

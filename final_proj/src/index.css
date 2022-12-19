@@ -48,6 +48,7 @@ html {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;  
+  overflow: hidden;
 }
 
 .products-page {

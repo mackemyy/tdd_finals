@@ -1,8 +1,11 @@
 import { NavLink, useLocation } from "react-router-dom";
+import { useContext } from "react";
+import ShopContext from "./context/shop_context";
 import './PageNavigation.css';
 
 export const PageNavigation = () => {
     const { pathName } = useLocation();
+    const {cart} = useContext(ShopContext)
     console.log(pathName);
     return (
         <>
@@ -15,15 +18,12 @@ export const PageNavigation = () => {
                     CHECKOUT
                 </NavLink>
                 <NavLink to='/my-cart' id="mycart-count" data-testid='my-cart'>
-                    0
+                    {cart.length}
                     <i class="fa fa-shopping-cart" id="mycart-icon" data-testid="mycart-btn"></i>
                 </NavLink>
                 {/* <a href=" " id="mycart-count">0<i class="fa fa-shopping-cart" id="mycart-icon" data-testid="mycart-btn"></i></a> */}
                 <NavLink to='/products' data-testid='products-nav'>
                     PRODUCTS
-                </NavLink>
-                <NavLink to='/product-detail' data-testid='productsdetail-nav'>
-                    DETAIL
                 </NavLink>
                 <NavLink to='/' data-testid='home-nav'>
                     HOME
