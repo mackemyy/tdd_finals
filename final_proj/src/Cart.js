@@ -7,6 +7,11 @@ import './Cart.css';
 const Cart = () => {
 
     const {cart, deleteToCart, addToCheckout} = useContext(ShopContext)
+    let subtotal = 0;
+
+    cart.map((item) => (
+        subtotal = subtotal + item.subtotal
+    ))
 
     const onDeleteToCart = (prodID) => {
         deleteToCart(prodID);
@@ -79,7 +84,7 @@ const Cart = () => {
                         <button class="backBtn">Back To Menu</button>
                     </NavLink>
                     </div>
-                    <div id="sub-total">Subtotal: tobefixed</div>
+                    <div id="sub-total">Subtotal: {(Math.round(subtotal * 100) / 100).toFixed(2)} PHP</div>
                     <div id="col-2-btn">
                         <NavLink to='/checkout' data-testid='products-nav'>
                             <button class="checkoutBtn" onClick={onCheckout}>Checkout</button>
