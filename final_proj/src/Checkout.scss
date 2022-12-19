@@ -198,13 +198,20 @@ $border-rad10: 10px;
 	background-size: contain ;
 }
 
-.cart-row {
+.payment-row {
 	&:after {
 		content: "" ;
 		display: table ;
 		clear: both ;
 	}
 }
+
+// .cart-row {
+// 	width: 82%;
+// 	height: 200px;
+// 	background-color: $grey;
+// 	border-radius: $border-rad10;
+// }
 
 #cart-row-space{
 	width: 85% ;

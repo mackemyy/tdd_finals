@@ -1,7 +1,8 @@
-import { useState } from "react";
 import './Cart.css';
 
+
 const Cart = () => {
+ 
     return (
         <>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Port+Lligat+Slab"></link>

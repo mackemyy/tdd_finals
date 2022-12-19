@@ -109,13 +109,13 @@ const Checkout = () => {
                                         </div>
                                     </div> 
                                     </div>
-
                                     </div>
                                 </div>
                                 <br/>
+                                <div className="payment">
                                 <div className="subtitle2">Payment Details</div>
                                 <div className = "pay-details">
-                                    <div className = "cart-row">
+                                    <div className = "payment-row">
                                         <div id = "pay-col1">
                                             Merchandise Subtotal<br/>
                                             Shipping Subtotal<br/>
@@ -129,6 +129,7 @@ const Checkout = () => {
                                     </div>
                                 </div>
                                 <button className="placeOrderBtn" onClick={toggleModal}>Place Order</button>
+                                </div>
                                 </div>
                             </div>
 
