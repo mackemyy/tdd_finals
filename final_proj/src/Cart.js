@@ -49,17 +49,6 @@ const Cart = () => {
                             <span class="checkmark"></span>  
                         </label>
                     </div>
-                    <div className="cart-items">
-                        <div className="prod">
-                            <img id="prodimg" alt =""></img>
-                        </div> 
-                        <div className="prodinfo">
-                            <label className="cart-container">Baked Croissant Bread
-                            <input type="checkbox" data-testid="checkbox"/> 
-                            <span class="checkmark"></span> 
-                            <p className="price">75.00 PHP</p>
-                            </label>
-                        </div>
                         <div className="cart-items1">
                             <div className="prod">
                                 <img id="prodimg" alt =""></img>
