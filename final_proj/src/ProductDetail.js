@@ -17,6 +17,7 @@ const ProductDetail = () => {
         }
 
         addToCart(newItem);
+        decreaseStock(id, counter);
         setModalConfirm(!modalConfirm)
         
     }
@@ -56,19 +57,6 @@ const ProductDetail = () => {
         
        
     }
-
-    // const onAddToCart = () => {
-        // const newItem = {
-            // id: prod.id,
-            // name: prod.name,
-            // price: prod.price,
-            // amount: counter
-        // }
-
-        // alert("Successfully added to cart");
-        // decreaseStock(id, counter);
-        // addToCart(newItem);
-    // }
 
     const onAddToCheckout = () => {
         const newCheckout = {
