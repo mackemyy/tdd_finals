@@ -16,8 +16,14 @@ const Checkout = () => {
 
     let total = 0;
     const toggleModal = () => {
-        setModalVisible(!modalVisible)
-        placeOrder();
+        if(!error) {
+            setModalVisible(!modalVisible)
+        }
+        else {
+            setModalVisible(!modalVisible);
+            placeOrder();
+        }
+        
     }
 
     if(modalVisible) {
@@ -35,10 +41,12 @@ const Checkout = () => {
     const handleSubmit=(e)=>{
         e.preventDefault();
         if(name.length===0||address.length===0||contact.length===0||email.length===0||nameC.length===0||card.length===0) {
+            setModalVisible(!modalVisible)
             setError(true)
         }
         if(name&&address&&contact&&email&&nameC&&card) {
             console.log("Name: ", name)
+            
         }
     }
 
