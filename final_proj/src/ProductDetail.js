@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import ShopContext from "./context/shop_context";
 import './ProductDetail.css';
@@ -66,8 +66,6 @@ const ProductDetail = () => {
             price: prod.price,
             amount: counter
         }
-
-        alert("Successfully added to checkout");
         addToCheckout(newCheckout);
         decreaseStock(id, counter);
     }
@@ -102,13 +100,10 @@ const ProductDetail = () => {
                         </div>
                     </div>
                     <div className="buttons">
-                    <NavLink to='/checkout' data-testid='products-nav'>
+                    <NavLink to='/login' data-testid='login-nav'>
                         <button id="buyItNow-btn" className="btns" data-testid="buyItNow-btn" onClick={onAddToCheckout}>Buy It Now</button>
                     </NavLink>
-                    
                         <button id="addToCart-btn" className="btns" data-testid="addToCart-btn" onClick={toggleConfirmModal}>Add to Cart</button>
-                    
-  
                     </div>
                 </div>
             </div>
@@ -119,26 +114,23 @@ const ProductDetail = () => {
         {modalConfirm && (
         <div className = "modalC">
             <div className="overlayC"></div>
-                <div className="modal-contentC">
+            <div className="modal-contentC">
                 <i id = "check" class="fa fa-check-circle fa-5x" aria-hidden="true"></i>
                 <br/>
                 <div id="h2C">Added to cart!</div>
                 <br/>
-                
-                {/* <i class="fa fa-times-circle fa-2x" aria-hidden="true" onClick={toggleConfirmModal}></i> */}
                 <div className="row-pd">
-                    
-                <NavLink to='/products' data-testid='products-nav'>
-                    <div className = "column-pd" id="col-pd1">
-                    <button className="cntshop-btn" onClick= "">Continue Shopping</button>
-                    </div>
-                </NavLink>
+                    <NavLink to='/products' data-testid='products-nav'>
+                        <div className = "column-pd" id="col-pd1">
+                        <button className="cntshop-btn" onClick= "">Continue Shopping</button>
+                        </div>
+                    </NavLink>
 
-                <NavLink to='/my-cart' data-testid='products-nav'>
-                    <div className = "column-pd" id="col-pd2">
-                    <button className="cntshop-btn" onClick="">View My Cart</button>
-                    </div>
-                </NavLink>
+                    <NavLink to='/my-cart' data-testid='products-nav'>
+                        <div className = "column-pd" id="col-pd2">
+                        <button className="cntshop-btn" onClick="">View My Cart</button>
+                        </div>
+                    </NavLink>
                 </div>
             </div>
         </div>
