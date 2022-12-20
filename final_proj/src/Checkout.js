@@ -16,8 +16,14 @@ const Checkout = () => {
 
     let total = 0;
     const toggleModal = () => {
-        setModalVisible(!modalVisible)
-        placeOrder();
+        if(!error) {
+            setModalVisible(!modalVisible)
+        }
+        else {
+            setModalVisible(!modalVisible);
+            placeOrder();
+        }
+        
     }
 
     if(modalVisible) {
