@@ -22,9 +22,9 @@ $border-rad10: 10px;
 .checkoutForm {
 	position: absolute ;
 	width: 80% ;
-	height: 700px ;
+	height: 720px ;
 	margin-left: 180px ;
-	top: 100px ;
+	top: 80px ;
 	background-color: $white ;
 	border-radius: 35px ;
 	box-shadow: 0 0 10px $black ;
@@ -98,12 +98,17 @@ $border-rad10: 10px;
 
 }
 
+.label{
+	color: red;
+	font-size: 11px;
+	
+}
+
 #contact-no{
 	font-size: 18px ;
 	padding: 10px ;
 	width: 80%;
     height: 23px;
-	margin-bottom: 10px;
     border-radius: $border-rad10;
     border-color: $grey;
     border: 0;
@@ -115,7 +120,6 @@ $border-rad10: 10px;
 	padding: 10px ;
 	width: 67%;
     height: 23px;
-	margin-bottom: 10px;
     border-radius: $border-rad10;
     border-color: $grey;
     border: 0;
@@ -138,12 +142,11 @@ $border-rad10: 10px;
 	margin-bottom: 10px ;
 }
 
-#john {
+#user-input {
 	font-size: 18px ;
 	padding: 10px ;
 	width: 55%;
     height: 23px;
-	margin-bottom: 10px;
     border-radius: $border-rad10;
     border-color: $grey;
     border: 0;
@@ -155,7 +158,6 @@ $border-rad10: 10px;
 	padding: 10px ;
 	width: 80%;
     height: 23px;
-	margin-bottom: 10px;
     border-radius: $border-rad10;
     border-color: $grey;
     border: 0;
@@ -174,28 +176,6 @@ $border-rad10: 10px;
 	border-radius: 10px ;
 	margin-bottom: 10px ;
 	padding: 5px ;
-}
-
-#croissant {
-	background-image: url("../src/assets/products/BakedCroissantBread.png") ;
-	width: 80px ;
-	height: 70px ;
-	background-repeat: no-repeat ;
-	border-radius: 5px ;
-	background-color: $white ;
-	background-position: center ;
-	background-size: contain ;
-}
-
-#slicedbread {
-	background-image: url("../src/assets/products/ClassicSlicedBread.png") ;
-	width: 80px ;
-	height: 70px ;
-	background-repeat: no-repeat ;
-	border-radius: 5px ;
-	background-color: $white ;
-	background-position: center ;
-	background-size: contain ;
 }
 
 .payment-row {
@@ -351,3 +331,66 @@ $border-rad10: 10px;
 	padding-top: 55px;
 	
 }
+
+//card
+#bread-picture{
+	background-image: url("../src/assets/products/BakedCroissantBread.png");
+	width: 80px;
+	height: 90px;
+	background-repeat: no-repeat;
+	border-radius: 5px;
+	background-color: white;
+	background-position: center;
+	background-size: contain;
+  
+	padding: 10px 50px 0px 0px;
+	margin: 10px 0px 0px 0px;
+  }
+
+
+#bread-name {
+  font-weight: bold;
+  font-size:20px;
+}
+
+#bread-detail{
+ 
+  font-size: 15px;
+}
+
+#price-quantity {
+ 
+  width: 300px;
+  height: 50px;
+}
+
+
+#bread-price {
+  text-align: end;
+  font-weight: 900;
+}
+
+#bread-quantity {
+  text-align: end;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+
+#btn-ctnr {
+  margin-top: 10px;
+  width: 490px;
+  height: 50px;
+ 
+  border-radius: 10px;
+  text-align: end;
+ 
+}
+
+
+
+
+
+  
+  
+  
