@@ -103,7 +103,7 @@ const ProductDetail = () => {
                         </div>
                     </div>
                     <div className="buttons">
-                    <NavLink to='/checkout' data-testid='checkout-nav'>
+                    <NavLink to='/login' data-testid='checkout-nav'>
                         <button id="buyItNow-btn" className="btns" data-testid="buyItNow-btn" onClick={onAddToCheckout}>Buy It Now</button>
                     </NavLink>
                         <button id="addToCart-btn" className="btns" data-testid="addToCart-btn" onClick={toggleConfirmModal}>Add to Cart</button>
