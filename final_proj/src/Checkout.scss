@@ -9,345 +9,387 @@ $border-rad5: 5px;
 $border-rad10: 10px;
 
 #profile-btn {
-	margin-right: 50px ;
-	padding-bottom: 3px ;
-}
-
-#mycart-btn {
-	&.active {
-		color: $orange ;
-	}
-}
-
-.checkoutForm {
-	position: absolute ;
-	width: 80% ;
-	height: 700px ;
-	margin-left: 180px ;
-	top: 100px ;
-	background-color: $white ;
-	border-radius: 35px ;
-	box-shadow: 0 0 10px $black ;
-    font-family: $main-font;
-}
-
-.check-space {
-	margin-left: 65px ;
-	margin-bottom: 20px ;
-}
-
-.checkout-title {
-	font-style: $main-font ;
-	font-weight: 600 ;
-	font-size: 45px ;
-	line-height: 82px ;
-	color: $orange ;
-	padding-left: 50px ; 
-	padding-top: 18px ;
-}
-
-.column {
-	width: 45% ;
-	padding-left: 55px ;
-}
-
-#col1 {
-	float: left ;
-}
-
-#col2 {
-	float: right ;
-}
-
-.row {
-	&:after {
-		content: "" ;
-		display: table ;
-		clear: both ;
-	}
-}
-
-.checkout-subtitle {
-	top: 20px ;
-	font-size: 20px ;
-	font-style: normal ;
-	font-weight: 800 ;
-	line-height: 38px ;
-	color: $orange ;
-}
-
-.line {
-	height: 1px ;
-	background: $black ;
-	width: 83% ;
-	float: left ;
-}
-
-
-.c-ship {
-	float: left ;
-}
-
-#c1{
+	margin-right: 50px;
+	padding-bottom: 3px;
+  }
+  
+  #mycart-btn.active {
+	color: $orange;
+  }
+  
+  .checkoutForm {
+	position: absolute;
+	width: 80%;
+	height:790px;
+	margin-left: 180px;
+	top: 100px;
+	background-color: white;
+	border-radius: 35px;
+	box-shadow: 0 0 10px black;
+	font-family: $main-font;
+  }
+  
+  .check-space {
+	margin-left: 65px;
+	margin-bottom: 20px;
+  }
+  
+  .checkout-title {
+	font-style: $main-font;
+	font-weight: 600;
+	font-size: 45px;
+	line-height: 82px;
+	color: $orange;
+	padding-left: 50px;
+	padding-top: 18px;
+  }
+  
+  .column {
+	width: 45%;
+	padding-left: 55px;
+  }
+  
+  #col1 {
+	float: left;
+  }
+  
+  #col2 {
+	float: right;
+  }
+  
+  .row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+  
+  .checkout-subtitle {
+	padding-top: 15px;
+	top: 20px;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 38px;
+	color: $orange;
+  }
+  
+  .line {
+	
+	margin-top: 10px;
+	margin-bottom: 20px;
+	height: 1px;
+	background: rgb(138, 138, 138);
+	width: 83%;
+	float: left;
+  }
+  
+  .c-ship {
+	float: left;
+  }
+  
+  #c1 {
 	width: 40%;
-}
-
-
-#c2 {
+  }
+  
+  #c2 {
 	width: 60%;
+  }
 
+.label{
+	color: red;
+	font-size: 11px;
+	
 }
-
-#contact-no{
-	font-size: 18px ;
-	padding: 10px ;
+  
+  #contact-no {
+	font-size: 18px;
+	padding: 10px;
 	width: 80%;
-    height: 23px;
-	margin-bottom: 10px;
-    border-radius: $border-rad10;
-    border-color: $grey;
-    border: 0;
-    background-color: $grey;
-}
-
-#email-ship{
-	font-size: 18px ;
-	padding: 10px ;
+	height: 23px;
+	border-radius: 10px;
+	border-color: $gray;
+	border: 0;
+	background-color: $gray;
+  }
+  
+  #email-ship {
+	font-size: 18px;
+	padding: 10px;
 	width: 67%;
-    height: 23px;
-	margin-bottom: 10px;
-    border-radius: $border-rad10;
-    border-color: $grey;
-    border: 0;
-    background-color: $grey;
-}
-
-.subtitle2 {
-	font-style: italic ;
-	margin-bottom: 5px ;
-	color: rgb(102,102, 102) ;
+	height: 23px;
+	border-radius: $border-rad10;
+	border-color: $gray;
+	border: 0;
+	background-color: $gray;
+  }
+  
+  .subtitle2 {
+	font-style: italic;
+	margin-bottom: 5px;
+	color: rgb(102, 102, 102);
 	margin-right: 100px;
-}
-
-
-.pay-info {
-	width: 420px ;
-	height: 46px ;
-	background: rgba(217, 217, 217) ;
-	border-radius: 10px ;
-	margin-bottom: 10px ;
-}
-
-#john {
-	font-size: 18px ;
-	padding: 10px ;
+  }
+  
+  .pay-info {
+	width: 420px;
+	height: 46px;
+	background: rgb(217, 217, 217);
+	border-radius: $border-rad10;
+	margin-bottom: 10px;
+  }
+  
+  #user-input {
+	font-size: 18px;
+	padding: 10px;
 	width: 55%;
-    height: 23px;
-	margin-bottom: 10px;
-    border-radius: $border-rad10;
-    border-color: $grey;
-    border: 0;
-    background-color: $grey;
-}
-
-#ship-info{
-	font-size: 18px ;
-	padding: 10px ;
+	height: 23px;
+	border-radius: $border-rad10;
+	border-color: $gray;
+	border: 0;
+	background-color: $gray;
+  }
+  
+  #ship-info {
+	font-size: 18px;
+	padding: 10px;
 	width: 80%;
-    height: 23px;
-	margin-bottom: 10px;
-    border-radius: $border-rad10;
-    border-color: $grey;
-    border: 0;
-    background-color: $grey;
-}
-
-#expDate {
-	width: 180px ;
-	height: 46px ;
-}
-
-.cart-card {
-	width: 450px ;
-	height: 80px ;
-	background: rgba(217, 217, 217) ;
-	border-radius: 10px ;
-	margin-bottom: 10px ;
-	padding: 5px ;
-}
-
-#croissant {
-	background-image: url("../src/assets/products/BakedCroissantBread.png") ;
-	width: 80px ;
-	height: 70px ;
-	background-repeat: no-repeat ;
-	border-radius: 5px ;
-	background-color: $white ;
-	background-position: center ;
-	background-size: contain ;
-}
-
-#slicedbread {
-	background-image: url("../src/assets/products/ClassicSlicedBread.png") ;
-	width: 80px ;
-	height: 70px ;
-	background-repeat: no-repeat ;
-	border-radius: 5px ;
-	background-color: $white ;
-	background-position: center ;
-	background-size: contain ;
-}
-
-.payment-row {
-	&:after {
-		content: "" ;
-		display: table ;
-		clear: both ;
-	}
-}
-
-#cart-row-space{
-	width: 85% ;
-	height: 200px ;
+	height: 23px;
+	border-radius: $border-rad10;
+	border-color: $gray;
+	border: 0;
+	background-color: $gray;
+  }
+  
+  #expDate {
+	width: 180px;
+	height: 46px;
+  }
+  
+  .cart-card {
+	
+	width: 450px;
+	height: 110px;
+	background: rgb(217, 217, 217);
+  
+	border-radius: $border-rad10;
+	margin-bottom: 20px;
+	padding: 15px;
+	display: flex;
+  }
+  
+  #bread-picture{
+	background-image: url("../src/assets/products/BakedCroissantBread.png");
+	width: 80px;
+	height: 90px;
+	background-repeat: no-repeat;
+	border-radius: $border-rad5;
+	background-color: $white;
+	background-position: center;
+	background-size: contain;
+  
+	padding: 10px 50px 0px 0px;
+	margin: 10px 0px 0px 0px;
+  }
+  
+  
+  
+  .payment-row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+  
+  #cart-row-space {
+	width: 85%;
+	height: 200px;
 	overflow: hidden;
 	overflow-y: scroll;
-}
-
-#pic-col1 {
-	margin-top: 5px ;
-	float: left ;
-	width: 20% ;
-}
-
-#pic-col2 {
-	font-weight: 600 ;
-	float: right ;
-	width: 50% ;
-	position: absolute ;
-	margin-left: 95px ;
-	margin-top: 5px ;
-}
-
-#pic-details {
-	margin-right: 150px ;
-}
-
-#pic-col3 {
-	position: absolute ;
-	width: 30% ;
-	margin-left: 320px ;
-	margin-top: 28px ;
-	font-style: italic; 
-	color: rgb(102,102, 102) ;
-}
-
-.pay-details {
-	width: 450px ;
-	height: 100px ;
-	background: rgba(217, 217, 217) ;
-	border-radius: 10px ;
-	margin-bottom: 10px ;
-	padding: 5px ;
-}
-
-#pay-col1 {
-	float: left ;
-	padding-top: 10px ;
-	padding-left: 10px ;
-}
-
-#pay-col2 {
-	float: right ;
-	padding-top: 10px ;
-	padding-right: 10px ;
-}
-
-#bold {
-	font-weight: 600 ;
-}
-
-.placeOrderBtn {
-	margin-right: 120px ;
-	float: right ;
-	width: 250px ;
-	height: 60px ;
-	left: 170px ;
-	top: 460px ;
+  }
+  
+  #pic-col1 {
+	margin-top: $border-rad5;
+	float: left;
+	width: 20%;
+  }
+  
+  #pic-col2 {
+	font-weight: 600;
+	float: right;
+	width: 50%;
+	position: absolute;
+	margin-left: 95px;
+	margin-top: $border-rad5;
+  }
+  
+  #pic-details {
+	margin: 10px 10px 10px 10px;
+	width: 300px;
+	height: 100px;
+   
+  }
+  
+  #pic-col3 {
+	position: absolute;
+	width: 30%;
+	margin-left: 320px;
+	margin-top: 28px;
+	font-style: italic;
+	color: rgb(102, 102, 102);
+  }
+  
+  .pay-details {
+	width: 480px;
+	height: 100px;
+	background: rgb(217, 217, 217);
+	border-radius: $border-rad10;
+	margin-bottom: 10px;
+	padding: 5px;
+  }
+  
+  #pay-col1 {
+	float: left;
+	padding-top: 10px;
+	padding-left: 10px;
+  }
+  
+  #pay-col2 {
+	float: right;
+	padding-top: 10px;
+	padding-right: 10px;
+  }
+  
+  #bold {
+	font-weight: 600;
+  }
+  
+  .placeOrderBtn {
+	
+   
+	width: 250px;
+	height: 60px;
+	left: 170px;
+	top: 460px;
 	background: $orange;
-	color: $white ;
-	border: 0 ;
-	border-radius: 10px ;
-	font-family: $main-font ;
-	font-style: normal ;
-	font-weight: 600 ;
-	font-size: 20px ;
-	line-height: 52px ; 
-	letter-spacing: 0.055em ;
-	cursor: pointer ;
-	&:hover {
-		background-color: $white ;
-		border: 2px solid ;
-		color: $orange ;
-	}
-}
-
-//modal
-
-.modal, .overlay {
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: fixed;
-}
-
-.overlay {
-    background: rgba(49,49,49,0.8);
-}
-.modal-content {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    line-height: 1.4;
-    background: $dark-modal;
-    padding: 14px 28px;
-    border-radius: $border-rad10;
+	color: $white;
+	border: 0;
+	border-radius: $border-rad10;
+	font-family: $main-font;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 52px;
+	letter-spacing: 0.055em;
+	cursor: pointer;
+  }
+  .placeOrderBtn:hover {
+	background-color: $white;
+	border: 2px solid;
+	color: $orange;
+  }
+  
+  .modal, .overlay {
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: fixed;
+  }
+  
+  .overlay {
+	background: rgba(49, 49, 49, 0.8);
+  }
+  
+  .modal-content {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	line-height: 1.4;
+	background: $dark-modal;
+	padding: 14px 28px;
+	border-radius: $border-rad10;
 	width: 40%;
 	height: 42%;
-}
-
-.fa-times-circle {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 5px 7px;
+  }
+  
+  .fa-times-circle {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	padding: 5px 7px;
 	color: $dirty-white;
 	cursor: pointer;
-}
-
-#h2{
+  }
+  
+  #h2 {
 	color: $dirty-white;
 	font-size: 35px;
 	padding-left: 36%;
 	font-family: $main-font;
 	font-weight: 600;
 	padding-top: 20px;
-}
-
-#p{
+  }
+  
+  #p {
 	color: $dirty-white;
 	font-family: $main-font;
 	padding-left: 18%;
 	font-size: 20px;
-
-}
-
-#check{
+  }
+  
+  #check {
 	color: $orange;
 	padding-left: 44%;
 	padding-top: 55px;
-	
-}
+  }
+  
+  #bread-name {
+	font-weight: bold;
+	font-size:20px;
+  }
+  
+  #bread-detail{
+   
+	font-size: 15px;
+  }
+  
+  #price-quantity {
+   
+	width: 300px;
+	height: 50px;
+  }
+  
+  
+  #bread-price {
+	text-align: end;
+	font-weight: 900;
+  }
+  
+  #bread-quantity {
+	text-align: end;
+	font-weight: 900;
+	font-size: 20px;
+  }
+  
+  
+  #btn-ctnr {
+	margin-top: 10px;
+	width: 490px;
+	height: 50px;
+   
+	border-radius: $border-rad10;
+	text-align: end;
+   
+   
+  }
+
+
+
+
+
+
+  
+  
+  

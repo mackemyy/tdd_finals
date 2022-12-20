@@ -8,10 +8,9 @@
 }
 
 .checkoutForm {
-  padding-top: 30px;
   position: absolute;
   width: 80%;
-  height:800px;
+  height: 790px;
   margin-left: 180px;
   top: 100px;
   background-color: white;
@@ -65,7 +64,6 @@
 }
 
 .line {
-  
   margin-top: 10px;
   margin-bottom: 20px;
   height: 1px;
@@ -86,12 +84,17 @@
   width: 60%;
 }
 
+.label{
+	color: red;
+	font-size: 11px;
+	
+}
+
 #contact-no {
   font-size: 18px;
   padding: 10px;
   width: 80%;
   height: 23px;
-  margin-bottom: 10px;
   border-radius: 10px;
   border-color: #D9D9D9;
   border: 0;
@@ -103,7 +106,6 @@
   padding: 10px;
   width: 67%;
   height: 23px;
-  margin-bottom: 10px;
   border-radius: 10px;
   border-color: #D9D9D9;
   border: 0;
@@ -122,7 +124,7 @@
   height: 46px;
   background: rgb(217, 217, 217);
   border-radius: 10px;
-  margin-bottom: 10px;
+
 }
 
 #user-input {
@@ -130,7 +132,6 @@
   padding: 10px;
   width: 55%;
   height: 23px;
-  margin-bottom: 10px;
   border-radius: 10px;
   border-color: #D9D9D9;
   border: 0;
@@ -142,7 +143,6 @@
   padding: 10px;
   width: 80%;
   height: 23px;
-  margin-bottom: 10px;
   border-radius: 10px;
   border-color: #D9D9D9;
   border: 0;
@@ -155,18 +155,16 @@
 }
 
 .cart-card {
-  
   width: 450px;
   height: 110px;
   background: rgb(217, 217, 217);
-
   border-radius: 10px;
   margin-bottom: 20px;
   padding: 15px;
   display: flex;
 }
 
-#bread-picture{
+#bread-picture {
   background-image: url("../src/assets/products/BakedCroissantBread.png");
   width: 80px;
   height: 90px;
@@ -175,12 +173,9 @@
   background-color: white;
   background-position: center;
   background-size: contain;
-
   padding: 10px 50px 0px 0px;
   margin: 10px 0px 0px 0px;
 }
-
-
 
 .payment-row:after {
   content: "";
@@ -214,7 +209,6 @@
   margin: 10px 10px 10px 10px;
   width: 300px;
   height: 100px;
- 
 }
 
 #pic-col3 {
@@ -252,8 +246,6 @@
 }
 
 .placeOrderBtn {
-  
- 
   width: 250px;
   height: 60px;
   left: 170px;
@@ -270,6 +262,7 @@
   letter-spacing: 0.055em;
   cursor: pointer;
 }
+
 .placeOrderBtn:hover {
   background-color: white;
   border: 2px solid;
@@ -336,20 +329,17 @@
 
 #bread-name {
   font-weight: bold;
-  font-size:20px;
+  font-size: 20px;
 }
 
-#bread-detail{
- 
+#bread-detail {
   font-size: 15px;
 }
 
 #price-quantity {
- 
   width: 300px;
   height: 50px;
 }
-
 
 #bread-price {
   text-align: end;
@@ -362,15 +352,11 @@
   font-size: 20px;
 }
 
-
 #btn-ctnr {
   margin-top: 10px;
   width: 490px;
   height: 50px;
- 
   border-radius: 10px;
   text-align: end;
- 
- 
 }
 /*# sourceMappingURL=Checkout.css.map */

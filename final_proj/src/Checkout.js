@@ -6,6 +6,13 @@ import { NavLink} from "react-router-dom";
 const Checkout = () => {
     const [modalVisible, setModalVisible] = useState(false);
     const {checkout, placeOrder} = useContext(ShopContext)
+    const [name, setName] = useState('')
+    const [address, setAdd] = useState('')
+    const [contact, setContact] = useState('')
+    const [email, setEmail] = useState('')
+    const [nameC, setNameC] = useState('')
+    const [card, setCard] = useState('')
+    const [error,setError]=useState(false)
     let total = 0;
     const toggleModal = () => {
         setModalVisible(!modalVisible)
@@ -23,6 +30,18 @@ const Checkout = () => {
     ))
 
     let fee = (Math.round((total * 0.20) * 100) / 100).toFixed(2)
+
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+        if(name.length==0||address.length==0||contact.length==0||email.length==0||nameC.length==0||card.length==0){
+            setError(true)
+        }
+        if(name&&address&&contact&&email&&nameC&&card)
+        {
+        console.log("Name: ", name)
+        }
+    }
+
     return(
         <>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Port+Lligat+Slab"></link>
@@ -32,23 +51,36 @@ const Checkout = () => {
                         <div className="header-checkout">
                             <div className="checkout-title">Checkout</div>
                         </div>
-
+                        
+                        <form onSubmit = {handleSubmit}>
                         <div className="row">
                             <div className="column" id ="col1">
                                 <div className="checkout-subtitle">Shipping Address</div>
                                 <hr className = "line"/>
                                 <div className = "subtitle2">Name</div>
-                                    <input type = "text" id ="ship-info"></input>
+                                    <input onChange ={e=>setName(e.target.value)} type = "text" id ="ship-info"></input>
+                                    <br/>
+                                    {error&&address.length<=0?
+                                    <label className="label">Name can't be empty</label>:""}
                                 <div className = "subtitle2">Address</div>
-                                    <input type = "text" id ="ship-info"></input>
+                                    <input onChange ={e=>setAdd(e.target.value)} type = "text" id ="ship-info"></input>
+                                    <br/>
+                                    {error&&address.length<=0?
+                                    <label className="label">Address can't be empty</label>:""}
                                 <div className ="r-ship"> 
                                     <div className ="c-ship" id = "c1">
                                         <div className = "subtitle2">Contact No.</div>
-                                            <input type = "text" id ="contact-no"></input>
+                                            <input onChange ={e=>setContact(e.target.value)} type = "text" id ="contact-no"></input>
+                                            <br/>
+                                            {error&&contact.length<=0?
+                                            <label className="label">Contact can't be empty</label>:""}
                                     </div>
                                     <div className ="c-ship" id = "c2">
                                         <div className = "subtitle2">Email Address</div>
-                                            <input type = "text" id ="email-ship"></input>
+                                            <input onChange ={e=>setEmail(e.target.value)} type = "text" id ="email-ship"></input>
+                                            <br/>
+                                            {error&&email.length<=0?
+                                            <label className="label">Email can't be empty</label>:""}
                                     </div>
                                 </div>
                                 <br/>
@@ -58,11 +90,17 @@ const Checkout = () => {
                                 <hr className = "line"/><br/>
                                 <div className = "subtitle2">Name on Card</div>
                                 <label htmlFor = "pay-info"  id = "name"> </label>
-                                    <input type = "text" id ="user-input"></input>
-                               
+                                    <input onChange ={e=>setNameC(e.target.value)}  type = "text" id ="user-input"></input>
+                                    <br/>
+                                    {error&&nameC.length<=0?
+                                    <label className="label">Name can't be empty</label>:""}
                                 <div className = "subtitle2">Card Information</div>
                                 <label className = "pay-info" id = "name"></label>
-                                    <input type ="text" id ="user-input"></input>
+                                    
+                                    <input onChange ={e=>setCard(e.target.value)} type ="text" id ="user-input"></input>
+                                    <br/>
+                                    {error&&card.length<=0?
+                                    <label className="label">Card Info can't be empty</label>:""}
                             </div>
                             <div className="column" id ="col2">
                                 <div>
@@ -124,6 +162,7 @@ const Checkout = () => {
                             </div>
 
                         </div>
+                        </form>
                         </div>
                 </div>
             </div>
