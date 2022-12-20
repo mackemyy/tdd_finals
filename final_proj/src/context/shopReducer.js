@@ -23,9 +23,18 @@ const shopReducer = (state, action) => {
                 cart: [],
             };
         case 'addItemToCheckout':
+            const prodFound = state.checkout.find((item) => {
+                return item.id === payload.id;
+              })
             return {
                 ...state,
-                checkout: [...state.checkout, payload],
+                checkout: prodFound === undefined 
+                ? [...state.checkout, payload]
+                : state.checkout.map((item) => 
+                item.id === payload.id
+                ? {...item, amount: item.amount + payload.amount, subtotal: parseInt(item.price) * (item.amount + payload.amount)} 
+                : item
+                ),
             };
         case 'deleteToCart':
             const itemFound = state.cart.find((item) => {
