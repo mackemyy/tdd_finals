@@ -6,7 +6,7 @@ import './Cart.css';
 
 const Cart = () => {
 
-    const {cart, deleteToCart, addToCheckout} = useContext(ShopContext)
+    const {items, cart, deleteToCart, addToCheckout, increaseStock, decreaseStock} = useContext(ShopContext)
     let subtotal = 0;
 
     cart.map((item) => (
@@ -19,6 +19,24 @@ const Cart = () => {
 
     const onCheckout = () => {
         addToCheckout(cart);
+    }
+
+    const onIncreaseStock = (prod) => {
+        if(prod.amount > 0) {
+            increaseStock(prod.id);
+        }
+        if(prod.amount === 1){
+            deleteToCart(prod.id);
+        }
+    }
+
+    const onDecreaseStock = (prod) => {
+        const match = items.find((item) => {
+            return item.id === prod.id;
+          })
+        if(match.stockAvail > 0) {
+            decreaseStock(prod.id);
+        }
     }
 
     return (
@@ -59,9 +77,9 @@ const Cart = () => {
                                 <div id="cart-additionals">{item.price}</div>
                                 <div id="cart-additionals">  
                                     <div class="wrapper">
-                                        <span class="minus" onClick="">-</span>
+                                        <span class="minus" onClick={onIncreaseStock.bind(this, item)}>-</span>
                                         <span class="num">{item.amount}</span>
-                                        <span class="plus" onClick="">+</span>
+                                        <span class="plus" onClick={onDecreaseStock.bind(this, item)}>+</span>  
                                     </div>
                                 </div>
                                 <div id="cart-additionals">{(Math.round(item.subtotal * 100) / 100).toFixed(2)} PHP</div>

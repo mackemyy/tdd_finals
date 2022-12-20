@@ -19,7 +19,6 @@ const ProductDetail = () => {
         }
 
         addToCart(newItem);
-        // decreaseStock(id, counter);
         setModalConfirm(!modalConfirm)
         
     }
@@ -70,7 +69,6 @@ const ProductDetail = () => {
             subtotal: parseInt(prod.price) * counter,
         }
         addItemToCheckout(newCheckout);
-        // decreaseStock(id, counter);
     }
 
     return(
