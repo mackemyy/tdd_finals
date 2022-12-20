@@ -9,15 +9,6 @@ $blk-opac: #1C1A17;
 $border-rad5: 5px;
 $border-rad10: 10px;
 
-
-// #cart-title {
-//     width: 100rem;
-//      background-color: blue;
-//      font-size: 20px;
-//      margin-right: 50px;
-//      font-size: 50px;
-// }
-
 #cart-title {
   display: flex;
   width: 100rem;
@@ -109,12 +100,11 @@ input[type="checkbox"] {
 #cart-prod-img{
   width: 160px;
   height: 90px;
-  
 }
 
 #cart-details {
   padding: 80px 20px 10px 20px ;
-   font-size: 20px;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -128,7 +118,6 @@ input[type="checkbox"] {
   font-size: 20px;
   padding-top: 80px;
   display: flex;
- 
 }
 
 #removebtn {
@@ -244,13 +233,3 @@ input[type="checkbox"] {
     pointer-events: none;
   }
 }
-
-
-
-  
-
-
-
-
-
-

@@ -1,6 +1,6 @@
 import './App.css';
 import Home from './Home';
-import { Link, BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Products from "./Products";
 import Login from './Login';
 import { PageNavigation } from './PageNavigation';
@@ -10,8 +10,6 @@ import Cart from './Cart';
 import Checkout from './Checkout';
 
 function App() {
-
-
 
   return (
     <ShopProvider>

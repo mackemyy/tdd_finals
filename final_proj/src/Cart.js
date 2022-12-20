@@ -68,8 +68,6 @@ const Cart = () => {
                                 <div id="cart-additionals">
                                     <button id="removebtn" onClick={onDeleteToCart.bind(this, item)}>Remove</button>
                                 </div>
-                                <div>
-                                </div>
                             </div>
                         ))}
                         {/* end of cart card */}
@@ -89,7 +87,6 @@ const Cart = () => {
                             </NavLink>
                         </div>
                     </div>
-
                 </div>
             </div>
         </>
