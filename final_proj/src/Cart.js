@@ -58,11 +58,11 @@ const Cart = () => {
                                 <div id="cart-additionals">  
                                     <div class="wrapper">
                                         <span class="minus" onClick="">-</span>
-                                        <span class="num">1</span>
+                                        <span class="num">{item.amount}</span>
                                         <span class="plus" onClick="">+</span>
                                     </div>
                                 </div>
-                                <div id="cart-additionals">{item.subtotal + '.00 PHP'}</div>
+                                <div id="cart-additionals">{(Math.round(item.subtotal * 100) / 100).toFixed(2)} PHP</div>
                                 <div id="cart-additionals">
                                     <button id="removebtn" onClick={onDeleteToCart.bind(this, item.id)}>Remove</button>
                                 </div>
