@@ -57,11 +57,11 @@ const Checkout = () => {
                                 <hr className = "line"/><br/>
                                 <div className = "subtitle2">Name on Card</div>
                                 <label htmlFor = "pay-info"  id = "name"> </label>
-                                    <input type = "text" id ="john"></input>
+                                    <input type = "text" id ="user-input"></input>
                                
                                 <div className = "subtitle2">Card Information</div>
                                 <label className = "pay-info" id = "name"></label>
-                                    <input type ="text" id ="john"></input>
+                                    <input type ="text" id ="user-input"></input>
                             </div>
                             <div className="column" id ="col2">
                                 <div>
@@ -88,7 +88,7 @@ const Checkout = () => {
                                         </div>
                                     </div>
                                     </div>
-                                    ))};
+                                    ))}
                                 {/* YOUR CART CARD ENDS HERE */}
                                    
 
@@ -98,22 +98,26 @@ const Checkout = () => {
                                 </div>
                                 <br/>
                                 <div className="payment">
-                                <div className="subtitle2">Payment Details</div>
-                                <div className = "pay-details">
-                                    <div className = "payment-row">
-                                        <div id = "pay-col1">
-                                            Merchandise Subtotal<br/>
-                                            Shipping Subtotal<br/>
-                                            <div id = "bold">Total Payment</div>
+                                     <div className="subtitle2">Payment Details</div>
+                                         <div className = "pay-details">
+                                              <div className = "payment-row">
+                                                    <div id = "pay-col1">
+                                                        Merchandise Subtotal<br/>
+                                                        Shipping Subtotal<br/>
+                                                         <div id = "bold">Total Payment</div>
+                                                    </div>
+                                                    <div id = "pay-col2">
+                                                        {(Math.round(total * 100) / 100).toFixed(2)} PHP<br/>
+                                                        {fee} PHP<br/>
+                                                <div id = "bold">{(Math.round((total + parseFloat(fee)) * 100) / 100).toFixed(2)} PHP</div> 
+                                            </div>
                                         </div>
-                                        <div id = "pay-col2">
-                                        {(Math.round(total * 100) / 100).toFixed(2)} PHP<br/>
-                                            {fee} PHP<br/>
-                                            <div id = "bold">{(Math.round((total + parseFloat(fee)) * 100) / 100).toFixed(2)} PHP</div> 
-                                        </div>
+                                </div >
+                                    <div  id="btn-ctnr">
+                                    <button  className="placeOrderBtn" onClick={toggleModal} data-testid='placeorder-test'>Place Order</button>
                                     </div>
-                                </div>
-                                <button className="placeOrderBtn" onClick={toggleModal} data-testid='placeorder-test'>Place Order</button>
+
+                               
                                 </div>
                                 </div>
                             </div>

@@ -59,8 +59,15 @@ const Cart = () => {
                                     <div id="cart-details">{item.name}</div>
                             </div>
                     <div id="cart-additionals">{item.price}</div>
+
+
+                    
                     <div id="cart-additionals">  
-                                 <div id="qty-cnt">{item.amount}</div>
+                    <div class="wrapper">
+                            <span class="minus" onClick="">-</span>
+                            <span class="num">1</span>
+                            <span class="plus" onClick="">+</span>
+                        </div>
                     </div>
                     <div id="cart-additionals">{item.subtotal}</div>
                     <div id="cart-additionals">
@@ -70,7 +77,7 @@ const Cart = () => {
                     </div>
 
                     </div>
-                    ))};
+                    ))}
             {/* end of cart card */}
 
 
