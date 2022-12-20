@@ -52,7 +52,7 @@ const Checkout = () => {
 
     return(
         <>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Port+Lligat+Slab"></link>
+        {/* <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Port+Lligat+Slab"></link> */}
             <div className="checkout-page" data-testid='checkout-test'>
                 <div className="checkoutForm">
                     <div className ="check-space">

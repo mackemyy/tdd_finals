@@ -58,7 +58,7 @@
   top: 20px;
   font-size: 20px;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 38px;
   color: #F68A1E;
 }
@@ -200,7 +200,7 @@
 }
 
 #pic-col2 {
-  font-weight: 600;
+  font-weight: 500;
   float: right;
   width: 50%;
   position: absolute;
@@ -259,7 +259,7 @@
   border-radius: 10px;
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 20px;
   line-height: 52px;
   letter-spacing: 0.055em;
@@ -312,7 +312,7 @@
   font-size: 35px;
   padding-left: 36%;
   font-family: "Poppins";
-  font-weight: 600;
+  font-weight: 500;
   padding-top: 20px;
 }
 
@@ -330,7 +330,7 @@
 }
 
 #bread-name {
-  font-weight: bold;
+  font-weight: 500;
   font-size: 20px;
 }
 
@@ -345,12 +345,12 @@
 
 #bread-price {
   text-align: end;
-  font-weight: 900;
+  font-weight: 500;
 }
 
 #bread-quantity {
   text-align: end;
-  font-weight: 900;
+  font-weight: 500;
   font-size: 20px;
 }
 
@@ -360,4 +360,10 @@
   height: 50px;
   border-radius: 10px;
   text-align: end;
+}
+
+input[type=text] {
+  font-family: "Poppins";
+  font-size: 14px;
+  padding-left: 3%;
 }/*# sourceMappingURL=Checkout.css.map */
