@@ -15,6 +15,11 @@ const shopReducer = (state, action) => {
                 ? {...item, amount: item.amount + payload.amount, subtotal: parseInt(item.price) * (item.amount + payload.amount)} 
                 : item
                 ),
+                items: state.items.map((item) => 
+                item.id === payload.id
+                ? {...item, stockAvail: item.stockAvail - payload.amount} 
+                : item
+                ),
             };
         case 'addToCheckout':
             return {
@@ -35,6 +40,11 @@ const shopReducer = (state, action) => {
                 ? {...item, amount: item.amount + payload.amount, subtotal: parseInt(item.price) * (item.amount + payload.amount)} 
                 : item
                 ),
+                items: state.items.map((item) => 
+                item.id === payload.id
+                ? {...item, stockAvail: item.stockAvail - payload.amount} 
+                : item
+                ),
             };
         case 'deleteToCart':
             const itemFound = state.cart.find((item) => {
@@ -49,16 +59,16 @@ const shopReducer = (state, action) => {
                 : item
                 ),
             };
-        case 'decreaseStock':
-            const {itemID, amount} = payload;
-            return {
-                ...state,
-                items: state.items.map((item) => 
-                item.id === itemID
-                ? {...item, stockAvail: item.stockAvail - amount} 
-                : item
-                ),
-            };
+        // case 'decreaseStock':
+        //     const {itemID, amount} = payload;
+        //     return {
+        //         ...state,
+        //         items: state.items.map((item) => 
+        //         item.id === itemID
+        //         ? {...item, stockAvail: item.stockAvail - amount} 
+        //         : item
+        //         ),
+        //     };
         case 'placeOrder':
             return {
                 ...state,

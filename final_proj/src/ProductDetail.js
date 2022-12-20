@@ -4,7 +4,7 @@ import ShopContext from "./context/shop_context";
 import './ProductDetail.css';
 
 const ProductDetail = () => {
-    const {items, addToCart, addItemToCheckout, decreaseStock} = useContext(ShopContext)
+    const {items, addToCart, addItemToCheckout} = useContext(ShopContext)
     const [modalConfirm, setModalConfirm] = useState(false);
 
     const toggleConfirmModal = () => {
@@ -19,7 +19,7 @@ const ProductDetail = () => {
         }
 
         addToCart(newItem);
-        decreaseStock(id, counter);
+        // decreaseStock(id, counter);
         setModalConfirm(!modalConfirm)
         
     }
@@ -69,7 +69,7 @@ const ProductDetail = () => {
             subtotal: parseInt(prod.price) * counter,
         }
         addItemToCheckout(newCheckout);
-        decreaseStock(id, counter);
+        // decreaseStock(id, counter);
     }
 
     return(
