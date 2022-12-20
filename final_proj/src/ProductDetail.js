@@ -23,7 +23,7 @@ const ProductDetail = () => {
         
     }
 
-    if(modalConfirm) {
+   if(modalConfirm) {
         document.body.classList.add('active-modal')
       } else {
         document.body.classList.remove('active-modal')
@@ -113,28 +113,28 @@ const ProductDetail = () => {
         {/* //MODAL  */}
 
         {modalConfirm && (
-        <div className = "modalC">
-            <div className="overlayC"></div>
-            <div className="modal-contentC">
-                <i id = "check" class="fa fa-check-circle fa-5x" aria-hidden="true"></i>
-                <br/>
-                <div id="h2C">Added to cart!</div>
-                <br/>
-                <div className="row-pd">
-                    <NavLink to='/products' data-testid='products-nav'>
-                        <div className = "column-pd" id="col-pd1">
-                        <button className="cntshop-btn" onClick= "">Continue Shopping</button>
-                        </div>
-                    </NavLink>
+            <div className = "modalC">
+                <div className="overlayC"></div>
+                <div className="modal-contentC">
+                    <i id = "check" class="fa fa-check-circle fa-5x" aria-hidden="true"></i>
+                    <br/>
+                    <div id="h2C">Added to cart!</div>
+                    <br/>
+                    <div className="row-pd">
+                        <NavLink to='/products' data-testid='products-nav'>
+                            <div className = "column-pd" id="col-pd1">
+                            <button className="cntshop-btn" onClick= "">Continue Shopping</button>
+                            </div>
+                        </NavLink>
 
-                    <NavLink to='/my-cart' data-testid='products-nav'>
-                        <div className = "column-pd" id="col-pd2">
-                        <button className="cntshop-btn" onClick="">View My Cart</button>
-                        </div>
-                    </NavLink>
+                        <NavLink to='/my-cart' data-testid='products-nav'>
+                            <div className = "column-pd" id="col-pd2">
+                            <button className="cntshop-btn" onClick="">View My Cart</button>
+                            </div>
+                        </NavLink>
+                    </div>
                 </div>
             </div>
-        </div>
         )
         }
 
