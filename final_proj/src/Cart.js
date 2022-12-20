@@ -58,7 +58,7 @@ const Cart = () => {
                                 <div id="cart-additionals">  
                                     <div class="wrapper">
                                         <span class="minus" onClick="">-</span>
-                                        <span class="num">{addToCheckout.amount}</span>
+                                        <span class="num">1</span>
                                         <span class="plus" onClick="">+</span>
                                     </div>
                                 </div>
