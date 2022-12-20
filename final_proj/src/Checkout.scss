@@ -1,5 +1,5 @@
 $main-font: 'Poppins';
-$orange: orange;
+$orange: #F68A1E;
 $white: white;
 $dirty-white: #f2f2f2;
 $grey: #D9D9D9;
@@ -7,34 +7,35 @@ $black: black;
 $dark-modal: #151413;
 $border-rad5: 5px;
 $border-rad10: 10px;
+$line-color: rgb(102, 102, 102);
 
 #profile-btn {
 	margin-right: 50px;
 	padding-bottom: 3px;
-  }
+}
   
-  #mycart-btn.active {
+#mycart-btn.active {
 	color: $orange;
-  }
+}
   
-  .checkoutForm {
+.checkoutForm {
 	position: absolute;
 	width: 80%;
 	height:790px;
 	margin-left: 180px;
 	top: 100px;
-	background-color: white;
+	background-color: $white;
 	border-radius: 35px;
-	box-shadow: 0 0 10px black;
+	box-shadow: 0 0 10px $black;
 	font-family: $main-font;
-  }
+}
   
-  .check-space {
+.check-space {
 	margin-left: 65px;
 	margin-bottom: 20px;
-  }
+}
   
-  .checkout-title {
+.checkout-title {
 	font-style: $main-font;
 	font-weight: 600;
 	font-size: 45px;
@@ -42,28 +43,28 @@ $border-rad10: 10px;
 	color: $orange;
 	padding-left: 50px;
 	padding-top: 18px;
-  }
+}
   
-  .column {
+.column {
 	width: 45%;
 	padding-left: 55px;
-  }
+}
   
-  #col1 {
+#col1 {
 	float: left;
-  }
+}
   
-  #col2 {
+#col2 {
 	float: right;
-  }
+}
   
-  .row:after {
+.row:after {
 	content: "";
 	display: table;
 	clear: both;
-  }
+}
   
-  .checkout-subtitle {
+.checkout-subtitle {
 	padding-top: 15px;
 	top: 20px;
 	font-size: 20px;
@@ -71,37 +72,35 @@ $border-rad10: 10px;
 	font-weight: 800;
 	line-height: 38px;
 	color: $orange;
-  }
+}
   
-  .line {
-	
+.line {
 	margin-top: 10px;
 	margin-bottom: 20px;
 	height: 1px;
 	background: rgb(138, 138, 138);
 	width: 83%;
 	float: left;
-  }
+}
   
-  .c-ship {
+.c-ship {
 	float: left;
-  }
-  
-  #c1 {
+}
+
+#c1 {
 	width: 40%;
-  }
-  
-  #c2 {
+}
+
+#c2 {
 	width: 60%;
-  }
+}
 
 .label{
 	color: red;
-	font-size: 11px;
-	
+	font-size: 11px;	
 }
   
-  #contact-no {
+#contact-no {
 	font-size: 18px;
 	padding: 10px;
 	width: 80%;
@@ -110,9 +109,9 @@ $border-rad10: 10px;
 	border-color: $grey;
 	border: 0;
 	background-color: $grey;
-  }
+}
   
-  #email-ship {
+#email-ship {
 	font-size: 18px;
 	padding: 10px;
 	width: 67%;
@@ -121,24 +120,24 @@ $border-rad10: 10px;
 	border-color: $grey;
 	border: 0;
 	background-color: $grey;
-  }
+}
   
-  .subtitle2 {
+.subtitle2 {
 	font-style: italic;
 	margin-bottom: 5px;
-	color: rgb(102, 102, 102);
+	color:$line-color;
 	margin-right: 100px;
-  }
+}
   
-  .pay-info {
+.pay-info {
 	width: 420px;
 	height: 46px;
 	background: rgb(217, 217, 217);
 	border-radius: $border-rad10;
 	margin-bottom: 10px;
-  }
+}
   
-  #user-input {
+#user-input {
 	font-size: 18px;
 	padding: 10px;
 	width: 55%;
@@ -147,9 +146,9 @@ $border-rad10: 10px;
 	border-color: $grey;
 	border: 0;
 	background-color: $grey;
-  }
+}
   
-  #ship-info {
+#ship-info {
 	font-size: 18px;
 	padding: 10px;
 	width: 80%;
@@ -158,26 +157,24 @@ $border-rad10: 10px;
 	border-color: $grey;
 	border: 0;
 	background-color: $grey;
-  }
+}
   
-  #expDate {
+#expDate {
 	width: 180px;
 	height: 46px;
-  }
+}
   
-  .cart-card {
-	
+.cart-card {
 	width: 450px;
 	height: 110px;
 	background: rgb(217, 217, 217);
-  
 	border-radius: $border-rad10;
 	margin-bottom: 20px;
 	padding: 15px;
 	display: flex;
-  }
+}
 
-  #bread-container {
+#bread-container {
 	width: 93px;
 	height: 86px;
 	background-repeat: no-repeat;
@@ -187,87 +184,83 @@ $border-rad10: 10px;
 	background-size: contain;
 	padding: 10px 50px 0px 0px;
 	margin: 10px 0px 0px 0px;
-  }
+}
   
-  #bread-picture{
+#bread-picture{
 	width: 138px;
     height: 82px;
-  }
+}
   
-  
-  
-  .payment-row:after {
+.payment-row:after {
 	content: "";
 	display: table;
 	clear: both;
-  }
+}
   
-  #cart-row-space {
+#cart-row-space {
 	width: 85%;
 	height: 305px;
 	overflow: hidden;
 	overflow-y: scroll;
-  }
+}
   
-  #pic-col1 {
+#pic-col1 {
 	margin-top: $border-rad5;
 	float: left;
 	width: 20%;
-  }
+}
   
-  #pic-col2 {
+#pic-col2 {
 	font-weight: 600;
 	float: right;
 	width: 50%;
 	position: absolute;
 	margin-left: 95px;
 	margin-top: $border-rad5;
-  }
+}
   
-  #pic-details {
+#pic-details {
 	margin: 10px 10px 10px 10px;
 	width: 300px;
 	height: 100px;
    
   }
   
-  #pic-col3 {
+#pic-col3 {
 	position: absolute;
 	width: 30%;
 	margin-left: 320px;
 	margin-top: 28px;
 	font-style: italic;
 	color: rgb(102, 102, 102);
-  }
+}
   
-  .pay-details {
+.pay-details {
 	width: 480px;
 	height: 100px;
 	background: rgb(217, 217, 217);
 	border-radius: $border-rad10;
 	margin-bottom: 10px;
 	padding: 5px;
-  }
+}
   
-  #pay-col1 {
+#pay-col1 {
 	float: left;
 	padding-top: 10px;
 	padding-left: 10px;
-  }
+}
   
-  #pay-col2 {
+#pay-col2 {
 	float: right;
 	padding-top: 10px;
 	padding-right: 10px;
-  }
+}
   
-  #bold {
+#bold {
 	font-weight: 600;
-  }
+}
   
-  .placeOrderBtn {
-	
-   
+.placeOrderBtn {
 	width: 250px;
 	height: 60px;
 	left: 170px;
@@ -283,14 +276,15 @@ $border-rad10: 10px;
 	line-height: 52px;
 	letter-spacing: 0.055em;
 	cursor: pointer;
-  }
-  .placeOrderBtn:hover {
-	background-color: $white;
-	border: 2px solid;
-	color: $orange;
-  }
+
+	&:hover {
+		background-color: $white;
+		border: 2px solid;
+		color: $orange;
+	}
+}
   
-  .modal, .overlay {
+.modal, .overlay {
 	width: 100vw;
 	height: 100vh;
 	top: 0;
@@ -300,11 +294,11 @@ $border-rad10: 10px;
 	position: fixed;
   }
   
-  .overlay {
+.overlay {
 	background: rgba(49, 49, 49, 0.8);
-  }
+}
   
-  .modal-content {
+.modal-content {
 	position: absolute;
 	top: 40%;
 	left: 50%;
@@ -315,78 +309,73 @@ $border-rad10: 10px;
 	border-radius: $border-rad10;
 	width: 40%;
 	height: 42%;
-  }
+}
   
-  .fa-times-circle {
+.fa-times-circle {
 	position: absolute;
 	top: 10px;
 	right: 10px;
 	padding: 5px 7px;
 	color: $dirty-white;
 	cursor: pointer;
-  }
+}
   
-  #h2 {
+#h2 {
 	color: $dirty-white;
 	font-size: 35px;
 	padding-left: 36%;
 	font-family: $main-font;
 	font-weight: 600;
 	padding-top: 20px;
-  }
+}
   
-  #p {
+#p {
 	color: $dirty-white;
 	font-family: $main-font;
 	padding-left: 18%;
 	font-size: 20px;
-  }
+}
   
-  #check {
+#check {
 	color: $orange;
 	padding-left: 44%;
 	padding-top: 55px;
-  }
+}
   
-  #bread-name {
+#bread-name {
 	font-weight: bold;
 	font-size:20px;
-  }
+}
   
-  #bread-detail{
-   
+#bread-detail{
 	font-size: 15px;
-  }
+}
   
-  #price-quantity {
-   
+#price-quantity {
 	width: 300px;
 	height: 50px;
-  }
+}
   
   
-  #bread-price {
+#bread-price {
 	text-align: end;
 	font-weight: 900;
-  }
+}
   
-  #bread-quantity {
+#bread-quantity {
 	text-align: end;
 	font-weight: 900;
 	font-size: 20px;
-  }
+}
   
   
-  #btn-ctnr {
+#btn-ctnr {
 	margin-top: 10px;
 	width: 490px;
 	height: 50px;
-   
 	border-radius: $border-rad10;
 	text-align: end;
-   
-   
-  }
+}
 
 
 

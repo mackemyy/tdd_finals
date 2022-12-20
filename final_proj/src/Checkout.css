@@ -4,7 +4,7 @@
 }
 
 #mycart-btn.active {
-  color: orange;
+  color: #F68A1E;
 }
 
 .checkoutForm {
@@ -29,7 +29,7 @@
   font-weight: 600;
   font-size: 45px;
   line-height: 82px;
-  color: orange;
+  color: #F68A1E;
   padding-left: 50px;
   padding-top: 18px;
 }
@@ -60,7 +60,7 @@
   font-style: normal;
   font-weight: 800;
   line-height: 38px;
-  color: orange;
+  color: #F68A1E;
 }
 
 .line {
@@ -253,7 +253,7 @@
   height: 60px;
   left: 170px;
   top: 460px;
-  background: orange;
+  background: #F68A1E;
   color: white;
   border: 0;
   border-radius: 10px;
@@ -265,11 +265,10 @@
   letter-spacing: 0.055em;
   cursor: pointer;
 }
-
 .placeOrderBtn:hover {
   background-color: white;
   border: 2px solid;
-  color: orange;
+  color: #F68A1E;
 }
 
 .modal, .overlay {
@@ -325,7 +324,7 @@
 }
 
 #check {
-  color: orange;
+  color: #F68A1E;
   padding-left: 44%;
   padding-top: 55px;
 }
