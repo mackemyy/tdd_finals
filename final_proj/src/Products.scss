@@ -57,7 +57,7 @@ body, html {
   height: 1400px;
 }
 
-#title {
+#menu {
   color: $black;
   margin-left: 150px;
   padding-top: 3%;
@@ -106,29 +106,28 @@ body, html {
 #img-container {
   width: 100%;
   height: 180px;
-  background-size: cover;
-  background-repeat: $np;
+  background-size: contain;
   width: 220px;
   height: 100px;
-  margin: 0 auto; 
-  
 }
 
 #product-name {
   width: 100%;
   height: 50px;
   color: $black;
+}
 
-}
-.product-img{
-  background-size: cover;
-  background-repeat: $np;
-  width: $width;
-  text-align: center;
-  height: $height; 
+.product-img {
   margin-left: 40px;
-  background-color: green;
+  width: 235px;
+  height: 125px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  
 }
+
 #prod-info {
   font-family: $main-font;
   font-weight: 500;

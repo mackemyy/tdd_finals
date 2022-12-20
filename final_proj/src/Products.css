@@ -47,7 +47,7 @@ body, html {
   height: 1400px;
 }
 
-#title {
+#menu {
   color: rgba(0, 0, 0, 0.835);
   margin-left: 150px;
   padding-top: 3%;
@@ -98,7 +98,6 @@ body, html {
   background-size: contain;
   width: 220px;
   height: 100px;
- 
 }
 
 #product-name {
@@ -115,7 +114,6 @@ body, html {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  
 }
 
 #prod-info {
@@ -129,9 +127,4 @@ body, html {
   font-family: "Poppins";
   text-align: center;
   margin-top: 0px;
-}
-
-
-
-
-/*# sourceMappingURL=Products.css.map */
+}/*# sourceMappingURL=Products.css.map */
