@@ -18,8 +18,11 @@ const ProductDetail = () => {
             subtotal: parseInt(prod.price) * counter,
         }
 
-        addToCart(newItem);
-        setModalConfirm(!modalConfirm)
+        if(prod.stockAvail > 0)
+        {
+            addToCart(newItem);
+            setModalConfirm(!modalConfirm)
+        }
         
     }
 
@@ -68,7 +71,11 @@ const ProductDetail = () => {
             pic: prod.image,
             subtotal: parseInt(prod.price) * counter,
         }
-        addItemToCheckout(newCheckout);
+
+        if(prod.stockAvail > 0)
+        {
+            addItemToCheckout(newCheckout);
+        }
     }
 
     return(
