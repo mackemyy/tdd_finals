@@ -113,4 +113,10 @@ label {
   background-color: white;
   border: 2px solid;
   color: #F68A1E;
+}
+
+input {
+  font-family: "Poppins";
+  font-size: 14px;
+  padding-left: 3%;
 }/*# sourceMappingURL=Login.css.map */

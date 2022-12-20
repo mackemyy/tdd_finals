@@ -31,12 +31,12 @@ $grey2: #666666;
     padding: 20px;
 }
 
-#bc-menu {
+#breadcrumbs-menu {
     text-decoration: none;
     color: rgba(0, 0, 255, 0.708);
 }
 
-#bc-prod-details {
+#breadcrumbs-prod-details {
     color: $custom-black
 }
 
@@ -230,6 +230,8 @@ $grey2: #666666;
     font-family: $main-font;
     font-weight: 600;
     padding-top: 20px;
+    letter-spacing: 2px;
+    padding-bottom: 40px;
   }
   
   
@@ -242,27 +244,30 @@ $grey2: #666666;
 
   .cntshop-btn{
     margin-right: 120px ;
-	float: right ;
-	width: 250px ;
-	height: 60px ;
-	left: 170px ;
-	top: 460px ;
-	background: $orange;
-	color: $white ;
-	border: 0 ;
-	border-radius: 10px ;
-	font-family: $main-font ;
-	font-style: normal ;
-	font-weight: 600 ;
-	font-size: 20px ;
-	line-height: 52px ; 
-	letter-spacing: 0.055em ;
-	cursor: pointer ;
-	&:hover {
-		background-color: $white ;
-		border: 2px solid ;
-		color: $orange ;
-	}
+    float: right ;
+    width: 250px ;
+    height: 60px ;
+    left: 170px ;
+    top: 460px ;
+    background: $orange;
+    color: $white ;
+    border: 0 ;
+    border-radius: 10px ;
+    font-family: $main-font ;
+    font-style: normal ;
+    font-weight: 500 ;
+    font-size: 18px ;
+    line-height: 52px ; 
+    letter-spacing: 0.055em ;
+    cursor: pointer ;
+
+      &:hover {
+        background-color: $white ;
+        border: 2px solid ;
+        color: $orange ;
+        font-size: 18px;
+        font-weight: 500;
+      }
   }
 
   .row-pd{

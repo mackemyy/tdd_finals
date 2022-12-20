@@ -41,6 +41,7 @@ const Cart = () => {
 
     return (
         <>
+        {/* <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Port+Lligat+Slab"></link> */}
             <div className="my-cart-page">
                 <div className="topnav-bg"></div>
                 <div className="whole-cart-content">
@@ -86,8 +87,6 @@ const Cart = () => {
                                 <div id="cart-additionals">
                                     <button id="removebtn" onClick={onDeleteToCart.bind(this, item)}>Remove</button>
                                 </div>
-                                <div>
-                                </div>
                             </div>
                         ))}
                         {/* end of cart card */}
@@ -107,7 +106,6 @@ const Cart = () => {
                             </NavLink>
                         </div>
                     </div>
-
                 </div>
             </div>
         </>
