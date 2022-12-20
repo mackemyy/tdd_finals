@@ -77,16 +77,18 @@ input[type=checkbox] {
 }
 
 #cart-img {
-  width: 150px;
-  height: 80px;
   padding: 30px;
   margin: 20px 0px 20px 0px;
-  border-radius: 5px;
-  background-image: url("../src/assets/products/BakedCroissantBread.png");
+  border-radius: 10px;
   background-repeat: no-repeat;
   background-color: rgb(247, 247, 247);
   background-position: center;
   background-size: contain;
+}
+
+#cart-prod-img {
+  width: 160px;
+  height: 90px;
 }
 
 #cart-details {

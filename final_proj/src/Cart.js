@@ -51,7 +51,9 @@ const Cart = () => {
                                     <div id="cart-check-box"> 
                                         <input  type="checkbox" data-testid="checkbox"/> 
                                     </div>
-                                        <div id="cart-img"></div>
+                                        <div id="cart-img">
+                                            <img key={item.index} src={item.pic} id="cart-prod-img" alt="Product"/>
+                                        </div>
                                         <div id="cart-details">{item.name}</div>
                                 </div>
                                 <div id="cart-additionals">{item.price}</div>
