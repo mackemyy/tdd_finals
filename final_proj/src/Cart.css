@@ -7,7 +7,11 @@
   display: flex;
   width: 100rem;
   margin: 50px;
- 
+}
+
+.whole-cart-content {
+  left: 6%;
+  position: relative;
 }
 
 
@@ -18,7 +22,7 @@
 
 #logo-title {
   padding: 12px 0px 0px 0px;
-  font-weight: 900;
+  font-weight: 600;
   color: orange;
   font-size: 40px;
 }
@@ -180,7 +184,7 @@ input[type="checkbox"] {
 #sub-total{
   padding: 20px 0px 0px 700px;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 600;
   margin-right: 120px;
 }
 

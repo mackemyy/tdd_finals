@@ -85,7 +85,6 @@ const Login = () => {
                             onChange={onChange}
                             data-testid="password-input"
                         />
-                        {/* <i className="far fa-eye" id="togglePassword"></i> */}
                     </form>
                 </div>
                 <div>
