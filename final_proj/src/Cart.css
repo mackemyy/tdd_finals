@@ -1,19 +1,17 @@
-.my-cart-page {
-  font-family: "Poppins";
-}
-
-
 #cart-title {
   display: flex;
   width: 100rem;
   margin: 50px;
 }
 
+.my-cart-page {
+  font-family: "Poppins";
+}
+
 .whole-cart-content {
   left: 6%;
   position: relative;
 }
-
 
 #cart-icon {
   padding: 20px;
@@ -23,10 +21,9 @@
 #logo-title {
   padding: 12px 0px 0px 0px;
   font-weight: 600;
-  color: orange;
+  color: #F68A1E;
   font-size: 40px;
 }
-
 
 #cart-title-nav {
   display: flex;
@@ -40,12 +37,11 @@
 }
 
 #cart-title-item {
- padding-left: 30px;
+  padding-left: 30px;
   width: 650px;
 }
 
 #cart-title-secondary {
- 
   padding-right: 180px;
 }
 
@@ -57,15 +53,14 @@
   overflow-y: scroll;
 }
 
-
 #all-select-box {
   font-size: 20px;
 }
 
-input[type="checkbox"] {
-  background-color: #fff;
-  width: 1.50em;
-  height: 1.50em;
+input[type=checkbox] {
+  background-color: white;
+  width: 1.5em;
+  height: 1.5em;
   border: none;
   color: currentColor;
   border-radius: 0.15em;
@@ -75,18 +70,16 @@ input[type="checkbox"] {
 #cart-card-menu {
   width: 100rem;
   display: flex;
-  
 }
 
 #cart-check-box {
-  padding: 60px 0px 50px 0px ;
- 
+  padding: 60px 0px 50px 0px;
 }
 
 #cart-img {
   width: 150px;
   height: 80px;
-  padding: 30px ;
+  padding: 30px;
   margin: 20px 0px 20px 0px;
   border-radius: 5px;
   background-image: url("../src/assets/products/BakedCroissantBread.png");
@@ -97,11 +90,10 @@ input[type="checkbox"] {
 }
 
 #cart-details {
-  padding: 80px 20px 10px 20px ;
-   font-size: 20px;
+  padding: 80px 20px 10px 20px;
+  font-size: 20px;
   font-weight: 400;
 }
-
 
 #col-1 {
   display: flex;
@@ -110,12 +102,10 @@ input[type="checkbox"] {
 
 #cart-additionals {
   padding-right: 130px;
- font-size: 20px;
+  font-size: 20px;
   padding-top: 80px;
   display: flex;
- 
 }
-
 
 #removebtn {
   background-color: white;
@@ -124,15 +114,13 @@ input[type="checkbox"] {
   font-size: 20px;
   font-family: "Poppins";
   height: 40px;
-
 }
-
 #removebtn:hover {
- color: black;
- cursor: pointer;
+  color: black;
+  cursor: pointer;
 }
 
-#qty-btn{
+#qty-btn {
   border: 1px solid black;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-size: 25px;
@@ -141,35 +129,29 @@ input[type="checkbox"] {
   cursor: pointer;
   border-radius: 3px;
 }
-
 #qty-btn:hover {
-  background-color: orange;
+  background-color: #F68A1E;
 }
 
-#qty-cnt{
+#qty-cnt {
   padding: 5px 10px 15px 10px;
-  background-color: #fff;
+  background-color: white;
   height: 20px;
   border: 1px solid black;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
 }
 
-#footer{
-   display: flex;
+#footer {
+  display: flex;
   margin: 50px;
   width: 100rem;
 }
 
-
 .backBtn {
- 
   font-family: "Poppins";
   width: 290px;
   height: 60px;
-  
   font-size: 20px;
-  font-family: "Poppins";
   color: white;
   background-color: #666666;
   border-radius: 10px;
@@ -181,19 +163,18 @@ input[type="checkbox"] {
   transform: scale(1.2);
 }
 
-#sub-total{
+#sub-total {
   padding: 20px 0px 0px 700px;
   font-size: 20px;
   font-weight: 600;
   margin-right: 120px;
 }
 
-
 .checkoutBtn {
   position: absolute;
   width: 290px;
   height: 60px;
-  background-color: orange;
+  background-color: #F68A1E;
   border-radius: 10px;
   border-style: none;
   font-size: 20px;
@@ -206,18 +187,16 @@ input[type="checkbox"] {
   transform: scale(1.2);
 }
 
-
 .wrapper {
   height: 30px;
   width: 100px;
   align-items: center;
   justify-content: center;
-  background: rgb(255, 255, 255);
+  background: white;
   border-radius: 5px;
   border: 1px solid black;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
-
 .wrapper span {
   width: 100%;
   text-align: center;
@@ -225,17 +204,13 @@ input[type="checkbox"] {
   font-weight: 300;
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-
 .wrapper span.num {
   font-size: 15px;
   border-right: 2px solid rgba(0, 0, 0, 0.2);
   border-left: 2px solid rgba(0, 0, 0, 0.2);
   pointer-events: none;
-}
-
-
-/*# sourceMappingURL=Cart.css.map */
+}/*# sourceMappingURL=Cart.css.map */

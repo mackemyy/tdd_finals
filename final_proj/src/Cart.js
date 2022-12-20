@@ -35,7 +35,7 @@ const Cart = () => {
                         <div id="cart-title-item">Item</div>
                         <div id="cart-title-secondary">Price</div>
                         <div id="cart-title-secondary">Qty</div>
-                        <div id="cart-title-secondary">Total</div>
+                        <div id="cart-title-secondary">Subtotal</div>
                     </div>
 
                     <div id="cart-content">

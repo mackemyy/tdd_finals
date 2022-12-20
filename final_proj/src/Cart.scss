@@ -1,5 +1,5 @@
 $main-font: 'Poppins';
-$orange: orange;
+$orange: #F68A1E;
 $white: white;
 $dirty-white: #f2f2f2;
 $grey: #D9D9D9;
@@ -10,12 +10,244 @@ $border-rad5: 5px;
 $border-rad10: 10px;
 
 
+// #cart-title {
+//     width: 100rem;
+//      background-color: blue;
+//      font-size: 20px;
+//      margin-right: 50px;
+//      font-size: 50px;
+// }
+
 #cart-title {
-    width: 100rem;
-     background-color: blue;
-     font-size: 20px;
-     margin-right: 50px;
-     font-size: 50px;
-   }
+  display: flex;
+  width: 100rem;
+  margin: 50px;
+}
+
+.my-cart-page {
+  font-family: $main-font;
+}
+
+.whole-cart-content {
+  left: 6%;
+  position: relative;
+}
+
+#cart-icon {
+  padding: 20px;
+  font-size: 50px;
+}
+
+#logo-title {
+  padding: 12px 0px 0px 0px;
+  font-weight: 600;
+  color: $orange;
+  font-size: 40px;
+}
+
+#cart-title-nav {
+  display: flex;
+  width: 100rem;
+  padding: 10px 0px 10px 0px;
+  background-color: rgb(136, 136, 136);
+  margin-left: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  color: $white;
+}
+
+#cart-title-item {
+  padding-left: 30px;
+  width: 650px;
+}
+
+ #cart-title-secondary {
+  padding-right: 180px;
+}
+
+#cart-content {
+  width: 100rem;
+  height: 400px;
+  margin: 10px 50px 50px 50px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+#all-select-box {
+  font-size: 20px;
+}
+
+input[type="checkbox"] {
+  background-color: $white;
+  width: 1.50em;
+  height: 1.50em;
+  border: none;
+  color: currentColor;
+  border-radius: 0.15em;
+  margin: 0px 10px 0px 0px;
+}
+
+#cart-card-menu {
+  width: 100rem;
+  display: flex;
+}
+
+#cart-check-box {
+  padding: 60px 0px 50px 0px ;
+}
+
+#cart-img {
+  width: 150px;
+  height: 80px;
+  padding: 30px ;
+  margin: 20px 0px 20px 0px;
+  border-radius: 5px;
+  background-image: url("../src/assets/products/BakedCroissantBread.png");
+  background-repeat: no-repeat;
+  background-color: rgb(247, 247, 247);
+  background-position: center;
+  background-size: contain;
+}
+
+#cart-details {
+  padding: 80px 20px 10px 20px ;
+   font-size: 20px;
+  font-weight: 400;
+}
+
+#col-1 {
+  display: flex;
+  width: 680px;
+}
+
+#cart-additionals {
+  padding-right: 130px;
+  font-size: 20px;
+  padding-top: 80px;
+  display: flex;
+ 
+}
+
+#removebtn {
+  background-color: $white;
+  border-style: none;
+  color: red;
+  font-size: 20px;
+  font-family: $main-font;
+  height: 40px;
+
+  &:hover {
+    color: $black;
+    cursor: pointer;
+  }
+}
+
+#qty-btn{
+  border: 1px solid $black;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 25px;
+  font-family: $main-font;
+  height: 42px;
+  cursor: pointer;
+  border-radius: 3px;
+
+  &:hover {
+    background-color: $orange;
+  }
+}
+
+#qty-cnt{
+  padding: 5px 10px 15px 10px;
+  background-color: $white;
+  height: 20px;
+  border: 1px solid $black;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#footer{
+  display: flex;
+  margin: 50px;
+  width: 100rem;
+}
+
+.backBtn {
+  font-family: $main-font;
+  width: 290px;
+  height: 60px;
+  font-size: 20px;
+  color: $white;
+  background-color: $grey2;
+  border-radius: 10px;
+  border-style: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+#sub-total{
+  padding: 20px 0px 0px 700px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-right: 120px;
+}
+
+.checkoutBtn {
+  position: absolute;
+  width: 290px;
+  height: 60px;
+  background-color: $orange;
+  border-radius: 10px;
+  border-style: none;
+  font-size: 20px;
+  font-family: $main-font;
+  color: $white;
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.wrapper {
+  height: 30px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  background: $white;
+  border-radius: 5px;
+  border: 1px solid $black;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+  & span {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+
+  & span.num {
+    font-size: 15px;
+    border-right: 2px solid rgba(0, 0, 0, 0.2);
+    border-left: 2px solid rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+  }
+}
+
+
+
+  
+
+
+
+
 
 
