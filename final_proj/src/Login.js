@@ -3,7 +3,7 @@ import './Login.css';
 import Checkout from "./Checkout";
 
 const Login = () => {
-    const [showMenu, setShowMenu] = useState(false);
+    const [showCheckout, setShowCheckout] = useState(false);
     const [user, setUser] = useState ({
         email: '',
         password: '',
@@ -39,7 +39,7 @@ const Login = () => {
 		.then((data) => {
 		  	if(data && data.token) {
 		  		setResult(data.token);
-		  		setShowMenu(true);
+		  		setShowCheckout(true);
 		  	}else{
 		  		setResult('Error login. Please try again.')
 		  	}
@@ -56,15 +56,15 @@ const Login = () => {
 	};
 
     const handleLogout = () => {
-		setShowMenu(false);
+		setShowCheckout(false);
 		setResult('');
 	};
 
-    return !showMenu ? (
+    return !showCheckout ? (
         <>
         {/* <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Port+Lligat+Slab"></link> */}
         <div className="login-page">
-              <div className="loginForm">
+            <div className="loginForm">
                 <div className="header">
                     <div className="login_title">Welcome back!</div>
                     <div className="login_subtitle">Login to your account.</div>
