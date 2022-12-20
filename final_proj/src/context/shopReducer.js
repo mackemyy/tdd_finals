@@ -28,9 +28,17 @@ const shopReducer = (state, action) => {
                 checkout: [...state.checkout, payload],
             };
         case 'deleteToCart':
+            const itemFound = state.cart.find((item) => {
+                return item.id === payload;
+              })
             return {
                 ...state,
                 cart: state.cart.filter((item) => item.id !== payload),
+                items: state.items.map((item) => 
+                item.id === payload
+                ? {...item, stockAvail: item.stockAvail + itemFound.amount} 
+                : item
+                ),
             };
         case 'decreaseStock':
             const {itemID, amount} = payload;
