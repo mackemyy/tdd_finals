@@ -23,6 +23,7 @@ const Cart = () => {
 
     return (
         <>
+        {/* <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Port+Lligat+Slab"></link> */}
             <div className="my-cart-page">
                 <div className="topnav-bg"></div>
                 <div className="whole-cart-content">

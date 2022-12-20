@@ -1,10 +1,10 @@
-import { useState } from "react";
-import { Link, BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Link, BrowserRouter as Routes, Route } from "react-router-dom";
 import './Home.css';
 
 const Home = () => {
     return (
         <>
+        {/* <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Port+Lligat+Slab"></link> */}
         <div className="home-page">
             <div className="left">
                 <div className="home_title" data-testid="home_title">You Knead This</div>

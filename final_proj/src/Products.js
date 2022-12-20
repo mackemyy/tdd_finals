@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import ShopContext from "./context/shop_context";
 import './Products.css'
