@@ -17,12 +17,12 @@
   padding: 20px;
 }
 
-#bc-menu {
+#breadcrumbs-menu {
   text-decoration: none;
   color: rgba(0, 0, 255, 0.708);
 }
 
-#bc-prod-details {
+#breadcrumbs-prod-details {
   color: rgba(0, 0, 0, 0.649);
 }
 
@@ -104,7 +104,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(255, 255, 255);
+  background: white;
   border-radius: 5px;
   border: 1px solid black;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -215,6 +215,8 @@
   font-family: "Poppins";
   font-weight: 600;
   padding-top: 20px;
+  letter-spacing: 2px;
+  padding-bottom: 40px;
 }
 
 #check {
@@ -236,8 +238,8 @@
   border-radius: 10px;
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
+  font-weight: 500;
+  font-size: 18px;
   line-height: 52px;
   letter-spacing: 0.055em;
   cursor: pointer;
@@ -246,6 +248,8 @@
   background-color: white;
   border: 2px solid;
   color: #F68A1E;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .row-pd {
