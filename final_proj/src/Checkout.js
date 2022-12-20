@@ -116,7 +116,9 @@ const Checkout = () => {
                                 {checkout.map((item, index) => (
                                     <div className = "cart-card" key={index}>
                                         <div>
-                                            <div id = "bread-picture"></div> 
+                                            <div id = "bread-container">
+                                                <img key={item.index} src={item.pic} id="bread-picture" alt="Product"/>
+                                            </div> 
                                         </div>
                                     <div id="pic-details">
                                         <div id="bread-name">{item.name}</div>

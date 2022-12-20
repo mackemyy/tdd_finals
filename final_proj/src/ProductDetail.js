@@ -66,6 +66,7 @@ const ProductDetail = () => {
             name: prod.name,
             price: prod.price,
             amount: counter,
+            pic: prod.image,
             subtotal: parseInt(prod.price) * counter,
         }
         addItemToCheckout(newCheckout);

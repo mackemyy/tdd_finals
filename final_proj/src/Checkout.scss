@@ -107,9 +107,9 @@ $border-rad10: 10px;
 	width: 80%;
 	height: 23px;
 	border-radius: 10px;
-	border-color: $gray;
+	border-color: $grey;
 	border: 0;
-	background-color: $gray;
+	background-color: $grey;
   }
   
   #email-ship {
@@ -118,9 +118,9 @@ $border-rad10: 10px;
 	width: 67%;
 	height: 23px;
 	border-radius: $border-rad10;
-	border-color: $gray;
+	border-color: $grey;
 	border: 0;
-	background-color: $gray;
+	background-color: $grey;
   }
   
   .subtitle2 {
@@ -144,9 +144,9 @@ $border-rad10: 10px;
 	width: 55%;
 	height: 23px;
 	border-radius: $border-rad10;
-	border-color: $gray;
+	border-color: $grey;
 	border: 0;
-	background-color: $gray;
+	background-color: $grey;
   }
   
   #ship-info {
@@ -155,9 +155,9 @@ $border-rad10: 10px;
 	width: 80%;
 	height: 23px;
 	border-radius: $border-rad10;
-	border-color: $gray;
+	border-color: $grey;
 	border: 0;
-	background-color: $gray;
+	background-color: $grey;
   }
   
   #expDate {
@@ -176,19 +176,22 @@ $border-rad10: 10px;
 	padding: 15px;
 	display: flex;
   }
-  
-  #bread-picture{
-	background-image: url("../src/assets/products/BakedCroissantBread.png");
-	width: 80px;
-	height: 90px;
+
+  #bread-container {
+	width: 93px;
+	height: 86px;
 	background-repeat: no-repeat;
 	border-radius: $border-rad5;
 	background-color: $white;
 	background-position: center;
 	background-size: contain;
-  
 	padding: 10px 50px 0px 0px;
 	margin: 10px 0px 0px 0px;
+  }
+  
+  #bread-picture{
+	width: 138px;
+    height: 82px;
   }
   
   
@@ -201,7 +204,7 @@ $border-rad10: 10px;
   
   #cart-row-space {
 	width: 85%;
-	height: 200px;
+	height: 305px;
 	overflow: hidden;
 	overflow-y: scroll;
   }

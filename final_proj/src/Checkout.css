@@ -84,10 +84,9 @@
   width: 60%;
 }
 
-.label{
-	color: red;
-	font-size: 11px;
-	
+.label {
+  color: red;
+  font-size: 11px;
 }
 
 #contact-no {
@@ -124,7 +123,7 @@
   height: 46px;
   background: rgb(217, 217, 217);
   border-radius: 10px;
-
+  margin-bottom: 10px;
 }
 
 #user-input {
@@ -164,10 +163,9 @@
   display: flex;
 }
 
-#bread-picture {
-  background-image: url("../src/assets/products/BakedCroissantBread.png");
-  width: 80px;
-  height: 90px;
+#bread-container {
+  width: 93px;
+  height: 86px;
   background-repeat: no-repeat;
   border-radius: 5px;
   background-color: white;
@@ -175,6 +173,11 @@
   background-size: contain;
   padding: 10px 50px 0px 0px;
   margin: 10px 0px 0px 0px;
+}
+
+#bread-picture {
+  width: 138px;
+  height: 82px;
 }
 
 .payment-row:after {
@@ -185,7 +188,7 @@
 
 #cart-row-space {
   width: 85%;
-  height: 200px;
+  height: 305px;
   overflow: hidden;
   overflow-y: scroll;
 }
@@ -358,5 +361,4 @@
   height: 50px;
   border-radius: 10px;
   text-align: end;
-}
-/*# sourceMappingURL=Checkout.css.map */
+}/*# sourceMappingURL=Checkout.css.map */
