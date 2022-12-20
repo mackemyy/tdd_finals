@@ -13,8 +13,8 @@ const Cart = () => {
         subtotal = subtotal + item.subtotal
     ))
 
-    const onDeleteToCart = (prodID) => {
-        deleteToCart(prodID);
+    const onDeleteToCart = (prod) => {
+        deleteToCart(prod.id);
     }
 
     const onCheckout = () => {
@@ -64,7 +64,7 @@ const Cart = () => {
                                 </div>
                                 <div id="cart-additionals">{(Math.round(item.subtotal * 100) / 100).toFixed(2)} PHP</div>
                                 <div id="cart-additionals">
-                                    <button id="removebtn" onClick={onDeleteToCart.bind(this, item.id)}>Remove</button>
+                                    <button id="removebtn" onClick={onDeleteToCart.bind(this, item)}>Remove</button>
                                 </div>
                                 <div>
                                 </div>
