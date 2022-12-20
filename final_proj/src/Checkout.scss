@@ -22,9 +22,9 @@ $border-rad10: 10px;
 .checkoutForm {
 	position: absolute ;
 	width: 80% ;
-	height: 700px ;
+	height: 720px ;
 	margin-left: 180px ;
-	top: 100px ;
+	top: 80px ;
 	background-color: $white ;
 	border-radius: 35px ;
 	box-shadow: 0 0 10px $black ;
@@ -103,7 +103,6 @@ $border-rad10: 10px;
 	padding: 10px ;
 	width: 80%;
     height: 23px;
-	margin-bottom: 10px;
     border-radius: $border-rad10;
     border-color: $grey;
     border: 0;
@@ -115,7 +114,6 @@ $border-rad10: 10px;
 	padding: 10px ;
 	width: 67%;
     height: 23px;
-	margin-bottom: 10px;
     border-radius: $border-rad10;
     border-color: $grey;
     border: 0;
@@ -127,6 +125,12 @@ $border-rad10: 10px;
 	margin-bottom: 5px ;
 	color: rgb(102,102, 102) ;
 	margin-right: 100px;
+}
+
+.label{
+	color: red;
+	font-size: 11px;
+	
 }
 
 
@@ -155,7 +159,6 @@ $border-rad10: 10px;
 	padding: 10px ;
 	width: 80%;
     height: 23px;
-	margin-bottom: 10px;
     border-radius: $border-rad10;
     border-color: $grey;
     border: 0;
@@ -176,27 +179,6 @@ $border-rad10: 10px;
 	padding: 5px ;
 }
 
-#croissant {
-	background-image: url("../src/assets/products/BakedCroissantBread.png") ;
-	width: 80px ;
-	height: 70px ;
-	background-repeat: no-repeat ;
-	border-radius: 5px ;
-	background-color: $white ;
-	background-position: center ;
-	background-size: contain ;
-}
-
-#slicedbread {
-	background-image: url("../src/assets/products/ClassicSlicedBread.png") ;
-	width: 80px ;
-	height: 70px ;
-	background-repeat: no-repeat ;
-	border-radius: 5px ;
-	background-color: $white ;
-	background-position: center ;
-	background-size: contain ;
-}
 
 .payment-row {
 	&:after {
