@@ -82,7 +82,7 @@ const Cart = () => {
                         </div>
                         <div id="sub-total">Total: {(Math.round(subtotal * 100) / 100).toFixed(2)} PHP</div>
                         <div id="col-2-btn">
-                            <NavLink to='/login' data-testid='login-nav'>
+                            <NavLink to='/checkout' data-testid='login-nav'>
                                 <button class="checkoutBtn" onClick={onCheckout}>Checkout</button>
                             </NavLink>
                         </div>

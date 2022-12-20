@@ -5,10 +5,11 @@ import { NavLink} from "react-router-dom";
 
 const Checkout = () => {
     const [modalVisible, setModalVisible] = useState(false);
-    const {checkout} = useContext(ShopContext)
+    const {checkout, placeOrder} = useContext(ShopContext)
     let total = 0;
     const toggleModal = () => {
         setModalVisible(!modalVisible)
+        placeOrder();
     }
 
     if(modalVisible) {

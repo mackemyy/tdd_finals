@@ -4,7 +4,7 @@ import ShopContext from "./context/shop_context";
 import './ProductDetail.css';
 
 const ProductDetail = () => {
-    const {items, addToCart, addToCheckout, decreaseStock} = useContext(ShopContext)
+    const {items, addToCart, addItemToCheckout, decreaseStock} = useContext(ShopContext)
     const [modalConfirm, setModalConfirm] = useState(false);
 
     const toggleConfirmModal = () => {
@@ -64,9 +64,10 @@ const ProductDetail = () => {
             id: prod.id,
             name: prod.name,
             price: prod.price,
-            amount: counter
+            amount: counter,
+            subtotal: parseInt(prod.price) * counter,
         }
-        addToCheckout(newCheckout);
+        addItemToCheckout(newCheckout);
         decreaseStock(id, counter);
     }
 
@@ -100,7 +101,7 @@ const ProductDetail = () => {
                         </div>
                     </div>
                     <div className="buttons">
-                    <NavLink to='/login' data-testid='login-nav'>
+                    <NavLink to='/checkout' data-testid='checkout-nav'>
                         <button id="buyItNow-btn" className="btns" data-testid="buyItNow-btn" onClick={onAddToCheckout}>Buy It Now</button>
                     </NavLink>
                         <button id="addToCart-btn" className="btns" data-testid="addToCart-btn" onClick={toggleConfirmModal}>Add to Cart</button>

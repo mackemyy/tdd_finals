@@ -28,6 +28,13 @@ const ShopProvider = (props) => {
         })
     }
 
+    const addItemToCheckout = (item) => {
+        dispatch({
+            type: 'addItemToCheckout',
+            payload: item
+        })
+    }
+
     const deleteToCart = (itemID) => {
         dispatch({
             type: 'deleteToCart',
@@ -42,6 +49,12 @@ const ShopProvider = (props) => {
         })
     }
 
+    const placeOrder = () => {
+        dispatch({
+            type: 'placeOrder',
+        })
+    }
+
     return(
         <>
             <ShopContext.Provider value={{
@@ -50,8 +63,10 @@ const ShopProvider = (props) => {
                 checkout: state.checkout,
                 addToCart,
                 addToCheckout,
+                addItemToCheckout,
                 deleteToCart,
                 decreaseStock,
+                placeOrder,
             }}>{props.children}</ShopContext.Provider>
         </>
     )
