@@ -42,12 +42,19 @@ const ShopProvider = (props) => {
         })
     }
 
-    // const decreaseStock = (itemID, amount) => {
-    //     dispatch({
-    //         type: 'decreaseStock',
-    //         payload: {itemID, amount}
-    //     })
-    // }
+    const increaseStock = (itemID) => {
+        dispatch({
+            type: 'increaseStock',
+            payload: itemID,
+        })
+    }
+
+    const decreaseStock = (itemID) => {
+        dispatch({
+            type: 'decreaseStock',
+            payload: itemID,
+        })
+    }
 
     const placeOrder = () => {
         dispatch({
@@ -65,7 +72,8 @@ const ShopProvider = (props) => {
                 addToCheckout,
                 addItemToCheckout,
                 deleteToCart,
-                // decreaseStock,
+                increaseStock,
+                decreaseStock,
                 placeOrder,
             }}>{props.children}</ShopContext.Provider>
         </>

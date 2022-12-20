@@ -59,16 +59,34 @@ const shopReducer = (state, action) => {
                 : item
                 ),
             };
-        // case 'decreaseStock':
-        //     const {itemID, amount} = payload;
-        //     return {
-        //         ...state,
-        //         items: state.items.map((item) => 
-        //         item.id === itemID
-        //         ? {...item, stockAvail: item.stockAvail - amount} 
-        //         : item
-        //         ),
-        //     };
+        case 'increaseStock':
+            return {
+                ...state,
+                items: state.items.map((item) => 
+                item.id === payload
+                ? {...item, stockAvail: item.stockAvail + 1} 
+                : item
+                ),
+                cart: state.cart.map((item) => 
+                item.id === payload
+                ? {...item, amount: item.amount - 1, subtotal: parseInt(item.price) * (item.amount - 1)} 
+                : item
+                ),
+            };
+        case 'decreaseStock':
+            return {
+                ...state,
+                items: state.items.map((item) => 
+                item.id === payload
+                ? {...item, stockAvail: item.stockAvail - 1} 
+                : item
+                ),
+                cart: state.cart.map((item) => 
+                item.id === payload
+                ? {...item, amount: item.amount + 1, subtotal: parseInt(item.price) * (item.amount + 1)} 
+                : item
+                ),
+            };
         case 'placeOrder':
             return {
                 ...state,
