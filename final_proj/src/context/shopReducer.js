@@ -22,6 +22,11 @@ const shopReducer = (state, action) => {
                 checkout: [...state.checkout, ...payload],
                 cart: [],
             };
+        case 'addItemToCheckout':
+            return {
+                ...state,
+                checkout: [...state.checkout, payload],
+            };
         case 'deleteToCart':
             return {
                 ...state,
@@ -37,6 +42,12 @@ const shopReducer = (state, action) => {
                 : item
                 ),
             };
+        case 'placeOrder':
+            return {
+                ...state,
+                cart: [],
+                checkout: [],
+            }
         default:
             return state;
     }
