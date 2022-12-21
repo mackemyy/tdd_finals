@@ -2,9 +2,6 @@ import { render, screen, cleanup, fireEvent } from "@testing-library/react";
 import axios from "axios";
 import App from './App';
 import Login from './Login';
-import Checkout from "./Checkout";
-
-import { ShopContext } from "./context/shop_context";
 
 import { ValidateUser } from "./components/axiosUtils";
 
@@ -123,18 +120,3 @@ describe("Check Login screen", ()=>{
     	axios.post.mockImplementationOnce(invalidUser);
     });
 })
-
-// ///////////// TEST FOR CHECKOUT PAGE
-// describe("Check checkout screen", ()=>{
-// 	it("check if there is an checkout page content",()=>{
-//     render(<Checkout />);
-// 		const input = screen.getByTestId("checkout-test");
-// 		expect(input).toBeInTheDocument();
-// 	});
-
-//     it("check if there is a button for place order modal",()=>{
-//     render(<Checkout />);
-// 		const btn_placeorder = screen.getByTestId("placeorder-test");
-// 		expect(btn_placeorder).toBeInTheDocument();
-// 	});
-// })
