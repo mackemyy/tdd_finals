@@ -40,7 +40,7 @@ const Cart = () => {
     const onCheckout = () => {
         const selectedCart = cart.filter(item => selectedItems.includes(item));
         addToCheckout(selectedCart);
-        selectedCart([]);
+        addToCheckout([]);
     };
 
     const onIncreaseStock = (prod) => {
