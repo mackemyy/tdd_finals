@@ -1,11 +1,31 @@
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import ShopContext from "./context/shop_context";
 import './Cart.css';
 
 
 const Cart = () => {
+    const [selectAll, setSelectAll] = useState(false);
+    const [selectedItems, setSelectedItems] = useState([]);
 
+    const handleSelectAll = () => {
+        setSelectAll(prevState => !prevState);
+        setSelectedItems(prevState => {
+          if (prevState.length === cart.length) {
+            return [];
+          }
+          return [...cart];
+        });
+      };
+
+    const handleItemSelection = (item) => {
+      setSelectedItems(prevState => {
+        if (prevState.includes(item)) {
+          return prevState.filter(i => i !== item);
+        }
+        return [...prevState, item];
+      });
+    };
     const {items, cart, deleteToCart, addToCheckout, increaseStock, decreaseStock} = useContext(ShopContext)
     let subtotal = 0;
 
@@ -16,10 +36,12 @@ const Cart = () => {
     const onDeleteToCart = (prod) => {
         deleteToCart(prod.id);
     }
-
+    
     const onCheckout = () => {
-        addToCheckout(cart);
-    }
+        const selectedCart = cart.filter(item => selectedItems.includes(item));
+        addToCheckout(selectedCart);
+        addToCheckout([]);
+    };
 
     const onIncreaseStock = (prod) => {
         if(prod.amount > 0) {
@@ -59,7 +81,7 @@ const Cart = () => {
 
                     <div id="cart-content">
                         <div id="all-select-box">
-                            <input type="checkbox" data-testid="checkbox"/> 
+                            <input type="checkbox" data-testid="checkbox-all" onChange={handleSelectAll}/> 
                             <label>Select All</label>
                         </div>
 
@@ -68,7 +90,12 @@ const Cart = () => {
                             <div id="cart-card-menu" key={index}>
                                 <div id="col-1">
                                     <div id="cart-check-box"> 
-                                        <input  type="checkbox" data-testid="checkbox"/> 
+                                    <input
+                                        type="checkbox"
+                                        data-testid="checkbox"
+                                        checked={selectedItems.includes(item)}
+                                        onChange={handleItemSelection.bind(this, item)}
+                                    />
                                     </div>
                                         <div id="cart-img">
                                             <img key={item.index} src={item.pic} id="cart-prod-img" alt="Product"/>
