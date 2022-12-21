@@ -26,12 +26,6 @@ const Checkout = () => {
         
     }
 
-    if(modalVisible) {
-        document.body.classList.add('active-modal')
-    } else {
-        document.body.classList.remove('active-modal')
-    }
-
     checkout.map((item) => (
         total = total + item.subtotal
     ))
